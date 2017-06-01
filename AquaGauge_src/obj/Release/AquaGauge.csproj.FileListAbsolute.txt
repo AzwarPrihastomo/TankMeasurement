@@ -1,0 +1,7 @@
+D:\PROJECT\Gauge\AquaGauge_src\bin\Release\AquaGauge.dll
+D:\PROJECT\Gauge\AquaGauge_src\bin\Release\AquaGauge.pdb
+D:\PROJECT\Gauge\AquaGauge_src\obj\Release\ResolveAssemblyReference.cache
+D:\PROJECT\Gauge\AquaGauge_src\obj\Release\AquaControls.AquaGauge.resources
+D:\PROJECT\Gauge\AquaGauge_src\obj\Release\AquaGauge.csproj.GenerateResource.Cache
+D:\PROJECT\Gauge\AquaGauge_src\obj\Release\AquaGauge.dll
+D:\PROJECT\Gauge\AquaGauge_src\obj\Release\AquaGauge.pdb
