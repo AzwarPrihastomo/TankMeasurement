@@ -9,6 +9,8 @@
 #define RS485_WRITE 1
 #define RS485_READ 0
 
+#define DEMO_MODE 0
+
 SoftwareSerial mySoftSerial = SoftwareSerial(RX, TX);    // The SoftwareSerial Object
 SerialCommand SCmd;
 String inputstring = "";
@@ -164,6 +166,7 @@ const float K_FACTOR = 0.55;
 const uint8_t HYSTERESIS = 10;
 const uint8_t OUTLIERS_THRESHOLD = 8; //in degrees, +- value
 const uint8_t ONE_PEAK_ADJUSTER_THRESHOLD = 10;
+const float dumVal = 10.0; //dummy value for demo mode
 //---------------------------------------------------------------------------------------------------------//
 
 //one peak mode will be selected when compare to other sensor, default counterweight because, posterior knowledge: needle is harder to see
@@ -209,7 +212,7 @@ int code;
 float angle1;
 
 int homing(int dir = CCW, bool retract = 1) {
- // changeAnalogRef(ANAREF5);
+  // changeAnalogRef(ANAREF5);
   power_led(1);
   code = CODE_IDLE;
   if (retract) {
@@ -241,7 +244,7 @@ int homing(int dir = CCW, bool retract = 1) {
   disable_motor();
   //power_led(0);
   //a bit hack
- // changeAnalogRef(ANAREF1V1);
+  // changeAnalogRef(ANAREF1V1);
   return code;
 }
 
@@ -864,7 +867,7 @@ void displayResult() {
   Serial.print(F("OUTPUT ANGLE: "));
   Serial.println(total_angle, 4);
   mode485(RS485_WRITE);
-  mySoftSerial.print(F("press:data="));
+  mySoftSerial.print(idName + ":data=");
   //printFloat485(total, 3);
   mySoftSerial.println(total);
   mode485(RS485_READ);
@@ -1003,7 +1006,7 @@ void read_anal() {
 }
 
 void setup() {
- // changeAnalogRef(ANAREF1V1);
+  // changeAnalogRef(ANAREF1V1);
   // put your setup code here, to run once:
   Serial.begin(19200);
   mySoftSerial.begin(9600);
@@ -1103,7 +1106,15 @@ void const inputhandle(String & inputstring)
   if (inputstring.indexOf(idName + ":data?") != -1)
   {
     delay(100);
+#ifdef DEMO_MODE
+    mode485(RS485_WRITE);
+    mySoftSerial.print(idName + ":data=");
+    //printFloat485(total, 3);
+    mySoftSerial.println(dumVal);
+    mode485(RS485_READ);
+#else
     read_main(0);
+#endif
   } else if (inputstring.indexOf("<GETID!>") != -1)
   {
     delay(100);
