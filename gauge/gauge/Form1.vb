@@ -90,6 +90,7 @@ Public Class Form1
     Public tempRequestedTimeout As Boolean
     Public presRequestedTimeout As Boolean
 
+
     Public time_req_level As Date
     Public time_req_temp As Date
     Public time_req_press As Date
@@ -109,6 +110,8 @@ Public Class Form1
     Public ComRetryCountLevel As Integer
     Public ComRetryCountTemp As Integer
     Public ComRetryCountPress As Integer
+
+
 
     Public dataComplete As Boolean
 
@@ -300,6 +303,8 @@ Public Class Form1
         If oMysql.Connect(connstring) Then
             portCom.PortName = portComName
             portCom.BaudRate = baudrate
+            portCom.DtrEnable = True
+            portCom.RtsEnable = True
             portCom.Open()
 
             isConnected = True
@@ -419,13 +424,12 @@ Public Class Form1
     End Sub
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
-        'gaugeLevel.Value = gaugeLevel.Value + 1
         Dim check_datelog As Integer = Convert.ToInt16(Now.ToString("dd"))
         If logdate <> check_datelog Then
             create_file()
         End If
+
         ' ================ REQUEST DATA =====================================================================================================================================================
-        'If (levelRequested = False And tempRequested = False And presRequested = False) Then
         If (Now > time_req_level) And ((presRequested = False) Or presRequestedTimeout) And ((tempRequested = False) Or tempRequestedTimeout) And (levelRequestedTimeout = False) Then
             time_req_level = time_req_level.AddSeconds(update_period)
             portCom.WriteLine(idLevel & ":" & reqDataCommand & "?")
@@ -460,7 +464,101 @@ Public Class Form1
             add_log("Tank pressure data requested")
             'Console.WriteLine("Temperature request data")
         End If
-        'End If
+
+        ' ================ COMMAND REPLY INCOMING CHECK ====================================================================================================================================
+        If gotComReplyLevel Then
+            gotComReplyLevel = False
+            ComLevelRequested = False
+            LevelStatus.ForeColor = Color.Green
+            LevelStatus.Text = "Tank Level data reading"
+            add_log("Tank Level data reading")
+        End If
+        If gotComReplyTemp Then
+            gotComReplyTemp = False
+            ComTempRequested = False
+            TempStatus.ForeColor = Color.Green
+            TempStatus.Text = "Tank Temperature data reading"
+            add_log("Tank Temperature data reading")
+        End If
+        If gotComReplyPress Then
+            gotComReplyPress = False
+            ComPresRequested = False
+            PressStatus.ForeColor = Color.Green
+            PressStatus.Text = "Tank pressure data reading"
+            add_log("Tank pressure data reading")
+        End If
+
+        ' ================ DATA INCOMING CHECK ====================================================================================================================================
+        If gotLevel Then
+            levelRequested = False
+        End If
+        If gotTemp Then
+            tempRequested = False
+        End If
+        If gotPress Then
+            presRequested = False
+        End If
+
+        If ((gotLevel Or levelRequestedTimeout) And (gotPress Or presRequestedTimeout) And (gotTemp Or tempRequestedTimeout)) Then
+            store_data()
+            update_chart_tankLevel()
+            update_chart_temp()
+            update_chart_press()
+
+            If gotLevel Then
+                gotLevel = False
+                gaugeLevel.Value = Convert.ToDouble(dataLevel)
+                LevelStatus.ForeColor = Color.Green
+                LevelStatus.Text = "Tank Level got data"
+                add_log("Tank level got data")
+                ComRetryCountLevel = 0
+            End If
+            If gotTemp Then
+                gotTemp = False
+                gaugeTemp.Value = Convert.ToDouble(dataTemp)
+                TempStatus.Text = "Tank Temperature got data"
+                add_log("Tank Temperature got data")
+                ComRetryCountTemp = 0
+            End If
+            If gotPress Then
+                gotPress = False
+                gaugePressure.Value = Convert.ToDouble(dataPress)
+                PressStatus.Text = "Tank pressure got data"
+                add_log("Tank pressure got data")
+                ComRetryCountPress = 0
+            End If
+        End If
+
+        ' ================ COMMAND REPLY TIMEOUT CHECKING ============================================================================================================================
+        If ComLevelRequested Then
+            If Now > timeComCountReqLevel.AddSeconds(reqComTimeOut) Then
+                LevelStatus.ForeColor = Color.Red
+                LevelStatus.Text = "Tank Level Command not response"
+                add_log("Tank Level Command not response")
+                levelRequestedTimeout = True
+                ComLevelRequested = False
+            End If
+        End If
+
+        If ComTempRequested Then
+            If Now > timeComCountTemp.AddSeconds(reqComTimeOut) Then
+                TempStatus.ForeColor = Color.Red
+                TempStatus.Text = "Tank Temperature Command not response"
+                add_log("Tank Temperature Command not response")
+                tempRequestedTimeout = True
+                ComTempRequested = False
+            End If
+        End If
+
+        If ComPresRequested Then
+            If Now > timeComCountPress.AddSeconds(reqComTimeOut) Then
+                PressStatus.ForeColor = Color.Red
+                PressStatus.Text = "Tank pressure Command not response"
+                add_log("Tank pressure Command not response")
+                presRequestedTimeout = True
+                ComPresRequested = False
+            End If
+        End If
 
         ' ================ DATA TIMEOUT CHECKING ====================================================================================================================================
         If levelRequested Then
@@ -493,37 +591,6 @@ Public Class Form1
             End If
         End If
 
-        ' ================ DATA COMMAND REPLY TIMEOUT CHECKING ============================================================================================================================
-        If ComLevelRequested Then
-            If Now > timeComCountReqLevel.AddSeconds(reqComTimeOut) Then
-                LevelStatus.ForeColor = Color.Red
-                LevelStatus.Text = "Tank Level Command not response"
-                add_log("Tank Level Command not response")
-                levelRequestedTimeout = True
-                ComLevelRequested = False
-            End If
-        End If
-
-        If ComTempRequested Then
-            If Now > timeComCountTemp.AddSeconds(reqComTimeOut) Then
-                TempStatus.ForeColor = Color.Red
-                TempStatus.Text = "Tank Temperature Command not response"
-                add_log("Tank Temperature Command not response")
-                tempRequestedTimeout = True
-                ComTempRequested = False
-            End If
-        End If
-
-        If ComPresRequested Then
-            If Now > timeComCountPress.AddSeconds(reqComTimeOut) Then
-                PressStatus.ForeColor = Color.Red
-                PressStatus.Text = "Tank pressure Command not response"
-                add_log("Tank pressure Command not response")
-                presRequestedTimeout = True
-                ComPresRequested = False
-            End If
-        End If
-
         ' ================ RETRY CHECKING =========================================================================================================================================
         If levelRequestedTimeout And (ComRetryCountLevel < ComReqRetry) Then
             ComRetryCountLevel = ComRetryCountLevel + 1
@@ -543,86 +610,6 @@ Public Class Form1
             add_log("Tank pressure command retry " & ComRetryCountPress)
         End If
 
-        ' ================ DATA INCOMING CHECK ====================================================================================================================================
-        If ((gotLevel Or levelRequestedTimeout) And (gotPress Or presRequestedTimeout) And (gotTemp Or tempRequestedTimeout)) Then
-            store_data()
-            update_chart_tankLevel()
-            update_chart_temp()
-            update_chart_press()
-            calculateData(Convert.ToDouble(tBoxLevel.Text), Convert.ToDouble(tBoxTemp.Text), Convert.ToDouble(tBoxPress.Text), Convert.ToDouble(cBoxDensity.Text))
-            If gotLevel Then
-                gotLevel = False
-                levelRequested = False
-                'ComRetryCountLevel = 0
-            End If
-            If gotTemp Then
-                gotTemp = False
-                tempRequested = False
-                'ComRetryCountTemp = 0
-            End If
-            If gotPress Then
-                gotPress = False
-                presRequested = False
-                'ComRetryCountPress = 0
-            End If
-        End If
-
-        If gotLevel Then
-            '    gotLevel = False
-            '    update_tankLevel(Convert.ToDouble(dataLevel))
-            gaugeLevel.Value = Convert.ToDouble(dataLevel)
-            levelRequested = False
-            '    update_chart_tankLevel()
-            LevelStatus.ForeColor = Color.Green
-            LevelStatus.Text = "Tank Level got data"
-            '    add_log("Tank Level got data")
-            ComRetryCountLevel = 0
-        End If
-        If gotTemp Then
-            '    gotTemp = False
-            '    update_temp(Convert.ToDouble(dataTemp))
-            gaugeTemp.Value = Convert.ToDouble(dataTemp)
-            tempRequested = False
-            '    update_chart_temp()
-            '    TempStatus.ForeColor = Color.Green
-            TempStatus.Text = "Tank Temperature got data"
-            add_log("Tank Temperature got data")
-            ComRetryCountTemp = 0
-        End If
-        If gotPress Then
-            '    gotPress = False
-            '    update_press(Convert.ToDouble(dataPress))
-            gaugePressure.Value = Convert.ToDouble(dataPress)
-            presRequested = False
-            '    update_chart_press()
-            '    PressStatus.ForeColor = Color.Green
-            PressStatus.Text = "Tank pressure got data"
-            add_log("Tank pressure got data")
-            ComRetryCountPress = 0
-        End If
-
-        ' ================ COMMAND REPLY INCOMING CHECK ====================================================================================================================================
-        If gotComReplyLevel Then
-            gotComReplyLevel = False
-            ComLevelRequested = False
-            LevelStatus.ForeColor = Color.Green
-            LevelStatus.Text = "Tank Level data reading"
-            add_log("Tank Level data reading")
-        End If
-        If gotComReplyTemp Then
-            gotComReplyTemp = False
-            ComTempRequested = False
-            TempStatus.ForeColor = Color.Green
-            TempStatus.Text = "Tank Temperature data reading"
-            add_log("Tank Temperature data reading")
-        End If
-        If gotComReplyPress Then
-            gotComReplyPress = False
-            ComPresRequested = False
-            PressStatus.ForeColor = Color.Green
-            PressStatus.Text = "Tank pressure data reading"
-            add_log("Tank pressure data reading")
-        End If
     End Sub
 
     Private Sub calculateData(ByVal levelVal As Double, ByVal tempVal As Double, ByVal pressureVal As Double, ByVal densityVal As Double)
@@ -740,8 +727,8 @@ Public Class Form1
         tBoxLevel.Text = levelVal
         tBoxPress.Text = pressVal
         tBoxTemp.Text = pressVal
-
-        myQuery = "INSERT INTO `" & dataTable & "` (`DataCompleteTime`, `LevelStatus`, `TankLevel`, `AccLevelTime`, `PressStatus`, `TankPress`, `AccPressTime`, `TempStatus`, `TankTemp`, `AccTempTime`) VALUES (now(),'" & levelStatus & "', '" & levelVal & "', '" & levelTime & "', '" & pressStatus & "', '" & pressVal & "', '" & pressTime & "', '" & tempStatus & "', '" & tempVal & "', '" & tempTime & "');"
+        calculateData(Convert.ToDouble(tBoxLevel.Text), Convert.ToDouble(tBoxTemp.Text), Convert.ToDouble(tBoxPress.Text), Convert.ToDouble(cBoxDensity.Text))
+        myQuery = "INSERT INTO `" & dataTable & "` (`DataCompleteTime`, `LevelStatus`, `TankLevel`, `AccLevelTime`, `PressStatus`, `TankPress`, `AccPressTime`, `TempStatus`, `TankTemp`, `AccTempTime`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(),'" & levelStatus & "', '" & levelVal & "', '" & levelTime & "', '" & pressStatus & "', '" & pressVal & "', '" & pressTime & "', '" & tempStatus & "', '" & tempVal & "', '" & tempTime & "', '" & kilogramLiquid.Text & "', '" & kilogramsVapour.Text & "', '" & TotalKilograms.Text & "');"
         oMysql.SetData(myQuery)
 
     End Sub
@@ -793,7 +780,7 @@ Public Class Form1
 
         If bufferCom.Contains(vbCrLf) Then
             strip_str = bufferCom.Split(vbCrLf)(0)
-            bufferCom = bufferCom.Split(vbCrLf)(1)
+            bufferCom = bufferCom.Replace(strip_str & vbCrLf, "")
             add_log("client send data -->" & strip_str)
             If strip_str.Contains(reqDataCommand & "=") Then
                 strip_str = strip_str.Replace(reqDataCommand & "=", "")
@@ -844,7 +831,7 @@ Public Class Form1
                     Dim namafile As String
                     namafile = SaveFileDialog1.FileName
                     Dim io_write As New StreamWriter(namafile)
-                    io_write.WriteLine("DataCompleteTime;LevelStatus;TankLevel;AccLevelTime;PressStatus;TankPress;AccPressTime;TempStatus;TankTemp;AccTempTime")
+                    io_write.WriteLine("DataCompleteTime;LevelStatus;TankLevel;AccLevelTime;PressStatus;TankPress;AccPressTime;TempStatus;TankTemp;AccTempTime;KgLiquid;KgVapour;KgTotal")
                     For i = 0 To dataGridExport.RowCount - 1
                         Dim baris As String = ""
                         For j = 0 To dataGridExport.ColumnCount - 1
@@ -940,7 +927,18 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        calculateData(Convert.ToDouble(tBoxLevel.Text), Convert.ToDouble(tBoxTemp.Text), Convert.ToDouble(tBoxPress.Text), Convert.ToDouble(cBoxDensity.Text))
+        'calculateData(Convert.ToDouble(tBoxLevel.Text), Convert.ToDouble(tBoxTemp.Text), Convert.ToDouble(tBoxPress.Text), Convert.ToDouble(cBoxDensity.Text))
+        gotComReplyLevel = True
+        gotComReplyPress = True
+        gotComReplyTemp = True
+
+        gotPress = True
+        gotLevel = True
+        gotTemp = True
+        dataPress = 10
+        dataLevel = 25
+        dataTemp = 30
+
     End Sub
 
     Public Sub openCsv(ByVal filename As String, ByRef datagrid As DataGridView)

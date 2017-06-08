@@ -25,26 +25,26 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ChartArea9 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea
-        Dim Legend9 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend
-        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series
-        Dim ChartArea10 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea
-        Dim Legend10 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend
-        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series
-        Dim ChartArea11 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea
-        Dim Legend11 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend
-        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series
-        Dim ChartArea12 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea
-        Dim Legend12 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend
+        Dim ChartArea25 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea
+        Dim Legend25 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend
+        Dim Series19 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series
+        Dim ChartArea26 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea
+        Dim Legend26 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend
+        Dim Series20 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series
+        Dim ChartArea27 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea
+        Dim Legend27 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend
+        Dim Series21 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series
+        Dim ChartArea28 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea
+        Dim Legend28 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer
         Me.gaugeLevel = New AquaControls.AquaGauge
-        Me.tableTangki = New System.Windows.Forms.DataGridView
-        Me.table54 = New System.Windows.Forms.DataGridView
         Me.ChkTodayLevel = New System.Windows.Forms.CheckBox
         Me.DTLevel = New System.Windows.Forms.DateTimePicker
         Me.ChartLevel = New System.Windows.Forms.DataVisualization.Charting.Chart
+        Me.tableTangki = New System.Windows.Forms.DataGridView
+        Me.table54 = New System.Windows.Forms.DataGridView
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.Label1 = New System.Windows.Forms.Label
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer
@@ -139,9 +139,9 @@ Partial Class Form1
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
+        CType(Me.ChartLevel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tableTangki, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.table54, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ChartLevel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
@@ -220,30 +220,14 @@ Partial Class Form1
         Me.gaugeLevel.Dock = System.Windows.Forms.DockStyle.Top
         Me.gaugeLevel.Glossiness = 70.0!
         Me.gaugeLevel.Location = New System.Drawing.Point(0, 0)
-        Me.gaugeLevel.MaxValue = 2000.0!
-        Me.gaugeLevel.MinValue = 1000.0!
+        Me.gaugeLevel.MaxValue = 100.0!
+        Me.gaugeLevel.MinValue = 0.0!
         Me.gaugeLevel.Name = "gaugeLevel"
-        Me.gaugeLevel.RecommendedValue = 1000.0!
+        Me.gaugeLevel.RecommendedValue = 1.0!
         Me.gaugeLevel.Size = New System.Drawing.Size(187, 187)
         Me.gaugeLevel.TabIndex = 1
         Me.gaugeLevel.ThresholdPercent = 0.0!
-        Me.gaugeLevel.Value = 1000.0!
-        '
-        'tableTangki
-        '
-        Me.tableTangki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tableTangki.Location = New System.Drawing.Point(315, 27)
-        Me.tableTangki.Name = "tableTangki"
-        Me.tableTangki.Size = New System.Drawing.Size(240, 150)
-        Me.tableTangki.TabIndex = 12
-        '
-        'table54
-        '
-        Me.table54.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.table54.Location = New System.Drawing.Point(41, 27)
-        Me.table54.Name = "table54"
-        Me.table54.Size = New System.Drawing.Size(240, 150)
-        Me.table54.TabIndex = 12
+        Me.gaugeLevel.Value = 0.0!
         '
         'ChkTodayLevel
         '
@@ -268,25 +252,41 @@ Partial Class Form1
         '
         'ChartLevel
         '
-        ChartArea9.Name = "ChartArea1"
-        Me.ChartLevel.ChartAreas.Add(ChartArea9)
+        ChartArea25.Name = "ChartArea1"
+        Me.ChartLevel.ChartAreas.Add(ChartArea25)
         Me.ChartLevel.Dock = System.Windows.Forms.DockStyle.Fill
-        Legend9.Alignment = System.Drawing.StringAlignment.Far
-        Legend9.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-        Legend9.Name = "Legend1"
-        Me.ChartLevel.Legends.Add(Legend9)
+        Legend25.Alignment = System.Drawing.StringAlignment.Far
+        Legend25.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend25.Name = "Legend1"
+        Me.ChartLevel.Legends.Add(Legend25)
         Me.ChartLevel.Location = New System.Drawing.Point(0, 0)
         Me.ChartLevel.Name = "ChartLevel"
-        Series7.ChartArea = "ChartArea1"
-        Series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series7.Color = System.Drawing.Color.Blue
-        Series7.Legend = "Legend1"
-        Series7.Name = "Tank Level"
-        Series7.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
-        Me.ChartLevel.Series.Add(Series7)
+        Series19.ChartArea = "ChartArea1"
+        Series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series19.Color = System.Drawing.Color.Blue
+        Series19.Legend = "Legend1"
+        Series19.Name = "Tank Level"
+        Series19.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
+        Me.ChartLevel.Series.Add(Series19)
         Me.ChartLevel.Size = New System.Drawing.Size(679, 182)
         Me.ChartLevel.TabIndex = 2
         Me.ChartLevel.Text = "Chart1"
+        '
+        'tableTangki
+        '
+        Me.tableTangki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tableTangki.Location = New System.Drawing.Point(315, 27)
+        Me.tableTangki.Name = "tableTangki"
+        Me.tableTangki.Size = New System.Drawing.Size(240, 150)
+        Me.tableTangki.TabIndex = 12
+        '
+        'table54
+        '
+        Me.table54.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.table54.Location = New System.Drawing.Point(41, 27)
+        Me.table54.Name = "table54"
+        Me.table54.Size = New System.Drawing.Size(240, 150)
+        Me.table54.TabIndex = 12
         '
         'Panel1
         '
@@ -389,22 +389,22 @@ Partial Class Form1
         '
         'ChartTemp
         '
-        ChartArea10.Name = "ChartArea1"
-        Me.ChartTemp.ChartAreas.Add(ChartArea10)
+        ChartArea26.Name = "ChartArea1"
+        Me.ChartTemp.ChartAreas.Add(ChartArea26)
         Me.ChartTemp.Dock = System.Windows.Forms.DockStyle.Fill
-        Legend10.Alignment = System.Drawing.StringAlignment.Far
-        Legend10.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-        Legend10.Name = "Legend1"
-        Me.ChartTemp.Legends.Add(Legend10)
+        Legend26.Alignment = System.Drawing.StringAlignment.Far
+        Legend26.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend26.Name = "Legend1"
+        Me.ChartTemp.Legends.Add(Legend26)
         Me.ChartTemp.Location = New System.Drawing.Point(0, 0)
         Me.ChartTemp.Name = "ChartTemp"
-        Series8.ChartArea = "ChartArea1"
-        Series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series8.Color = System.Drawing.Color.SeaGreen
-        Series8.Legend = "Legend1"
-        Series8.Name = "Temperature"
-        Series8.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
-        Me.ChartTemp.Series.Add(Series8)
+        Series20.ChartArea = "ChartArea1"
+        Series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series20.Color = System.Drawing.Color.SeaGreen
+        Series20.Legend = "Legend1"
+        Series20.Name = "Temperature"
+        Series20.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
+        Me.ChartTemp.Series.Add(Series20)
         Me.ChartTemp.Size = New System.Drawing.Size(679, 184)
         Me.ChartTemp.TabIndex = 3
         Me.ChartTemp.Text = "Chart1"
@@ -511,35 +511,35 @@ Partial Class Form1
         '
         'ChartPressure
         '
-        ChartArea11.Name = "ChartArea1"
-        Me.ChartPressure.ChartAreas.Add(ChartArea11)
+        ChartArea27.Name = "ChartArea1"
+        Me.ChartPressure.ChartAreas.Add(ChartArea27)
         Me.ChartPressure.Dock = System.Windows.Forms.DockStyle.Fill
-        Legend11.Alignment = System.Drawing.StringAlignment.Far
-        Legend11.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-        Legend11.Name = "Legend1"
-        Me.ChartPressure.Legends.Add(Legend11)
+        Legend27.Alignment = System.Drawing.StringAlignment.Far
+        Legend27.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend27.Name = "Legend1"
+        Me.ChartPressure.Legends.Add(Legend27)
         Me.ChartPressure.Location = New System.Drawing.Point(0, 0)
         Me.ChartPressure.Name = "ChartPressure"
-        Series9.ChartArea = "ChartArea1"
-        Series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series9.Color = System.Drawing.Color.BlueViolet
-        Series9.Legend = "Legend1"
-        Series9.Name = "Pressure"
-        Series9.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
-        Me.ChartPressure.Series.Add(Series9)
+        Series21.ChartArea = "ChartArea1"
+        Series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series21.Color = System.Drawing.Color.BlueViolet
+        Series21.Legend = "Legend1"
+        Series21.Name = "Pressure"
+        Series21.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
+        Me.ChartPressure.Series.Add(Series21)
         Me.ChartPressure.Size = New System.Drawing.Size(676, 189)
         Me.ChartPressure.TabIndex = 4
         Me.ChartPressure.Text = "Chart1"
         '
         'Chart3
         '
-        ChartArea12.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea12)
+        ChartArea28.Name = "ChartArea1"
+        Me.Chart3.ChartAreas.Add(ChartArea28)
         Me.Chart3.Dock = System.Windows.Forms.DockStyle.Fill
-        Legend12.Alignment = System.Drawing.StringAlignment.Far
-        Legend12.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-        Legend12.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend12)
+        Legend28.Alignment = System.Drawing.StringAlignment.Far
+        Legend28.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend28.Name = "Legend1"
+        Me.Chart3.Legends.Add(Legend28)
         Me.Chart3.Location = New System.Drawing.Point(0, 0)
         Me.Chart3.Name = "Chart3"
         Me.Chart3.Size = New System.Drawing.Size(676, 189)
@@ -564,9 +564,9 @@ Partial Class Form1
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(350, 7)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(135, 16)
+        Me.Label3.Size = New System.Drawing.Size(140, 16)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "PRESSURE ( Psi )"
+        Me.Label3.Text = "PRESSURE ( Kpa )"
         '
         'portCom
         '
@@ -837,9 +837,9 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(12, 66)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(77, 13)
+        Me.Label6.Size = New System.Drawing.Size(82, 13)
         Me.Label6.TabIndex = 0
-        Me.Label6.Text = "Pressure ( Psi )"
+        Me.Label6.Text = "Pressure ( Kpa )"
         '
         'tBoxPress
         '
@@ -1145,9 +1145,9 @@ Partial Class Form1
         Me.SplitContainer3.Panel2.ResumeLayout(False)
         Me.SplitContainer3.Panel2.PerformLayout()
         Me.SplitContainer3.ResumeLayout(False)
+        CType(Me.ChartLevel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tableTangki, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.table54, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ChartLevel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.SplitContainer2.Panel1.ResumeLayout(False)
