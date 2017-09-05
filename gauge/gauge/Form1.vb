@@ -595,18 +595,21 @@ Public Class Form1
         If levelRequestedTimeout And (ComRetryCountLevel < ComReqRetry) Then
             ComRetryCountLevel = ComRetryCountLevel + 1
             levelRequestedTimeout = False
+            time_req_level = Now
             add_log("Tank Level command retry " & ComRetryCountLevel)
         End If
 
         If tempRequestedTimeout And (ComRetryCountTemp < ComReqRetry) Then
             ComRetryCountTemp = ComRetryCountTemp + 1
             tempRequestedTimeout = False
+            time_req_temp = Now
             add_log("Tank Temp command retry " & ComRetryCountTemp)
         End If
 
         If presRequestedTimeout And (ComRetryCountPress < ComReqRetry) Then
             ComRetryCountPress = ComRetryCountPress + 1
             presRequestedTimeout = False
+            time_req_press = Now
             add_log("Tank pressure command retry " & ComRetryCountPress)
         End If
 
@@ -626,12 +629,14 @@ Public Class Form1
                 rowTempLookup = i
                 Exit For
             End If
+            rowTempLookup = i
         Next
         For i = colDensityStartTable54 To table54.ColumnCount - 1
             If densityVal <= table54.Item(i, rowDensityTable54).value Then
                 colDensityLookup = i
                 Exit For
             End If
+            colDensityLookup = i
         Next
         faktorKoreksiTemp.Text = table54.Item(colDensityLookup, rowTempLookup).Value
 
@@ -645,6 +650,7 @@ Public Class Form1
                 rowPersenLookup = i
                 Exit For
             End If
+            rowPersenLookup = i
         Next
         nettLiterProducLiquid.Text = tableTangki.Item(colLiterTableTangki, rowPersenLookup).value
 
@@ -672,6 +678,7 @@ Public Class Form1
                 rowMaxLookup = i
                 Exit For
             End If
+            rowMaxLookup = i
         Next
         nettLitersProductVapour.Text = tableTangki.Item(colLiterTableTangki, rowMaxLookup).value - Convert.ToDouble(nettLiterProducLiquid.Text)
 
