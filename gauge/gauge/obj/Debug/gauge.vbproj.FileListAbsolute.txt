@@ -24,7 +24,6 @@ D:\PROJECT\Gauge\publish\gauge\gauge\obj\Debug\gauge.pdb
 D:\PROJECT\Gauge\publish\gauge\gauge\bin\Debug\gauge.exe
 D:\PROJECT\Gauge\publish\gauge\gauge\bin\Debug\gauge.pdb
 D:\PROJECT\Gauge\publish\gauge\gauge\bin\Debug\gauge.xml
-D:\PROJECT\Gauge\publish\gauge\gauge\bin\Debug\AquaGauge.dll
 D:\PROJECT\Gauge\publish\gauge\gauge\bin\Debug\AquaGauge.pdb
 D:\PROJECT\Gauge\publish\gauge\gauge\obj\Debug\ResolveAssemblyReference.cache
 D:\PROJECT\Gauge\publish\gauge\gauge\obj\Debug\Tank_Measurement.About.resources

@@ -76,7 +76,30 @@ Public Class Form1
     Public gotPressTime As Date
 
     Public reqDataCommandReply As String = "ComAccepted"
+    Public OutliersDetetionFailed As String = "Err500"
+    Public NoValidSensorAfterReading As String = "Err100"
+    Public NoValidSensorAfterLearning As String = "Err200"
+    Public MotorCannotReachTargetPosWhenLearning As String = "Err300"
+    Public HomingFailure As String = "Err400"
+    Public UnrecognizedCommand As String = "Err800"
 
+    Public Enum ERROR_CODE
+        NoError
+        OutlierDetFailed
+        NoValidSensorReading
+        NoValidSensorLearning
+        MotorCannotReachLearning
+        HomingFailure
+        UnrecognizeCommand
+    End Enum
+
+    Public ErrLevel As Integer
+    Public ErrPress As Integer
+    Public ErrTemp As Integer
+
+    Public levelDammage As Boolean
+    Public PresDammage As Boolean
+    Public TempDammage As Boolean
 
     Public gotComReplyLevel As Boolean
     Public gotComReplyTemp As Boolean
@@ -335,6 +358,14 @@ Public Class Form1
             gotPress = False
             gotTemp = False
 
+            ErrLevel = ERROR_CODE.NoError
+            ErrPress = ERROR_CODE.NoError
+            ErrTemp = ERROR_CODE.NoError
+
+            levelDammage = False
+            PresDammage = False
+            TempDammage = False
+
             ComRetryCountLevel = 0
             ComRetryCountTemp = 0
             ComRetryCountPress = 0
@@ -430,7 +461,9 @@ Public Class Form1
         End If
 
         ' ================ REQUEST DATA =====================================================================================================================================================
-        If (Now > time_req_level) And ((presRequested = False) Or presRequestedTimeout) And ((tempRequested = False) Or tempRequestedTimeout) And (levelRequestedTimeout = False) Then
+        If (Now > time_req_level) And ((presRequested = False) Or presRequestedTimeout) And ((tempRequested = False) Or tempRequestedTimeout) _
+            And (levelRequestedTimeout = False) And levelDammage = False Then
+
             time_req_level = time_req_level.AddSeconds(update_period)
             portCom.WriteLine(idLevel & ":" & reqDataCommand & "?")
             timeCountReqLevel = Now
@@ -441,7 +474,10 @@ Public Class Form1
             LevelStatus.Text = "Tank Level data requested"
             add_log("Tank Level data requested")
             'Console.WriteLine("level request data")
-        ElseIf (Now > time_req_press) And ((levelRequested = False) Or levelRequestedTimeout) And ((tempRequested = False) Or tempRequestedTimeout) And (presRequestedTimeout = False) Then
+
+        ElseIf (Now > time_req_press) And ((levelRequested = False) Or levelRequestedTimeout) And ((tempRequested = False) Or tempRequestedTimeout) _
+            And (presRequestedTimeout = False) And TempDammage = False Then
+
             time_req_press = time_req_press.AddSeconds(update_period)
             portCom.WriteLine(idPress & ":" & reqDataCommand & "?")
             timeCountPress = Now
@@ -452,7 +488,10 @@ Public Class Form1
             PressStatus.Text = "Tank Temperature data requested"
             add_log("Tank Temperature data requested")
             'Console.WriteLine("pressure request data")
-        ElseIf (Now > time_req_temp) And ((levelRequested = False) Or levelRequestedTimeout) And ((presRequested = False) Or presRequestedTimeout) And (tempRequestedTimeout = False) Then
+
+        ElseIf (Now > time_req_temp) And ((levelRequested = False) Or levelRequestedTimeout) And ((presRequested = False) Or presRequestedTimeout) _
+            And (tempRequestedTimeout = False) And PresDammage = False Then
+
             time_req_temp = time_req_temp.AddSeconds(update_period)
             portCom.WriteLine(idTemp & ":" & reqDataCommand & "?")
             timeCountTemp = Now
@@ -590,13 +629,37 @@ Public Class Form1
                 presRequested = False
             End If
         End If
-
+        ' ================ ERROR CHECKING =========================================================================================================================================
+        If (ErrLevel = ERROR_CODE.HomingFailure) Or ErrLevel = ERROR_CODE.MotorCannotReachLearning Then
+            levelDammage = True
+        End If
+        If (ErrTemp = ERROR_CODE.HomingFailure) Or ErrTemp = ERROR_CODE.MotorCannotReachLearning Then
+            tempDammage = True
+        End If
+        If (ErrPress = ERROR_CODE.HomingFailure) Or ErrPress = ERROR_CODE.MotorCannotReachLearning Then
+            presDammage = True
+        End If
+        If ErrLevel <> ERROR_CODE.NoError Then
+            levelRequestedTimeout = True
+            ErrLevel = ERROR_CODE.NoError
+        End If
+        If ErrTemp <> ERROR_CODE.NoError Then
+            tempRequestedTimeout = True
+            ErrTemp = ERROR_CODE.NoError
+        End If
+        If ErrPress <> ERROR_CODE.NoError Then
+            presRequestedTimeout = True
+            ErrPress = ERROR_CODE.NoError
+        End If
         ' ================ RETRY CHECKING =========================================================================================================================================
         If levelRequestedTimeout And (ComRetryCountLevel < ComReqRetry) Then
             ComRetryCountLevel = ComRetryCountLevel + 1
             levelRequestedTimeout = False
             time_req_level = Now
             add_log("Tank Level command retry " & ComRetryCountLevel)
+        Else
+            time_req_level = time_req_level.AddSeconds(update_period)
+            levelRequestedTimeout = False
         End If
 
         If tempRequestedTimeout And (ComRetryCountTemp < ComReqRetry) Then
@@ -604,6 +667,9 @@ Public Class Form1
             tempRequestedTimeout = False
             time_req_temp = Now
             add_log("Tank Temp command retry " & ComRetryCountTemp)
+        Else
+            time_req_temp = time_req_temp.AddSeconds(update_period)
+            tempRequestedTimeout = False
         End If
 
         If presRequestedTimeout And (ComRetryCountPress < ComReqRetry) Then
@@ -611,6 +677,9 @@ Public Class Form1
             presRequestedTimeout = False
             time_req_press = Now
             add_log("Tank pressure command retry " & ComRetryCountPress)
+        Else
+            time_req_press = time_req_press.AddSeconds(update_period)
+            presRequestedTimeout = False
         End If
 
     End Sub
@@ -782,6 +851,7 @@ Public Class Form1
     Private Sub portCom_DataReceived(ByVal sender As System.Object, ByVal e As System.IO.Ports.SerialDataReceivedEventArgs) Handles portCom.DataReceived
         Dim got_data As String = ""
         Dim strip_str As String = ""
+        Dim errVal As Integer
         got_data = portCom.ReadExisting
         bufferCom &= got_data
 
@@ -812,9 +882,30 @@ Public Class Form1
                 ElseIf strip_str.Contains(idTemp & ":") Then
                     gotComReplyTemp = True
                 End If
+            ElseIf strip_str.Contains(OutliersDetetionFailed) Then
+                errVal = ERROR_CODE.OutlierDetFailed
+            ElseIf strip_str.Contains(NoValidSensorAfterReading) Then
+                errVal = ERROR_CODE.NoValidSensorReading
+            ElseIf strip_str.Contains(NoValidSensorAfterLearning) Then
+                errVal = ERROR_CODE.NoValidSensorLearning
+            ElseIf strip_str.Contains(MotorCannotReachTargetPosWhenLearning) Then
+                errVal = ERROR_CODE.MotorCannotReachLearning
+            ElseIf strip_str.Contains(HomingFailure) Then
+                errVal = ERROR_CODE.HomingFailure
+            ElseIf strip_str.Contains(UnrecognizedCommand) Then
+                errVal = ERROR_CODE.UnrecognizeCommand
             End If
-            'bufferCom = ""
+            If errVal <> 0 Then
+                If strip_str.Contains(idLevel & ":") Then
+                    ErrLevel = errVal
+                ElseIf strip_str.Contains(idPress & ":") Then
+                    ErrPress = errVal
+                ElseIf strip_str.Contains(idTemp & ":") Then
+                    ErrTemp = errVal
+                End If
+            End If
         End If
+            'bufferCom = ""
     End Sub
 
     Private Sub export_csv(ByVal field)
