@@ -652,36 +652,41 @@ Public Class Form1
             ErrPress = ERROR_CODE.NoError
         End If
         ' ================ RETRY CHECKING =========================================================================================================================================
-        If levelRequestedTimeout And (ComRetryCountLevel < ComReqRetry) Then
-            ComRetryCountLevel = ComRetryCountLevel + 1
-            levelRequestedTimeout = False
-            time_req_level = Now
-            add_log("Tank Level command retry " & ComRetryCountLevel)
-        Else
-            time_req_level = time_req_level.AddSeconds(update_period)
-            levelRequestedTimeout = False
+        If levelRequestedTimeout Then
+            If (ComRetryCountLevel < ComReqRetry) Then
+                ComRetryCountLevel = ComRetryCountLevel + 1
+                levelRequestedTimeout = False
+                time_req_level = Now
+                add_log("Tank Level command retry " & ComRetryCountLevel)
+            Else
+                time_req_level = time_req_level.AddSeconds(update_period)
+                levelRequestedTimeout = False
+            End If
         End If
 
-        If tempRequestedTimeout And (ComRetryCountTemp < ComReqRetry) Then
-            ComRetryCountTemp = ComRetryCountTemp + 1
-            tempRequestedTimeout = False
-            time_req_temp = Now
-            add_log("Tank Temp command retry " & ComRetryCountTemp)
-        Else
-            time_req_temp = time_req_temp.AddSeconds(update_period)
-            tempRequestedTimeout = False
+        If tempRequestedTimeout Then
+            If (ComRetryCountTemp < ComReqRetry) Then
+                ComRetryCountTemp = ComRetryCountTemp + 1
+                tempRequestedTimeout = False
+                time_req_temp = Now
+                add_log("Tank Temp command retry " & ComRetryCountTemp)
+            Else
+                time_req_temp = time_req_temp.AddSeconds(update_period)
+                tempRequestedTimeout = False
+            End If
         End If
 
-        If presRequestedTimeout And (ComRetryCountPress < ComReqRetry) Then
-            ComRetryCountPress = ComRetryCountPress + 1
-            presRequestedTimeout = False
-            time_req_press = Now
-            add_log("Tank pressure command retry " & ComRetryCountPress)
-        Else
-            time_req_press = time_req_press.AddSeconds(update_period)
-            presRequestedTimeout = False
+        If presRequestedTimeout Then
+            If (ComRetryCountPress < ComReqRetry) Then
+                ComRetryCountPress = ComRetryCountPress + 1
+                presRequestedTimeout = False
+                time_req_press = Now
+                add_log("Tank pressure command retry " & ComRetryCountPress)
+            Else
+                time_req_press = time_req_press.AddSeconds(update_period)
+                presRequestedTimeout = False
+            End If
         End If
-
     End Sub
 
     Private Sub calculateData(ByVal levelVal As Double, ByVal tempVal As Double, ByVal pressureVal As Double, ByVal densityVal As Double)
