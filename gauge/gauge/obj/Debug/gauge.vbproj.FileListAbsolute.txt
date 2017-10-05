@@ -53,3 +53,8 @@ C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.vbproj.GenerateResource.Cache
 C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.exe
 C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.xml
 C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.pdb
+C:\Git\Dial Reader\gauge\gauge\bin\Debug\gauge.exe.manifest
+C:\Git\Dial Reader\gauge\gauge\bin\Debug\gauge.application
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.TrustInfo.xml
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.exe.manifest
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.application
