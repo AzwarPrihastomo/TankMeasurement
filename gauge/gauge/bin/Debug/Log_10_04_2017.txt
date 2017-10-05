@@ -1,0 +1,18 @@
+04/10/2017 23:09:28:program running...
+04/10/2017 23:10:50:user try connect
+04/10/2017 23:10:51:Tank Level data requested
+04/10/2017 23:10:52:client send data -->level:ComAccepted
+04/10/2017 23:10:52:Tank Level data reading
+04/10/2017 23:11:15:client send data -->level:data=87.66
+04/10/2017 23:11:15:Tank Temperature data requested
+04/10/2017 23:11:16:client send data -->press:ComAccepted
+04/10/2017 23:11:16:Tank pressure data reading
+04/10/2017 23:11:39:client send data -->press:data=9.97
+04/10/2017 23:11:39:Tank pressure data requested
+04/10/2017 23:11:40:client send data -->temp:ComAccepted
+04/10/2017 23:11:40:Tank Temperature data reading
+04/10/2017 23:12:03:client send data -->temp:data=27.59
+04/10/2017 23:12:03:Tank level got data
+04/10/2017 23:12:03:Tank Temperature got data
+04/10/2017 23:12:03:Tank pressure got data
+04/10/2017 23:15:08:user try disconnect

@@ -34,3 +34,22 @@ D:\PROJECT\Gauge\publish\gauge\gauge\obj\Debug\Tank_Measurement.password.resourc
 D:\PROJECT\Gauge\publish\gauge\gauge\obj\Debug\Tank_Measurement.setting.resources
 D:\PROJECT\Gauge\publish\gauge\gauge\obj\Debug\Tank_Measurement.tables.resources
 D:\PROJECT\Gauge\publish\gauge\gauge\obj\Debug\gauge.vbproj.GenerateResource.Cache
+C:\Git\Dial Reader\gauge\gauge\bin\Debug\gauge.exe.config
+C:\Git\Dial Reader\gauge\gauge\bin\Debug\gauge.exe
+C:\Git\Dial Reader\gauge\gauge\bin\Debug\gauge.pdb
+C:\Git\Dial Reader\gauge\gauge\bin\Debug\gauge.xml
+C:\Git\Dial Reader\gauge\gauge\bin\Debug\AquaGauge.dll
+C:\Git\Dial Reader\gauge\gauge\bin\Debug\MySql.Data.dll
+C:\Git\Dial Reader\gauge\gauge\bin\Debug\AquaGauge.pdb
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.vbprojResolveAssemblyReference.cache
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\Tank_Measurement.About.resources
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\Tank_Measurement.ExportCsv.resources
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\Tank_Measurement.Form1.resources
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\Tank_Measurement.Resources.resources
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\Tank_Measurement.password.resources
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\Tank_Measurement.setting.resources
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\Tank_Measurement.tables.resources
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.vbproj.GenerateResource.Cache
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.exe
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.xml
+C:\Git\Dial Reader\gauge\gauge\obj\Debug\gauge.pdb
