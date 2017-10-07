@@ -25,17 +25,17 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
     Me.components = New System.ComponentModel.Container()
-    Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-    Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-    Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-    Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-    Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-    Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-    Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-    Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-    Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-    Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-    Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+    Dim ChartArea21 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+    Dim Legend21 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+    Dim Series16 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+    Dim ChartArea22 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+    Dim Legend22 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+    Dim Series17 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+    Dim ChartArea23 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+    Dim Legend23 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+    Dim Series18 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+    Dim ChartArea24 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+    Dim Legend24 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
     Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
     Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
     Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
@@ -134,6 +134,8 @@ Partial Class Form1
     Me.Label9 = New System.Windows.Forms.Label()
     Me.Label8 = New System.Windows.Forms.Label()
     Me.Label23 = New System.Windows.Forms.Label()
+    Me.Button2 = New System.Windows.Forms.Button()
+    Me.Button3 = New System.Windows.Forms.Button()
     CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.SplitContainer1.Panel1.SuspendLayout()
     Me.SplitContainer1.Panel2.SuspendLayout()
@@ -181,8 +183,8 @@ Partial Class Form1
     'SplitContainer1
     '
     Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-    Me.SplitContainer1.Location = New System.Drawing.Point(0, 28)
-    Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4)
+    Me.SplitContainer1.Location = New System.Drawing.Point(0, 33)
+    Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.SplitContainer1.Name = "SplitContainer1"
     Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
     '
@@ -194,16 +196,16 @@ Partial Class Form1
     'SplitContainer1.Panel2
     '
     Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-    Me.SplitContainer1.Size = New System.Drawing.Size(1160, 792)
-    Me.SplitContainer1.SplitterDistance = 256
-    Me.SplitContainer1.SplitterWidth = 5
+    Me.SplitContainer1.Size = New System.Drawing.Size(1305, 993)
+    Me.SplitContainer1.SplitterDistance = 320
+    Me.SplitContainer1.SplitterWidth = 6
     Me.SplitContainer1.TabIndex = 2
     '
     'SplitContainer3
     '
     Me.SplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill
-    Me.SplitContainer3.Location = New System.Drawing.Point(0, 32)
-    Me.SplitContainer3.Margin = New System.Windows.Forms.Padding(4)
+    Me.SplitContainer3.Location = New System.Drawing.Point(0, 40)
+    Me.SplitContainer3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.SplitContainer3.Name = "SplitContainer3"
     '
     'SplitContainer3.Panel1
@@ -217,9 +219,9 @@ Partial Class Form1
     Me.SplitContainer3.Panel2.Controls.Add(Me.ChartLevel)
     Me.SplitContainer3.Panel2.Controls.Add(Me.tableTangki)
     Me.SplitContainer3.Panel2.Controls.Add(Me.table54)
-    Me.SplitContainer3.Size = New System.Drawing.Size(1160, 224)
-    Me.SplitContainer3.SplitterDistance = 249
-    Me.SplitContainer3.SplitterWidth = 5
+    Me.SplitContainer3.Size = New System.Drawing.Size(1305, 280)
+    Me.SplitContainer3.SplitterDistance = 280
+    Me.SplitContainer3.SplitterWidth = 6
     Me.SplitContainer3.TabIndex = 0
     '
     'gaugeLevel
@@ -230,12 +232,12 @@ Partial Class Form1
     Me.gaugeLevel.Dock = System.Windows.Forms.DockStyle.Top
     Me.gaugeLevel.Glossiness = 70.0!
     Me.gaugeLevel.Location = New System.Drawing.Point(0, 0)
-    Me.gaugeLevel.Margin = New System.Windows.Forms.Padding(5)
+    Me.gaugeLevel.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
     Me.gaugeLevel.MaxValue = 100.0!
     Me.gaugeLevel.MinValue = 0!
     Me.gaugeLevel.Name = "gaugeLevel"
     Me.gaugeLevel.RecommendedValue = 1.0!
-    Me.gaugeLevel.Size = New System.Drawing.Size(249, 249)
+    Me.gaugeLevel.Size = New System.Drawing.Size(280, 280)
     Me.gaugeLevel.TabIndex = 1
     Me.gaugeLevel.ThresholdPercent = 0!
     Me.gaugeLevel.Value = 0!
@@ -245,10 +247,10 @@ Partial Class Form1
     Me.ChkTodayLevel.AutoSize = True
     Me.ChkTodayLevel.Checked = True
     Me.ChkTodayLevel.CheckState = System.Windows.Forms.CheckState.Checked
-    Me.ChkTodayLevel.Location = New System.Drawing.Point(55, 9)
-    Me.ChkTodayLevel.Margin = New System.Windows.Forms.Padding(4)
+    Me.ChkTodayLevel.Location = New System.Drawing.Point(62, 11)
+    Me.ChkTodayLevel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.ChkTodayLevel.Name = "ChkTodayLevel"
-    Me.ChkTodayLevel.Size = New System.Drawing.Size(70, 21)
+    Me.ChkTodayLevel.Size = New System.Drawing.Size(78, 24)
     Me.ChkTodayLevel.TabIndex = 11
     Me.ChkTodayLevel.Text = "Today"
     Me.ChkTodayLevel.UseVisualStyleBackColor = True
@@ -256,52 +258,52 @@ Partial Class Form1
     'DTLevel
     '
     Me.DTLevel.Enabled = False
-    Me.DTLevel.Location = New System.Drawing.Point(141, 7)
-    Me.DTLevel.Margin = New System.Windows.Forms.Padding(4)
+    Me.DTLevel.Location = New System.Drawing.Point(159, 9)
+    Me.DTLevel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.DTLevel.Name = "DTLevel"
-    Me.DTLevel.Size = New System.Drawing.Size(265, 22)
+    Me.DTLevel.Size = New System.Drawing.Size(298, 26)
     Me.DTLevel.TabIndex = 10
     Me.DTLevel.Value = New Date(2012, 10, 23, 0, 0, 0, 0)
     '
     'ChartLevel
     '
-    ChartArea1.Name = "ChartArea1"
-    Me.ChartLevel.ChartAreas.Add(ChartArea1)
+    ChartArea21.Name = "ChartArea1"
+    Me.ChartLevel.ChartAreas.Add(ChartArea21)
     Me.ChartLevel.Dock = System.Windows.Forms.DockStyle.Fill
-    Legend1.Alignment = System.Drawing.StringAlignment.Far
-    Legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-    Legend1.Name = "Legend1"
-    Me.ChartLevel.Legends.Add(Legend1)
+    Legend21.Alignment = System.Drawing.StringAlignment.Far
+    Legend21.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+    Legend21.Name = "Legend1"
+    Me.ChartLevel.Legends.Add(Legend21)
     Me.ChartLevel.Location = New System.Drawing.Point(0, 0)
-    Me.ChartLevel.Margin = New System.Windows.Forms.Padding(4)
+    Me.ChartLevel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.ChartLevel.Name = "ChartLevel"
-    Series1.ChartArea = "ChartArea1"
-    Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-    Series1.Color = System.Drawing.Color.Blue
-    Series1.Legend = "Legend1"
-    Series1.Name = "Tank Level"
-    Series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
-    Me.ChartLevel.Series.Add(Series1)
-    Me.ChartLevel.Size = New System.Drawing.Size(906, 224)
+    Series16.ChartArea = "ChartArea1"
+    Series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+    Series16.Color = System.Drawing.Color.Blue
+    Series16.Legend = "Legend1"
+    Series16.Name = "Tank Level"
+    Series16.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
+    Me.ChartLevel.Series.Add(Series16)
+    Me.ChartLevel.Size = New System.Drawing.Size(1019, 280)
     Me.ChartLevel.TabIndex = 2
     Me.ChartLevel.Text = "Chart1"
     '
     'tableTangki
     '
     Me.tableTangki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-    Me.tableTangki.Location = New System.Drawing.Point(420, 33)
-    Me.tableTangki.Margin = New System.Windows.Forms.Padding(4)
+    Me.tableTangki.Location = New System.Drawing.Point(472, 41)
+    Me.tableTangki.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.tableTangki.Name = "tableTangki"
-    Me.tableTangki.Size = New System.Drawing.Size(320, 185)
+    Me.tableTangki.Size = New System.Drawing.Size(360, 231)
     Me.tableTangki.TabIndex = 12
     '
     'table54
     '
     Me.table54.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-    Me.table54.Location = New System.Drawing.Point(55, 33)
-    Me.table54.Margin = New System.Windows.Forms.Padding(4)
+    Me.table54.Location = New System.Drawing.Point(62, 41)
+    Me.table54.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.table54.Name = "table54"
-    Me.table54.Size = New System.Drawing.Size(320, 185)
+    Me.table54.Size = New System.Drawing.Size(360, 231)
     Me.table54.TabIndex = 12
     '
     'Panel1
@@ -310,19 +312,19 @@ Partial Class Form1
     Me.Panel1.Controls.Add(Me.Label1)
     Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
     Me.Panel1.Location = New System.Drawing.Point(0, 0)
-    Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+    Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Panel1.Name = "Panel1"
-    Me.Panel1.Size = New System.Drawing.Size(1160, 32)
+    Me.Panel1.Size = New System.Drawing.Size(1305, 40)
     Me.Panel1.TabIndex = 1
     '
     'Label1
     '
     Me.Label1.AutoSize = True
     Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-    Me.Label1.Location = New System.Drawing.Point(467, 9)
+    Me.Label1.Location = New System.Drawing.Point(525, 11)
     Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label1.Name = "Label1"
-    Me.Label1.Size = New System.Drawing.Size(148, 20)
+    Me.Label1.Size = New System.Drawing.Size(172, 25)
     Me.Label1.TabIndex = 0
     Me.Label1.Text = "Tank Level ( % )"
     '
@@ -330,7 +332,7 @@ Partial Class Form1
     '
     Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
     Me.SplitContainer2.Location = New System.Drawing.Point(0, 0)
-    Me.SplitContainer2.Margin = New System.Windows.Forms.Padding(4)
+    Me.SplitContainer2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.SplitContainer2.Name = "SplitContainer2"
     Me.SplitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal
     '
@@ -343,16 +345,16 @@ Partial Class Form1
     '
     Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer5)
     Me.SplitContainer2.Panel2.Controls.Add(Me.Panel3)
-    Me.SplitContainer2.Size = New System.Drawing.Size(1160, 531)
-    Me.SplitContainer2.SplitterDistance = 259
-    Me.SplitContainer2.SplitterWidth = 5
+    Me.SplitContainer2.Size = New System.Drawing.Size(1305, 667)
+    Me.SplitContainer2.SplitterDistance = 325
+    Me.SplitContainer2.SplitterWidth = 6
     Me.SplitContainer2.TabIndex = 0
     '
     'SplitContainer4
     '
     Me.SplitContainer4.Dock = System.Windows.Forms.DockStyle.Fill
-    Me.SplitContainer4.Location = New System.Drawing.Point(0, 32)
-    Me.SplitContainer4.Margin = New System.Windows.Forms.Padding(4)
+    Me.SplitContainer4.Location = New System.Drawing.Point(0, 40)
+    Me.SplitContainer4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.SplitContainer4.Name = "SplitContainer4"
     '
     'SplitContainer4.Panel1
@@ -366,9 +368,9 @@ Partial Class Form1
     Me.SplitContainer4.Panel2.Controls.Add(Me.ChartTemp)
     Me.SplitContainer4.Panel2.Controls.Add(Me.dataGridExport)
     Me.SplitContainer4.Panel2.Controls.Add(Me.data_log_table)
-    Me.SplitContainer4.Size = New System.Drawing.Size(1160, 227)
-    Me.SplitContainer4.SplitterDistance = 249
-    Me.SplitContainer4.SplitterWidth = 5
+    Me.SplitContainer4.Size = New System.Drawing.Size(1305, 285)
+    Me.SplitContainer4.SplitterDistance = 280
+    Me.SplitContainer4.SplitterWidth = 6
     Me.SplitContainer4.TabIndex = 0
     '
     'gaugeTemp
@@ -379,12 +381,12 @@ Partial Class Form1
     Me.gaugeTemp.Dock = System.Windows.Forms.DockStyle.Fill
     Me.gaugeTemp.Glossiness = 70.0!
     Me.gaugeTemp.Location = New System.Drawing.Point(0, 0)
-    Me.gaugeTemp.Margin = New System.Windows.Forms.Padding(5)
+    Me.gaugeTemp.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
     Me.gaugeTemp.MaxValue = 200.0!
     Me.gaugeTemp.MinValue = 0!
     Me.gaugeTemp.Name = "gaugeTemp"
     Me.gaugeTemp.RecommendedValue = 0!
-    Me.gaugeTemp.Size = New System.Drawing.Size(249, 249)
+    Me.gaugeTemp.Size = New System.Drawing.Size(280, 280)
     Me.gaugeTemp.TabIndex = 1
     Me.gaugeTemp.ThresholdPercent = 0!
     Me.gaugeTemp.Value = 0!
@@ -394,10 +396,10 @@ Partial Class Form1
     Me.ChkTodayTemp.AutoSize = True
     Me.ChkTodayTemp.Checked = True
     Me.ChkTodayTemp.CheckState = System.Windows.Forms.CheckState.Checked
-    Me.ChkTodayTemp.Location = New System.Drawing.Point(55, 9)
-    Me.ChkTodayTemp.Margin = New System.Windows.Forms.Padding(4)
+    Me.ChkTodayTemp.Location = New System.Drawing.Point(62, 11)
+    Me.ChkTodayTemp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.ChkTodayTemp.Name = "ChkTodayTemp"
-    Me.ChkTodayTemp.Size = New System.Drawing.Size(70, 21)
+    Me.ChkTodayTemp.Size = New System.Drawing.Size(78, 24)
     Me.ChkTodayTemp.TabIndex = 11
     Me.ChkTodayTemp.Text = "Today"
     Me.ChkTodayTemp.UseVisualStyleBackColor = True
@@ -405,33 +407,33 @@ Partial Class Form1
     'DTTemp
     '
     Me.DTTemp.Enabled = False
-    Me.DTTemp.Location = New System.Drawing.Point(141, 7)
-    Me.DTTemp.Margin = New System.Windows.Forms.Padding(4)
+    Me.DTTemp.Location = New System.Drawing.Point(159, 9)
+    Me.DTTemp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.DTTemp.Name = "DTTemp"
-    Me.DTTemp.Size = New System.Drawing.Size(265, 22)
+    Me.DTTemp.Size = New System.Drawing.Size(298, 26)
     Me.DTTemp.TabIndex = 10
     Me.DTTemp.Value = New Date(2012, 10, 23, 0, 0, 0, 0)
     '
     'ChartTemp
     '
-    ChartArea2.Name = "ChartArea1"
-    Me.ChartTemp.ChartAreas.Add(ChartArea2)
+    ChartArea22.Name = "ChartArea1"
+    Me.ChartTemp.ChartAreas.Add(ChartArea22)
     Me.ChartTemp.Dock = System.Windows.Forms.DockStyle.Fill
-    Legend2.Alignment = System.Drawing.StringAlignment.Far
-    Legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-    Legend2.Name = "Legend1"
-    Me.ChartTemp.Legends.Add(Legend2)
+    Legend22.Alignment = System.Drawing.StringAlignment.Far
+    Legend22.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+    Legend22.Name = "Legend1"
+    Me.ChartTemp.Legends.Add(Legend22)
     Me.ChartTemp.Location = New System.Drawing.Point(0, 0)
-    Me.ChartTemp.Margin = New System.Windows.Forms.Padding(4)
+    Me.ChartTemp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.ChartTemp.Name = "ChartTemp"
-    Series2.ChartArea = "ChartArea1"
-    Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-    Series2.Color = System.Drawing.Color.SeaGreen
-    Series2.Legend = "Legend1"
-    Series2.Name = "Temperature"
-    Series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
-    Me.ChartTemp.Series.Add(Series2)
-    Me.ChartTemp.Size = New System.Drawing.Size(906, 227)
+    Series17.ChartArea = "ChartArea1"
+    Series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+    Series17.Color = System.Drawing.Color.SeaGreen
+    Series17.Legend = "Legend1"
+    Series17.Name = "Temperature"
+    Series17.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
+    Me.ChartTemp.Series.Add(Series17)
+    Me.ChartTemp.Size = New System.Drawing.Size(1019, 285)
     Me.ChartTemp.TabIndex = 3
     Me.ChartTemp.Text = "Chart1"
     '
@@ -439,10 +441,10 @@ Partial Class Form1
     '
     Me.dataGridExport.AllowUserToAddRows = False
     Me.dataGridExport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-    Me.dataGridExport.Location = New System.Drawing.Point(371, 9)
-    Me.dataGridExport.Margin = New System.Windows.Forms.Padding(4)
+    Me.dataGridExport.Location = New System.Drawing.Point(417, 11)
+    Me.dataGridExport.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.dataGridExport.Name = "dataGridExport"
-    Me.dataGridExport.Size = New System.Drawing.Size(301, 181)
+    Me.dataGridExport.Size = New System.Drawing.Size(339, 226)
     Me.dataGridExport.TabIndex = 12
     Me.dataGridExport.Visible = False
     '
@@ -450,10 +452,10 @@ Partial Class Form1
     '
     Me.data_log_table.AllowUserToAddRows = False
     Me.data_log_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-    Me.data_log_table.Location = New System.Drawing.Point(35, 9)
-    Me.data_log_table.Margin = New System.Windows.Forms.Padding(4)
+    Me.data_log_table.Location = New System.Drawing.Point(39, 11)
+    Me.data_log_table.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.data_log_table.Name = "data_log_table"
-    Me.data_log_table.Size = New System.Drawing.Size(301, 181)
+    Me.data_log_table.Size = New System.Drawing.Size(339, 226)
     Me.data_log_table.TabIndex = 12
     Me.data_log_table.Visible = False
     '
@@ -463,9 +465,9 @@ Partial Class Form1
     Me.Panel2.Controls.Add(Me.Label2)
     Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
     Me.Panel2.Location = New System.Drawing.Point(0, 0)
-    Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+    Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Panel2.Name = "Panel2"
-    Me.Panel2.Size = New System.Drawing.Size(1160, 32)
+    Me.Panel2.Size = New System.Drawing.Size(1305, 40)
     Me.Panel2.TabIndex = 2
     '
     'Label2
@@ -474,18 +476,18 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
     Me.Label2.AutoSize = True
     Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-    Me.Label2.Location = New System.Drawing.Point(433, 9)
+    Me.Label2.Location = New System.Drawing.Point(487, 11)
     Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label2.Name = "Label2"
-    Me.Label2.Size = New System.Drawing.Size(204, 20)
+    Me.Label2.Size = New System.Drawing.Size(237, 25)
     Me.Label2.TabIndex = 0
     Me.Label2.Text = "TEMPERATURE ( ° C )"
     '
     'SplitContainer5
     '
     Me.SplitContainer5.Dock = System.Windows.Forms.DockStyle.Fill
-    Me.SplitContainer5.Location = New System.Drawing.Point(0, 32)
-    Me.SplitContainer5.Margin = New System.Windows.Forms.Padding(4)
+    Me.SplitContainer5.Location = New System.Drawing.Point(0, 40)
+    Me.SplitContainer5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.SplitContainer5.Name = "SplitContainer5"
     '
     'SplitContainer5.Panel1
@@ -498,9 +500,9 @@ Partial Class Form1
     Me.SplitContainer5.Panel2.Controls.Add(Me.DTPress)
     Me.SplitContainer5.Panel2.Controls.Add(Me.ChartPressure)
     Me.SplitContainer5.Panel2.Controls.Add(Me.Chart3)
-    Me.SplitContainer5.Size = New System.Drawing.Size(1160, 235)
-    Me.SplitContainer5.SplitterDistance = 253
-    Me.SplitContainer5.SplitterWidth = 5
+    Me.SplitContainer5.Size = New System.Drawing.Size(1305, 296)
+    Me.SplitContainer5.SplitterDistance = 284
+    Me.SplitContainer5.SplitterWidth = 6
     Me.SplitContainer5.TabIndex = 0
     '
     'gaugePressure
@@ -511,12 +513,12 @@ Partial Class Form1
     Me.gaugePressure.Dock = System.Windows.Forms.DockStyle.Fill
     Me.gaugePressure.Glossiness = 70.0!
     Me.gaugePressure.Location = New System.Drawing.Point(0, 0)
-    Me.gaugePressure.Margin = New System.Windows.Forms.Padding(5)
+    Me.gaugePressure.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
     Me.gaugePressure.MaxValue = 200.0!
     Me.gaugePressure.MinValue = 0!
     Me.gaugePressure.Name = "gaugePressure"
     Me.gaugePressure.RecommendedValue = 0!
-    Me.gaugePressure.Size = New System.Drawing.Size(253, 253)
+    Me.gaugePressure.Size = New System.Drawing.Size(284, 284)
     Me.gaugePressure.TabIndex = 1
     Me.gaugePressure.ThresholdPercent = 0!
     Me.gaugePressure.Value = 0!
@@ -526,10 +528,10 @@ Partial Class Form1
     Me.ChkTodayPress.AutoSize = True
     Me.ChkTodayPress.Checked = True
     Me.ChkTodayPress.CheckState = System.Windows.Forms.CheckState.Checked
-    Me.ChkTodayPress.Location = New System.Drawing.Point(51, 9)
-    Me.ChkTodayPress.Margin = New System.Windows.Forms.Padding(4)
+    Me.ChkTodayPress.Location = New System.Drawing.Point(57, 11)
+    Me.ChkTodayPress.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.ChkTodayPress.Name = "ChkTodayPress"
-    Me.ChkTodayPress.Size = New System.Drawing.Size(70, 21)
+    Me.ChkTodayPress.Size = New System.Drawing.Size(78, 24)
     Me.ChkTodayPress.TabIndex = 11
     Me.ChkTodayPress.Text = "Today"
     Me.ChkTodayPress.UseVisualStyleBackColor = True
@@ -537,49 +539,49 @@ Partial Class Form1
     'DTPress
     '
     Me.DTPress.Enabled = False
-    Me.DTPress.Location = New System.Drawing.Point(137, 7)
-    Me.DTPress.Margin = New System.Windows.Forms.Padding(4)
+    Me.DTPress.Location = New System.Drawing.Point(154, 9)
+    Me.DTPress.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.DTPress.Name = "DTPress"
-    Me.DTPress.Size = New System.Drawing.Size(265, 22)
+    Me.DTPress.Size = New System.Drawing.Size(298, 26)
     Me.DTPress.TabIndex = 10
     Me.DTPress.Value = New Date(2012, 10, 23, 0, 0, 0, 0)
     '
     'ChartPressure
     '
-    ChartArea3.Name = "ChartArea1"
-    Me.ChartPressure.ChartAreas.Add(ChartArea3)
+    ChartArea23.Name = "ChartArea1"
+    Me.ChartPressure.ChartAreas.Add(ChartArea23)
     Me.ChartPressure.Dock = System.Windows.Forms.DockStyle.Fill
-    Legend3.Alignment = System.Drawing.StringAlignment.Far
-    Legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-    Legend3.Name = "Legend1"
-    Me.ChartPressure.Legends.Add(Legend3)
+    Legend23.Alignment = System.Drawing.StringAlignment.Far
+    Legend23.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+    Legend23.Name = "Legend1"
+    Me.ChartPressure.Legends.Add(Legend23)
     Me.ChartPressure.Location = New System.Drawing.Point(0, 0)
-    Me.ChartPressure.Margin = New System.Windows.Forms.Padding(4)
+    Me.ChartPressure.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.ChartPressure.Name = "ChartPressure"
-    Series3.ChartArea = "ChartArea1"
-    Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-    Series3.Color = System.Drawing.Color.BlueViolet
-    Series3.Legend = "Legend1"
-    Series3.Name = "Pressure"
-    Series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
-    Me.ChartPressure.Series.Add(Series3)
-    Me.ChartPressure.Size = New System.Drawing.Size(902, 235)
+    Series18.ChartArea = "ChartArea1"
+    Series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+    Series18.Color = System.Drawing.Color.BlueViolet
+    Series18.Legend = "Legend1"
+    Series18.Name = "Pressure"
+    Series18.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
+    Me.ChartPressure.Series.Add(Series18)
+    Me.ChartPressure.Size = New System.Drawing.Size(1015, 296)
     Me.ChartPressure.TabIndex = 4
     Me.ChartPressure.Text = "Chart1"
     '
     'Chart3
     '
-    ChartArea4.Name = "ChartArea1"
-    Me.Chart3.ChartAreas.Add(ChartArea4)
+    ChartArea24.Name = "ChartArea1"
+    Me.Chart3.ChartAreas.Add(ChartArea24)
     Me.Chart3.Dock = System.Windows.Forms.DockStyle.Fill
-    Legend4.Alignment = System.Drawing.StringAlignment.Far
-    Legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-    Legend4.Name = "Legend1"
-    Me.Chart3.Legends.Add(Legend4)
+    Legend24.Alignment = System.Drawing.StringAlignment.Far
+    Legend24.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+    Legend24.Name = "Legend1"
+    Me.Chart3.Legends.Add(Legend24)
     Me.Chart3.Location = New System.Drawing.Point(0, 0)
-    Me.Chart3.Margin = New System.Windows.Forms.Padding(4)
+    Me.Chart3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Chart3.Name = "Chart3"
-    Me.Chart3.Size = New System.Drawing.Size(902, 235)
+    Me.Chart3.Size = New System.Drawing.Size(1015, 296)
     Me.Chart3.TabIndex = 3
     Me.Chart3.Text = "Chart3"
     '
@@ -589,9 +591,9 @@ Partial Class Form1
     Me.Panel3.Controls.Add(Me.Label3)
     Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
     Me.Panel3.Location = New System.Drawing.Point(0, 0)
-    Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
+    Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Panel3.Name = "Panel3"
-    Me.Panel3.Size = New System.Drawing.Size(1160, 32)
+    Me.Panel3.Size = New System.Drawing.Size(1305, 40)
     Me.Panel3.TabIndex = 3
     '
     'Label3
@@ -600,10 +602,10 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
     Me.Label3.AutoSize = True
     Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-    Me.Label3.Location = New System.Drawing.Point(467, 9)
+    Me.Label3.Location = New System.Drawing.Point(525, 11)
     Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label3.Name = "Label3"
-    Me.Label3.Size = New System.Drawing.Size(172, 20)
+    Me.Label3.Size = New System.Drawing.Size(200, 25)
     Me.Label3.TabIndex = 0
     Me.Label3.Text = "PRESSURE ( Kpa )"
     '
@@ -616,8 +618,8 @@ Partial Class Form1
     Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.AboutToolStripMenuItem})
     Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
     Me.MenuStrip1.Name = "MenuStrip1"
-    Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-    Me.MenuStrip1.Size = New System.Drawing.Size(1573, 28)
+    Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(9, 2, 0, 2)
+    Me.MenuStrip1.Size = New System.Drawing.Size(1770, 33)
     Me.MenuStrip1.TabIndex = 3
     Me.MenuStrip1.Text = "MenuStrip1"
     '
@@ -625,74 +627,75 @@ Partial Class Form1
     '
     Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingToolStripMenuItem, Me.TablesToolStripMenuItem, Me.ExportToCsvToolStripMenuItem, Me.ToolStripSeparator1, Me.ExitToolStripMenuItem1})
     Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-    Me.FileToolStripMenuItem.Size = New System.Drawing.Size(44, 24)
+    Me.FileToolStripMenuItem.Size = New System.Drawing.Size(50, 29)
     Me.FileToolStripMenuItem.Text = "File"
     '
     'SettingToolStripMenuItem
     '
     Me.SettingToolStripMenuItem.Name = "SettingToolStripMenuItem"
-    Me.SettingToolStripMenuItem.Size = New System.Drawing.Size(171, 26)
+    Me.SettingToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
     Me.SettingToolStripMenuItem.Text = "Setting"
     '
     'TablesToolStripMenuItem
     '
     Me.TablesToolStripMenuItem.Name = "TablesToolStripMenuItem"
-    Me.TablesToolStripMenuItem.Size = New System.Drawing.Size(171, 26)
+    Me.TablesToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
     Me.TablesToolStripMenuItem.Text = "Tables"
     '
     'ExportToCsvToolStripMenuItem
     '
     Me.ExportToCsvToolStripMenuItem.Name = "ExportToCsvToolStripMenuItem"
-    Me.ExportToCsvToolStripMenuItem.Size = New System.Drawing.Size(171, 26)
+    Me.ExportToCsvToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
     Me.ExportToCsvToolStripMenuItem.Text = "Export to Csv"
     '
     'ToolStripSeparator1
     '
     Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-    Me.ToolStripSeparator1.Size = New System.Drawing.Size(168, 6)
+    Me.ToolStripSeparator1.Size = New System.Drawing.Size(199, 6)
     '
     'ExitToolStripMenuItem1
     '
     Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-    Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(171, 26)
+    Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(202, 30)
     Me.ExitToolStripMenuItem1.Text = "Exit"
     '
     'AboutToolStripMenuItem
     '
     Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-    Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(62, 24)
+    Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(74, 29)
     Me.AboutToolStripMenuItem.Text = "About"
     '
     'Panel4
     '
     Me.Panel4.BackColor = System.Drawing.Color.Silver
+    Me.Panel4.Controls.Add(Me.Button3)
+    Me.Panel4.Controls.Add(Me.Button2)
     Me.Panel4.Controls.Add(Me.Button1)
     Me.Panel4.Controls.Add(Me.btnRun)
     Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
-    Me.Panel4.Location = New System.Drawing.Point(0, 820)
-    Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
+    Me.Panel4.Location = New System.Drawing.Point(0, 1026)
+    Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Panel4.Name = "Panel4"
-    Me.Panel4.Size = New System.Drawing.Size(1573, 37)
+    Me.Panel4.Size = New System.Drawing.Size(1770, 46)
     Me.Panel4.TabIndex = 4
     '
     'Button1
     '
-    Me.Button1.Location = New System.Drawing.Point(1324, 5)
-    Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+    Me.Button1.Location = New System.Drawing.Point(1490, 6)
+    Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Button1.Name = "Button1"
-    Me.Button1.Size = New System.Drawing.Size(100, 28)
+    Me.Button1.Size = New System.Drawing.Size(112, 35)
     Me.Button1.TabIndex = 1
     Me.Button1.Text = "Button1"
     Me.Button1.UseVisualStyleBackColor = True
-    Me.Button1.Visible = False
     '
     'btnRun
     '
     Me.btnRun.Anchor = System.Windows.Forms.AnchorStyles.Right
-    Me.btnRun.Location = New System.Drawing.Point(1444, 5)
-    Me.btnRun.Margin = New System.Windows.Forms.Padding(4)
+    Me.btnRun.Location = New System.Drawing.Point(1624, 6)
+    Me.btnRun.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.btnRun.Name = "btnRun"
-    Me.btnRun.Size = New System.Drawing.Size(100, 28)
+    Me.btnRun.Size = New System.Drawing.Size(112, 35)
     Me.btnRun.TabIndex = 0
     Me.btnRun.Text = "Run"
     Me.btnRun.UseVisualStyleBackColor = True
@@ -701,35 +704,35 @@ Partial Class Form1
     '
     Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
     Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SystemStatus, Me.LevelStatus, Me.TempStatus, Me.PressStatus})
-    Me.StatusStrip1.Location = New System.Drawing.Point(0, 857)
+    Me.StatusStrip1.Location = New System.Drawing.Point(0, 1072)
     Me.StatusStrip1.Name = "StatusStrip1"
-    Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
-    Me.StatusStrip1.Size = New System.Drawing.Size(1573, 25)
+    Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 21, 0)
+    Me.StatusStrip1.Size = New System.Drawing.Size(1770, 30)
     Me.StatusStrip1.TabIndex = 5
     Me.StatusStrip1.Text = "StatusStrip1"
     '
     'SystemStatus
     '
     Me.SystemStatus.Name = "SystemStatus"
-    Me.SystemStatus.Size = New System.Drawing.Size(39, 20)
+    Me.SystemStatus.Size = New System.Drawing.Size(47, 25)
     Me.SystemStatus.Text = "IDLE"
     '
     'LevelStatus
     '
     Me.LevelStatus.Name = "LevelStatus"
-    Me.LevelStatus.Size = New System.Drawing.Size(120, 20)
+    Me.LevelStatus.Size = New System.Drawing.Size(144, 25)
     Me.LevelStatus.Text = "Tank Level Status"
     '
     'TempStatus
     '
     Me.TempStatus.Name = "TempStatus"
-    Me.TempStatus.Size = New System.Drawing.Size(170, 20)
+    Me.TempStatus.Size = New System.Drawing.Size(203, 25)
     Me.TempStatus.Text = "Tank Temperature Status"
     '
     'PressStatus
     '
     Me.PressStatus.Name = "PressStatus"
-    Me.PressStatus.Size = New System.Drawing.Size(140, 20)
+    Me.PressStatus.Size = New System.Drawing.Size(171, 25)
     Me.PressStatus.Text = "Tank Pressure Status"
     '
     'Timer1
@@ -741,12 +744,12 @@ Partial Class Form1
     Me.menuLevel.ImageScalingSize = New System.Drawing.Size(20, 20)
     Me.menuLevel.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExportCsvToolStripMenuItem})
     Me.menuLevel.Name = "menu"
-    Me.menuLevel.Size = New System.Drawing.Size(148, 28)
+    Me.menuLevel.Size = New System.Drawing.Size(169, 34)
     '
     'ExportCsvToolStripMenuItem
     '
     Me.ExportCsvToolStripMenuItem.Name = "ExportCsvToolStripMenuItem"
-    Me.ExportCsvToolStripMenuItem.Size = New System.Drawing.Size(147, 24)
+    Me.ExportCsvToolStripMenuItem.Size = New System.Drawing.Size(168, 30)
     Me.ExportCsvToolStripMenuItem.Text = "Export Csv"
     '
     'menuTemp
@@ -754,12 +757,12 @@ Partial Class Form1
     Me.menuTemp.ImageScalingSize = New System.Drawing.Size(20, 20)
     Me.menuTemp.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExportCsvToolStripMenuItem1})
     Me.menuTemp.Name = "menuTemp"
-    Me.menuTemp.Size = New System.Drawing.Size(148, 28)
+    Me.menuTemp.Size = New System.Drawing.Size(169, 34)
     '
     'ExportCsvToolStripMenuItem1
     '
     Me.ExportCsvToolStripMenuItem1.Name = "ExportCsvToolStripMenuItem1"
-    Me.ExportCsvToolStripMenuItem1.Size = New System.Drawing.Size(147, 24)
+    Me.ExportCsvToolStripMenuItem1.Size = New System.Drawing.Size(168, 30)
     Me.ExportCsvToolStripMenuItem1.Text = "Export Csv"
     '
     'menuPress
@@ -767,12 +770,12 @@ Partial Class Form1
     Me.menuPress.ImageScalingSize = New System.Drawing.Size(20, 20)
     Me.menuPress.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExportCsvToolStripMenuItem2})
     Me.menuPress.Name = "menuPress"
-    Me.menuPress.Size = New System.Drawing.Size(148, 28)
+    Me.menuPress.Size = New System.Drawing.Size(169, 34)
     '
     'ExportCsvToolStripMenuItem2
     '
     Me.ExportCsvToolStripMenuItem2.Name = "ExportCsvToolStripMenuItem2"
-    Me.ExportCsvToolStripMenuItem2.Size = New System.Drawing.Size(147, 24)
+    Me.ExportCsvToolStripMenuItem2.Size = New System.Drawing.Size(168, 30)
     Me.ExportCsvToolStripMenuItem2.Text = "Export Csv"
     '
     'SaveFileDialog1
@@ -794,18 +797,18 @@ Partial Class Form1
     Me.Panel5.Controls.Add(Me.GroupBox1)
     Me.Panel5.Controls.Add(Me.Label23)
     Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
-    Me.Panel5.Location = New System.Drawing.Point(1160, 28)
-    Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
+    Me.Panel5.Location = New System.Drawing.Point(1305, 33)
+    Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Panel5.Name = "Panel5"
-    Me.Panel5.Size = New System.Drawing.Size(413, 792)
+    Me.Panel5.Size = New System.Drawing.Size(465, 993)
     Me.Panel5.TabIndex = 6
     '
     'TotalKilograms
     '
-    Me.TotalKilograms.Location = New System.Drawing.Point(203, 722)
-    Me.TotalKilograms.Margin = New System.Windows.Forms.Padding(4)
+    Me.TotalKilograms.Location = New System.Drawing.Point(228, 902)
+    Me.TotalKilograms.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.TotalKilograms.Name = "TotalKilograms"
-    Me.TotalKilograms.Size = New System.Drawing.Size(132, 22)
+    Me.TotalKilograms.Size = New System.Drawing.Size(148, 26)
     Me.TotalKilograms.TabIndex = 12
     '
     'Panel7
@@ -815,19 +818,19 @@ Partial Class Form1
     Me.Panel7.Controls.Add(Me.Label15)
     Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
     Me.Panel7.Location = New System.Drawing.Point(0, 0)
-    Me.Panel7.Margin = New System.Windows.Forms.Padding(4)
+    Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Panel7.Name = "Panel7"
-    Me.Panel7.Size = New System.Drawing.Size(413, 32)
+    Me.Panel7.Size = New System.Drawing.Size(465, 40)
     Me.Panel7.TabIndex = 4
     '
     'Label22
     '
     Me.Label22.AutoSize = True
     Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-    Me.Label22.Location = New System.Drawing.Point(128, 9)
+    Me.Label22.Location = New System.Drawing.Point(144, 11)
     Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label22.Name = "Label22"
-    Me.Label22.Size = New System.Drawing.Size(103, 20)
+    Me.Label22.Size = New System.Drawing.Size(120, 25)
     Me.Label22.TabIndex = 0
     Me.Label22.Text = "Calculation"
     '
@@ -835,10 +838,10 @@ Partial Class Form1
     '
     Me.Label15.AutoSize = True
     Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-    Me.Label15.Location = New System.Drawing.Point(467, 9)
+    Me.Label15.Location = New System.Drawing.Point(525, 11)
     Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label15.Name = "Label15"
-    Me.Label15.Size = New System.Drawing.Size(148, 20)
+    Me.Label15.Size = New System.Drawing.Size(172, 25)
     Me.Label15.TabIndex = 0
     Me.Label15.Text = "Tank Level ( % )"
     '
@@ -852,86 +855,86 @@ Partial Class Form1
     Me.Panel6.Controls.Add(Me.tBoxPress)
     Me.Panel6.Controls.Add(Me.Label7)
     Me.Panel6.Controls.Add(Me.tBoxTemp)
-    Me.Panel6.Location = New System.Drawing.Point(31, 52)
-    Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
+    Me.Panel6.Location = New System.Drawing.Point(35, 65)
+    Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Panel6.Name = "Panel6"
-    Me.Panel6.Size = New System.Drawing.Size(332, 154)
+    Me.Panel6.Size = New System.Drawing.Size(374, 192)
     Me.Panel6.TabIndex = 3
     '
     'cBoxDensity
     '
     Me.cBoxDensity.FormattingEnabled = True
-    Me.cBoxDensity.Location = New System.Drawing.Point(172, 111)
-    Me.cBoxDensity.Margin = New System.Windows.Forms.Padding(4)
+    Me.cBoxDensity.Location = New System.Drawing.Point(194, 139)
+    Me.cBoxDensity.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.cBoxDensity.Name = "cBoxDensity"
-    Me.cBoxDensity.Size = New System.Drawing.Size(132, 24)
+    Me.cBoxDensity.Size = New System.Drawing.Size(148, 28)
     Me.cBoxDensity.TabIndex = 2
     Me.cBoxDensity.Text = "0.510"
     '
     'Label4
     '
     Me.Label4.AutoSize = True
-    Me.Label4.Location = New System.Drawing.Point(16, 17)
+    Me.Label4.Location = New System.Drawing.Point(18, 21)
     Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label4.Name = "Label4"
-    Me.Label4.Size = New System.Drawing.Size(118, 17)
+    Me.Label4.Size = New System.Drawing.Size(128, 20)
     Me.Label4.TabIndex = 0
     Me.Label4.Text = "Level Liquid ( % )"
     '
     'Label5
     '
     Me.Label5.AutoSize = True
-    Me.Label5.Location = New System.Drawing.Point(16, 49)
+    Me.Label5.Location = New System.Drawing.Point(18, 61)
     Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label5.Name = "Label5"
-    Me.Label5.Size = New System.Drawing.Size(131, 17)
+    Me.Label5.Size = New System.Drawing.Size(142, 20)
     Me.Label5.TabIndex = 0
     Me.Label5.Text = "Temperature ( ° C )"
     '
     'tBoxLevel
     '
-    Me.tBoxLevel.Location = New System.Drawing.Point(172, 14)
-    Me.tBoxLevel.Margin = New System.Windows.Forms.Padding(4)
+    Me.tBoxLevel.Location = New System.Drawing.Point(194, 18)
+    Me.tBoxLevel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.tBoxLevel.Name = "tBoxLevel"
-    Me.tBoxLevel.Size = New System.Drawing.Size(132, 22)
+    Me.tBoxLevel.Size = New System.Drawing.Size(148, 26)
     Me.tBoxLevel.TabIndex = 1
     Me.tBoxLevel.Text = "70"
     '
     'Label6
     '
     Me.Label6.AutoSize = True
-    Me.Label6.Location = New System.Drawing.Point(16, 81)
+    Me.Label6.Location = New System.Drawing.Point(18, 101)
     Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label6.Name = "Label6"
-    Me.Label6.Size = New System.Drawing.Size(112, 17)
+    Me.Label6.Size = New System.Drawing.Size(122, 20)
     Me.Label6.TabIndex = 0
     Me.Label6.Text = "Pressure ( Kpa )"
     '
     'tBoxPress
     '
-    Me.tBoxPress.Location = New System.Drawing.Point(172, 78)
-    Me.tBoxPress.Margin = New System.Windows.Forms.Padding(4)
+    Me.tBoxPress.Location = New System.Drawing.Point(194, 98)
+    Me.tBoxPress.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.tBoxPress.Name = "tBoxPress"
-    Me.tBoxPress.Size = New System.Drawing.Size(132, 22)
+    Me.tBoxPress.Size = New System.Drawing.Size(148, 26)
     Me.tBoxPress.TabIndex = 1
     Me.tBoxPress.Text = "15"
     '
     'Label7
     '
     Me.Label7.AutoSize = True
-    Me.Label7.Location = New System.Drawing.Point(16, 114)
+    Me.Label7.Location = New System.Drawing.Point(18, 142)
     Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label7.Name = "Label7"
-    Me.Label7.Size = New System.Drawing.Size(55, 17)
+    Me.Label7.Size = New System.Drawing.Size(62, 20)
     Me.Label7.TabIndex = 0
     Me.Label7.Text = "Density"
     '
     'tBoxTemp
     '
-    Me.tBoxTemp.Location = New System.Drawing.Point(172, 46)
-    Me.tBoxTemp.Margin = New System.Windows.Forms.Padding(4)
+    Me.tBoxTemp.Location = New System.Drawing.Point(194, 58)
+    Me.tBoxTemp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.tBoxTemp.Name = "tBoxTemp"
-    Me.tBoxTemp.Size = New System.Drawing.Size(132, 22)
+    Me.tBoxTemp.Size = New System.Drawing.Size(148, 26)
     Me.tBoxTemp.TabIndex = 1
     Me.tBoxTemp.Text = "30"
     '
@@ -949,119 +952,119 @@ Partial Class Form1
     Me.GroupBox2.Controls.Add(Me.Label19)
     Me.GroupBox2.Controls.Add(Me.Label20)
     Me.GroupBox2.Controls.Add(Me.Label21)
-    Me.GroupBox2.Location = New System.Drawing.Point(31, 478)
-    Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
+    Me.GroupBox2.Location = New System.Drawing.Point(35, 598)
+    Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.GroupBox2.Name = "GroupBox2"
-    Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-    Me.GroupBox2.Size = New System.Drawing.Size(332, 222)
+    Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+    Me.GroupBox2.Size = New System.Drawing.Size(374, 278)
     Me.GroupBox2.TabIndex = 2
     Me.GroupBox2.TabStop = False
     '
     'kilogramsVapour
     '
-    Me.kilogramsVapour.Location = New System.Drawing.Point(172, 177)
-    Me.kilogramsVapour.Margin = New System.Windows.Forms.Padding(4)
+    Me.kilogramsVapour.Location = New System.Drawing.Point(194, 221)
+    Me.kilogramsVapour.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.kilogramsVapour.Name = "kilogramsVapour"
-    Me.kilogramsVapour.Size = New System.Drawing.Size(132, 22)
+    Me.kilogramsVapour.Size = New System.Drawing.Size(148, 26)
     Me.kilogramsVapour.TabIndex = 12
     '
     'vapourDensity
     '
-    Me.vapourDensity.Location = New System.Drawing.Point(172, 145)
-    Me.vapourDensity.Margin = New System.Windows.Forms.Padding(4)
+    Me.vapourDensity.Location = New System.Drawing.Point(194, 181)
+    Me.vapourDensity.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.vapourDensity.Name = "vapourDensity"
-    Me.vapourDensity.Size = New System.Drawing.Size(132, 22)
+    Me.vapourDensity.Size = New System.Drawing.Size(148, 26)
     Me.vapourDensity.TabIndex = 11
     '
     'TemperatureFactor
     '
-    Me.TemperatureFactor.Location = New System.Drawing.Point(172, 113)
-    Me.TemperatureFactor.Margin = New System.Windows.Forms.Padding(4)
+    Me.TemperatureFactor.Location = New System.Drawing.Point(194, 141)
+    Me.TemperatureFactor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.TemperatureFactor.Name = "TemperatureFactor"
-    Me.TemperatureFactor.Size = New System.Drawing.Size(132, 22)
+    Me.TemperatureFactor.Size = New System.Drawing.Size(148, 26)
     Me.TemperatureFactor.TabIndex = 10
     '
     'pressureFactor
     '
-    Me.pressureFactor.Location = New System.Drawing.Point(172, 81)
-    Me.pressureFactor.Margin = New System.Windows.Forms.Padding(4)
+    Me.pressureFactor.Location = New System.Drawing.Point(194, 101)
+    Me.pressureFactor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.pressureFactor.Name = "pressureFactor"
-    Me.pressureFactor.Size = New System.Drawing.Size(132, 22)
+    Me.pressureFactor.Size = New System.Drawing.Size(148, 26)
     Me.pressureFactor.TabIndex = 15
     '
     'nettLitersProductVapour
     '
-    Me.nettLitersProductVapour.Location = New System.Drawing.Point(172, 49)
-    Me.nettLitersProductVapour.Margin = New System.Windows.Forms.Padding(4)
+    Me.nettLitersProductVapour.Location = New System.Drawing.Point(194, 61)
+    Me.nettLitersProductVapour.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.nettLitersProductVapour.Name = "nettLitersProductVapour"
-    Me.nettLitersProductVapour.Size = New System.Drawing.Size(132, 22)
+    Me.nettLitersProductVapour.Size = New System.Drawing.Size(148, 26)
     Me.nettLitersProductVapour.TabIndex = 14
     '
     'levelVapour
     '
-    Me.levelVapour.Location = New System.Drawing.Point(172, 17)
-    Me.levelVapour.Margin = New System.Windows.Forms.Padding(4)
+    Me.levelVapour.Location = New System.Drawing.Point(194, 21)
+    Me.levelVapour.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.levelVapour.Name = "levelVapour"
-    Me.levelVapour.Size = New System.Drawing.Size(132, 22)
+    Me.levelVapour.Size = New System.Drawing.Size(148, 26)
     Me.levelVapour.TabIndex = 13
     '
     'Label16
     '
     Me.Label16.AutoSize = True
-    Me.Label16.Location = New System.Drawing.Point(8, 181)
+    Me.Label16.Location = New System.Drawing.Point(9, 226)
     Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label16.Name = "Label16"
-    Me.Label16.Size = New System.Drawing.Size(120, 17)
+    Me.Label16.Size = New System.Drawing.Size(134, 20)
     Me.Label16.TabIndex = 5
     Me.Label16.Text = "Kilograms Vapour"
     '
     'Label17
     '
     Me.Label17.AutoSize = True
-    Me.Label17.Location = New System.Drawing.Point(8, 149)
+    Me.Label17.Location = New System.Drawing.Point(9, 186)
     Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label17.Name = "Label17"
-    Me.Label17.Size = New System.Drawing.Size(105, 17)
+    Me.Label17.Size = New System.Drawing.Size(118, 20)
     Me.Label17.TabIndex = 2
     Me.Label17.Text = "Vapour Density"
     '
     'Label18
     '
     Me.Label18.AutoSize = True
-    Me.Label18.Location = New System.Drawing.Point(8, 117)
+    Me.Label18.Location = New System.Drawing.Point(9, 146)
     Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label18.Name = "Label18"
-    Me.Label18.Size = New System.Drawing.Size(126, 17)
+    Me.Label18.Size = New System.Drawing.Size(141, 20)
     Me.Label18.TabIndex = 3
     Me.Label18.Text = "Temperatur Factor"
     '
     'Label19
     '
     Me.Label19.AutoSize = True
-    Me.Label19.Location = New System.Drawing.Point(8, 85)
+    Me.Label19.Location = New System.Drawing.Point(9, 106)
     Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label19.Name = "Label19"
-    Me.Label19.Size = New System.Drawing.Size(109, 17)
+    Me.Label19.Size = New System.Drawing.Size(122, 20)
     Me.Label19.TabIndex = 8
     Me.Label19.Text = "Pressure Factor"
     '
     'Label20
     '
     Me.Label20.AutoSize = True
-    Me.Label20.Location = New System.Drawing.Point(8, 53)
+    Me.Label20.Location = New System.Drawing.Point(9, 66)
     Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label20.Name = "Label20"
-    Me.Label20.Size = New System.Drawing.Size(142, 17)
+    Me.Label20.Size = New System.Drawing.Size(159, 20)
     Me.Label20.TabIndex = 7
     Me.Label20.Text = "Nett Liters at Product"
     '
     'Label21
     '
     Me.Label21.AutoSize = True
-    Me.Label21.Location = New System.Drawing.Point(8, 21)
+    Me.Label21.Location = New System.Drawing.Point(9, 26)
     Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label21.Name = "Label21"
-    Me.Label21.Size = New System.Drawing.Size(92, 17)
+    Me.Label21.Size = New System.Drawing.Size(102, 20)
     Me.Label21.TabIndex = 6
     Me.Label21.Text = "Level Vapour"
     '
@@ -1081,162 +1084,180 @@ Partial Class Form1
     Me.GroupBox1.Controls.Add(Me.Label10)
     Me.GroupBox1.Controls.Add(Me.Label9)
     Me.GroupBox1.Controls.Add(Me.Label8)
-    Me.GroupBox1.Location = New System.Drawing.Point(31, 213)
-    Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+    Me.GroupBox1.Location = New System.Drawing.Point(35, 266)
+    Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.GroupBox1.Name = "GroupBox1"
-    Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-    Me.GroupBox1.Size = New System.Drawing.Size(332, 257)
+    Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+    Me.GroupBox1.Size = New System.Drawing.Size(374, 321)
     Me.GroupBox1.TabIndex = 2
     Me.GroupBox1.TabStop = False
     '
     'kilogramLiquid
     '
-    Me.kilogramLiquid.Location = New System.Drawing.Point(172, 209)
-    Me.kilogramLiquid.Margin = New System.Windows.Forms.Padding(4)
+    Me.kilogramLiquid.Location = New System.Drawing.Point(194, 261)
+    Me.kilogramLiquid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.kilogramLiquid.Name = "kilogramLiquid"
-    Me.kilogramLiquid.Size = New System.Drawing.Size(132, 22)
+    Me.kilogramLiquid.Size = New System.Drawing.Size(148, 26)
     Me.kilogramLiquid.TabIndex = 9
     '
     'Multiplier
     '
-    Me.Multiplier.Location = New System.Drawing.Point(172, 177)
-    Me.Multiplier.Margin = New System.Windows.Forms.Padding(4)
+    Me.Multiplier.Location = New System.Drawing.Point(194, 221)
+    Me.Multiplier.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Multiplier.Name = "Multiplier"
-    Me.Multiplier.Size = New System.Drawing.Size(132, 22)
+    Me.Multiplier.Size = New System.Drawing.Size(148, 26)
     Me.Multiplier.TabIndex = 12
     '
     'Liters15C
     '
-    Me.Liters15C.Location = New System.Drawing.Point(172, 145)
-    Me.Liters15C.Margin = New System.Windows.Forms.Padding(4)
+    Me.Liters15C.Location = New System.Drawing.Point(194, 181)
+    Me.Liters15C.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Liters15C.Name = "Liters15C"
-    Me.Liters15C.Size = New System.Drawing.Size(132, 22)
+    Me.Liters15C.Size = New System.Drawing.Size(148, 26)
     Me.Liters15C.TabIndex = 11
     '
     'volCorrectionFactor
     '
-    Me.volCorrectionFactor.Location = New System.Drawing.Point(172, 113)
-    Me.volCorrectionFactor.Margin = New System.Windows.Forms.Padding(4)
+    Me.volCorrectionFactor.Location = New System.Drawing.Point(194, 141)
+    Me.volCorrectionFactor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.volCorrectionFactor.Name = "volCorrectionFactor"
-    Me.volCorrectionFactor.Size = New System.Drawing.Size(132, 22)
+    Me.volCorrectionFactor.Size = New System.Drawing.Size(148, 26)
     Me.volCorrectionFactor.TabIndex = 10
     '
     'nettLiterProducLiquid
     '
-    Me.nettLiterProducLiquid.Location = New System.Drawing.Point(172, 81)
-    Me.nettLiterProducLiquid.Margin = New System.Windows.Forms.Padding(4)
+    Me.nettLiterProducLiquid.Location = New System.Drawing.Point(194, 101)
+    Me.nettLiterProducLiquid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.nettLiterProducLiquid.Name = "nettLiterProducLiquid"
-    Me.nettLiterProducLiquid.Size = New System.Drawing.Size(132, 22)
+    Me.nettLiterProducLiquid.Size = New System.Drawing.Size(148, 26)
     Me.nettLiterProducLiquid.TabIndex = 15
     '
     'density15C
     '
-    Me.density15C.Location = New System.Drawing.Point(172, 49)
-    Me.density15C.Margin = New System.Windows.Forms.Padding(4)
+    Me.density15C.Location = New System.Drawing.Point(194, 61)
+    Me.density15C.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.density15C.Name = "density15C"
-    Me.density15C.Size = New System.Drawing.Size(132, 22)
+    Me.density15C.Size = New System.Drawing.Size(148, 26)
     Me.density15C.TabIndex = 14
     '
     'faktorKoreksiTemp
     '
-    Me.faktorKoreksiTemp.Location = New System.Drawing.Point(172, 17)
-    Me.faktorKoreksiTemp.Margin = New System.Windows.Forms.Padding(4)
+    Me.faktorKoreksiTemp.Location = New System.Drawing.Point(194, 21)
+    Me.faktorKoreksiTemp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.faktorKoreksiTemp.Name = "faktorKoreksiTemp"
-    Me.faktorKoreksiTemp.Size = New System.Drawing.Size(132, 22)
+    Me.faktorKoreksiTemp.Size = New System.Drawing.Size(148, 26)
     Me.faktorKoreksiTemp.TabIndex = 13
     '
     'Label14
     '
     Me.Label14.AutoSize = True
-    Me.Label14.Location = New System.Drawing.Point(8, 213)
+    Me.Label14.Location = New System.Drawing.Point(9, 266)
     Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label14.Name = "Label14"
-    Me.Label14.Size = New System.Drawing.Size(112, 17)
+    Me.Label14.Size = New System.Drawing.Size(124, 20)
     Me.Label14.TabIndex = 4
     Me.Label14.Text = "Kilograms Liquid"
     '
     'Label13
     '
     Me.Label13.AutoSize = True
-    Me.Label13.Location = New System.Drawing.Point(8, 181)
+    Me.Label13.Location = New System.Drawing.Point(9, 226)
     Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label13.Name = "Label13"
-    Me.Label13.Size = New System.Drawing.Size(64, 17)
+    Me.Label13.Size = New System.Drawing.Size(71, 20)
     Me.Label13.TabIndex = 5
     Me.Label13.Text = "Multiplier"
     '
     'Label12
     '
     Me.Label12.AutoSize = True
-    Me.Label12.Location = New System.Drawing.Point(8, 149)
+    Me.Label12.Location = New System.Drawing.Point(9, 186)
     Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label12.Name = "Label12"
-    Me.Label12.Size = New System.Drawing.Size(98, 17)
+    Me.Label12.Size = New System.Drawing.Size(108, 20)
     Me.Label12.TabIndex = 2
     Me.Label12.Text = "Liters at 15° C"
     '
     'Label11
     '
     Me.Label11.AutoSize = True
-    Me.Label11.Location = New System.Drawing.Point(8, 117)
+    Me.Label11.Location = New System.Drawing.Point(9, 146)
     Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label11.Name = "Label11"
-    Me.Label11.Size = New System.Drawing.Size(145, 17)
+    Me.Label11.Size = New System.Drawing.Size(163, 20)
     Me.Label11.TabIndex = 3
     Me.Label11.Text = "Vol. Correction Factor"
     '
     'Label10
     '
     Me.Label10.AutoSize = True
-    Me.Label10.Location = New System.Drawing.Point(8, 85)
+    Me.Label10.Location = New System.Drawing.Point(9, 106)
     Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label10.Name = "Label10"
-    Me.Label10.Size = New System.Drawing.Size(142, 17)
+    Me.Label10.Size = New System.Drawing.Size(159, 20)
     Me.Label10.TabIndex = 8
     Me.Label10.Text = "Nett Liters at Product"
     '
     'Label9
     '
     Me.Label9.AutoSize = True
-    Me.Label9.Location = New System.Drawing.Point(8, 53)
+    Me.Label9.Location = New System.Drawing.Point(9, 66)
     Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label9.Name = "Label9"
-    Me.Label9.Size = New System.Drawing.Size(110, 17)
+    Me.Label9.Size = New System.Drawing.Size(122, 20)
     Me.Label9.TabIndex = 7
     Me.Label9.Text = "Density at 15° C"
     '
     'Label8
     '
     Me.Label8.AutoSize = True
-    Me.Label8.Location = New System.Drawing.Point(8, 21)
+    Me.Label8.Location = New System.Drawing.Point(9, 26)
     Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label8.Name = "Label8"
-    Me.Label8.Size = New System.Drawing.Size(139, 17)
+    Me.Label8.Size = New System.Drawing.Size(155, 20)
     Me.Label8.TabIndex = 6
     Me.Label8.Text = "Faktor Koreksi Temp"
     '
     'Label23
     '
     Me.Label23.AutoSize = True
-    Me.Label23.Location = New System.Drawing.Point(39, 726)
+    Me.Label23.Location = New System.Drawing.Point(44, 908)
     Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label23.Name = "Label23"
-    Me.Label23.Size = New System.Drawing.Size(106, 17)
+    Me.Label23.Size = New System.Drawing.Size(117, 20)
     Me.Label23.TabIndex = 5
     Me.Label23.Text = "Total Kilograms"
     '
+    'Button2
+    '
+    Me.Button2.Location = New System.Drawing.Point(1070, 6)
+    Me.Button2.Name = "Button2"
+    Me.Button2.Size = New System.Drawing.Size(153, 29)
+    Me.Button2.TabIndex = 2
+    Me.Button2.Text = "connect"
+    Me.Button2.UseVisualStyleBackColor = True
+    '
+    'Button3
+    '
+    Me.Button3.Location = New System.Drawing.Point(1248, 4)
+    Me.Button3.Name = "Button3"
+    Me.Button3.Size = New System.Drawing.Size(140, 42)
+    Me.Button3.TabIndex = 3
+    Me.Button3.Text = "test write"
+    Me.Button3.UseVisualStyleBackColor = True
+    '
     'Form1
     '
-    Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+    Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
     Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-    Me.ClientSize = New System.Drawing.Size(1573, 882)
+    Me.ClientSize = New System.Drawing.Size(1770, 1102)
     Me.Controls.Add(Me.SplitContainer1)
     Me.Controls.Add(Me.Panel5)
     Me.Controls.Add(Me.Panel4)
     Me.Controls.Add(Me.MenuStrip1)
     Me.Controls.Add(Me.StatusStrip1)
     Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-    Me.Margin = New System.Windows.Forms.Padding(4)
+    Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Name = "Form1"
     Me.Text = "Monitoring"
     Me.SplitContainer1.Panel1.ResumeLayout(False)
@@ -1395,4 +1416,6 @@ Partial Class Form1
     Friend WithEvents table54 As System.Windows.Forms.DataGridView
     Friend WithEvents cBoxDensity As System.Windows.Forms.ComboBox
   Friend WithEvents SystemStatus As ToolStripStatusLabel
+  Friend WithEvents Button2 As Button
+  Friend WithEvents Button3 As Button
 End Class

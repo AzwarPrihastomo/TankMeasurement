@@ -1199,13 +1199,13 @@ void setup() {
 
   Serial.println(F("FW Version 1.7.0"));
 
-  SCmd.addCommand("HOMING", homing_cmd);
-  SCmd.addCommand("STEP", step_move);
+ // SCmd.addCommand("HOMING", homing_cmd);
+ // SCmd.addCommand("STEP", step_move);
   SCmd.addCommand("READ", read_main_cmd);
-  SCmd.addCommand("READ_HOMING", read_anal);
-  SCmd.addCommand("LEARN", learn);
-  SCmd.addCommand("LED", led_cmd);
-  SCmd.addCommand("READ_RAW", read_raw);
+ // SCmd.addCommand("READ_HOMING", read_anal);
+  //SCmd.addCommand("LEARN", learn);
+  //SCmd.addCommand("LED", led_cmd);
+  //SCmd.addCommand("READ_RAW", read_raw);
 
 
   // SCmd.addCommand("GET_VAR", load_memory_cmd);//load variable

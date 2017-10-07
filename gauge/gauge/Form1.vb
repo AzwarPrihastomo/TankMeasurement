@@ -22,7 +22,6 @@ Public Class Form1
   Public rowPersenTableTangki = 1
   Public colLiterTableTangki = 2
 
-
   Public dataTable = "measuringdata"
   'Public table_level = "tank_level"
   'Public table_pressure = "pressure"
@@ -74,6 +73,17 @@ Public Class Form1
   Public gotPress As Boolean
   Public dataPress As String = ""
   Public gotPressTime As Date
+
+  Public indexBuffer As Integer
+
+  Public lastOkPress As Double
+  Public lastOkTemp As Double
+  Public lastOkLevel As Double
+
+  Public lastOkPress1 As Double
+  Public lastOkTemp1 As Double
+  Public lastOkLevel1 As Double
+
 
   Public reqDataCommandReply As String = "ComAccepted"
   Public OutliersDetetionFailed As String = "Err500"
@@ -133,9 +143,6 @@ Public Class Form1
   Public ComRetryCountLevel As Integer
   Public ComRetryCountTemp As Integer
   Public ComRetryCountPress As Integer
-
-
-
   Public dataComplete As Boolean
 
 
@@ -783,34 +790,68 @@ Public Class Form1
     Dim levelVal, pressVal, tempVal As Double
     Dim levelTime, pressTime, tempTime As String
     reset_status()
+
     If (gotLevel) Then
       levelStatus = "OK"
       levelVal = dataLevel
       levelTime = gotLevelTime.ToString("yyyy-MM-dd H:mm:ss")
+      'predictor
+      lastOkLevel = levelVal
     Else
-      levelStatus = "FAIL"
-      levelVal = 0
+
+      If setting.usePredCheck.Checked Then
+        levelVal = lastOkLevel
+        levelStatus = "PRED"
+      Else
+        levelStatus = "FAIL"
+        levelVal = 0
+      End If
+
       levelTime = Now.ToString("yyyy-MM-dd H:mm:ss")
     End If
+
     If (gotPress) Then
       pressStatus = "OK"
       pressVal = dataPress
       pressVal = toKpa(pressVal)
       pressTime = gotPressTime.ToString("yyyy-MM-dd H:mm:ss")
+      'predictor
+      lastOkPress = pressVal
     Else
-      pressStatus = "FAIL"
-      pressVal = 0
+
+      If setting.usePredCheck.Checked Then
+        pressStatus = "PRED"
+        pressVal = lastOkPress
+      Else
+        pressStatus = "FAIL"
+        pressVal = 0
+      End If
+
       pressTime = Now.ToString("yyyy-MM-dd H:mm:ss")
     End If
+
     If (gotTemp) Then
       tempStatus = "OK"
       tempVal = dataTemp
       tempTime = gotTempTime.ToString("yyyy-MM-dd H:mm:ss")
+      'predictor
+      lastOkTemp = tempVal
     Else
-      tempStatus = "FAIL"
-      tempVal = 0
+
+      If setting.usePredCheck.Checked Then
+
+        tempStatus = "PRED"
+        tempVal = lastOkTemp
+
+      Else
+        tempStatus = "FAIL"
+        tempVal = 0
+
+      End If
+
       tempTime = Now.ToString("yyyy-MM-dd H:mm:ss")
     End If
+
     tBoxLevel.Text = levelVal
     tBoxPress.Text = pressVal
     tBoxTemp.Text = tempVal
@@ -897,6 +938,7 @@ Public Class Form1
         End If
       ElseIf strip_str.Contains(OutliersDetetionFailed) Then
         errVal = ERROR_CODE.OutlierDetFailed
+        add_log("Outliers Detection Failed")
       ElseIf strip_str.Contains(NoValidSensorAfterReading) Then
         errVal = ERROR_CODE.NoValidSensorReading
       ElseIf strip_str.Contains(NoValidSensorAfterLearning) Then
@@ -1093,4 +1135,25 @@ Public Class Form1
   Function toKpa(input As Double) As Double
     toKpa = input * 98.0665
   End Function
+
+  Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    'connect()
+    connstring = "server=" & sql_address & ";user id=" & master_user & ";password=" & master_pass & "; port=3307; database=" & Chr(34) & database_name & Chr(34) & ";"
+    If oMysql.Connect(connstring) Then
+      MsgBox("connected")
+    End If
+  End Sub
+
+  Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Dim levelVal, tempVal, pressVal As Double
+    Dim levelTime, tempTime, pressTime As String
+    levelTime = Now.ToString("yyyy-MM-dd H:mm:ss")
+    tempTime = Now.ToString("yyyy-MM-dd H:mm:ss")
+    pressTime = Now.ToString("yyyy-MM-dd H:mm:ss")
+    'myQuery = "INSERT INTO `measuringdata` (`DataCompleteTime`, `LevelStatus`, `TankLevel`, `AccLevelTime`, `PressStatus`, `TankPress`, `AccPressTime`, `TempStatus`, `TankTemp`, `AccTempTime`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(),'" + LevelStatus + "', '" + levelVal + "', '" + levelTime + "', '" + PressStatus + "', '" + pressVal + "', '" + pressTime + "', '" + TempStatus + "', '" + tempVal + "', '" + tempTime + "', '" + kilogramLiquid.Text + "', '" + kilogramsVapour.Text + "', '" + TotalKilograms.Text + "');"
+    myQuery = "INSERT INTO `measurement`.`measuringdata` (`DataCompleteTime`, `LevelStatus`, `TankLevel`, `AccLevelTime`, `PressStatus`, `TankPress`, `AccPressTime`, `TempStatus`, `TankTemp`, `AccTempTime`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (CURRENT_TIMESTAMP, '', '-1', CURRENT_TIMESTAMP, '', '-1', CURRENT_TIMESTAMP, '', '-1', CURRENT_TIMESTAMP, '0', '0', '0')"
+    If oMysql.SetData(myQuery) Then
+      MsgBox("Succcess")
+    End If
+  End Sub
 End Class
