@@ -14,4 +14,8 @@
   Private Sub usePredCheck_CheckedChanged(sender As Object, e As EventArgs) Handles usePredCheck.CheckedChanged
 
   End Sub
+
+  Private Sub setting_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+  End Sub
 End Class

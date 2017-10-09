@@ -25,17 +25,17 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
     Me.components = New System.ComponentModel.Container()
-    Dim ChartArea21 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-    Dim Legend21 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-    Dim Series16 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-    Dim ChartArea22 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-    Dim Legend22 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-    Dim Series17 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-    Dim ChartArea23 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-    Dim Legend23 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-    Dim Series18 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-    Dim ChartArea24 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-    Dim Legend24 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+    Dim ChartArea17 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+    Dim Legend17 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+    Dim Series13 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+    Dim ChartArea18 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+    Dim Legend18 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+    Dim Series14 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+    Dim ChartArea19 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+    Dim Legend19 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+    Dim Series15 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+    Dim ChartArea20 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+    Dim Legend20 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
     Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
     Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
     Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
@@ -75,6 +75,9 @@ Partial Class Form1
     Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
     Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
     Me.Panel4 = New System.Windows.Forms.Panel()
+    Me.Button4 = New System.Windows.Forms.Button()
+    Me.Button3 = New System.Windows.Forms.Button()
+    Me.Button2 = New System.Windows.Forms.Button()
     Me.Button1 = New System.Windows.Forms.Button()
     Me.btnRun = New System.Windows.Forms.Button()
     Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -134,8 +137,6 @@ Partial Class Form1
     Me.Label9 = New System.Windows.Forms.Label()
     Me.Label8 = New System.Windows.Forms.Label()
     Me.Label23 = New System.Windows.Forms.Label()
-    Me.Button2 = New System.Windows.Forms.Button()
-    Me.Button3 = New System.Windows.Forms.Button()
     CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.SplitContainer1.Panel1.SuspendLayout()
     Me.SplitContainer1.Panel2.SuspendLayout()
@@ -196,8 +197,8 @@ Partial Class Form1
     'SplitContainer1.Panel2
     '
     Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-    Me.SplitContainer1.Size = New System.Drawing.Size(1305, 993)
-    Me.SplitContainer1.SplitterDistance = 320
+    Me.SplitContainer1.Size = New System.Drawing.Size(1305, 919)
+    Me.SplitContainer1.SplitterDistance = 296
     Me.SplitContainer1.SplitterWidth = 6
     Me.SplitContainer1.TabIndex = 2
     '
@@ -219,7 +220,7 @@ Partial Class Form1
     Me.SplitContainer3.Panel2.Controls.Add(Me.ChartLevel)
     Me.SplitContainer3.Panel2.Controls.Add(Me.tableTangki)
     Me.SplitContainer3.Panel2.Controls.Add(Me.table54)
-    Me.SplitContainer3.Size = New System.Drawing.Size(1305, 280)
+    Me.SplitContainer3.Size = New System.Drawing.Size(1305, 256)
     Me.SplitContainer3.SplitterDistance = 280
     Me.SplitContainer3.SplitterWidth = 6
     Me.SplitContainer3.TabIndex = 0
@@ -232,7 +233,7 @@ Partial Class Form1
     Me.gaugeLevel.Dock = System.Windows.Forms.DockStyle.Top
     Me.gaugeLevel.Glossiness = 70.0!
     Me.gaugeLevel.Location = New System.Drawing.Point(0, 0)
-    Me.gaugeLevel.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+    Me.gaugeLevel.Margin = New System.Windows.Forms.Padding(6)
     Me.gaugeLevel.MaxValue = 100.0!
     Me.gaugeLevel.MinValue = 0!
     Me.gaugeLevel.Name = "gaugeLevel"
@@ -267,24 +268,24 @@ Partial Class Form1
     '
     'ChartLevel
     '
-    ChartArea21.Name = "ChartArea1"
-    Me.ChartLevel.ChartAreas.Add(ChartArea21)
+    ChartArea17.Name = "ChartArea1"
+    Me.ChartLevel.ChartAreas.Add(ChartArea17)
     Me.ChartLevel.Dock = System.Windows.Forms.DockStyle.Fill
-    Legend21.Alignment = System.Drawing.StringAlignment.Far
-    Legend21.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-    Legend21.Name = "Legend1"
-    Me.ChartLevel.Legends.Add(Legend21)
+    Legend17.Alignment = System.Drawing.StringAlignment.Far
+    Legend17.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+    Legend17.Name = "Legend1"
+    Me.ChartLevel.Legends.Add(Legend17)
     Me.ChartLevel.Location = New System.Drawing.Point(0, 0)
     Me.ChartLevel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.ChartLevel.Name = "ChartLevel"
-    Series16.ChartArea = "ChartArea1"
-    Series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-    Series16.Color = System.Drawing.Color.Blue
-    Series16.Legend = "Legend1"
-    Series16.Name = "Tank Level"
-    Series16.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
-    Me.ChartLevel.Series.Add(Series16)
-    Me.ChartLevel.Size = New System.Drawing.Size(1019, 280)
+    Series13.ChartArea = "ChartArea1"
+    Series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+    Series13.Color = System.Drawing.Color.Blue
+    Series13.Legend = "Legend1"
+    Series13.Name = "Tank Level"
+    Series13.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
+    Me.ChartLevel.Series.Add(Series13)
+    Me.ChartLevel.Size = New System.Drawing.Size(1019, 256)
     Me.ChartLevel.TabIndex = 2
     Me.ChartLevel.Text = "Chart1"
     '
@@ -345,8 +346,8 @@ Partial Class Form1
     '
     Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer5)
     Me.SplitContainer2.Panel2.Controls.Add(Me.Panel3)
-    Me.SplitContainer2.Size = New System.Drawing.Size(1305, 667)
-    Me.SplitContainer2.SplitterDistance = 325
+    Me.SplitContainer2.Size = New System.Drawing.Size(1305, 617)
+    Me.SplitContainer2.SplitterDistance = 300
     Me.SplitContainer2.SplitterWidth = 6
     Me.SplitContainer2.TabIndex = 0
     '
@@ -368,7 +369,7 @@ Partial Class Form1
     Me.SplitContainer4.Panel2.Controls.Add(Me.ChartTemp)
     Me.SplitContainer4.Panel2.Controls.Add(Me.dataGridExport)
     Me.SplitContainer4.Panel2.Controls.Add(Me.data_log_table)
-    Me.SplitContainer4.Size = New System.Drawing.Size(1305, 285)
+    Me.SplitContainer4.Size = New System.Drawing.Size(1305, 260)
     Me.SplitContainer4.SplitterDistance = 280
     Me.SplitContainer4.SplitterWidth = 6
     Me.SplitContainer4.TabIndex = 0
@@ -381,7 +382,7 @@ Partial Class Form1
     Me.gaugeTemp.Dock = System.Windows.Forms.DockStyle.Fill
     Me.gaugeTemp.Glossiness = 70.0!
     Me.gaugeTemp.Location = New System.Drawing.Point(0, 0)
-    Me.gaugeTemp.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+    Me.gaugeTemp.Margin = New System.Windows.Forms.Padding(6)
     Me.gaugeTemp.MaxValue = 200.0!
     Me.gaugeTemp.MinValue = 0!
     Me.gaugeTemp.Name = "gaugeTemp"
@@ -416,24 +417,24 @@ Partial Class Form1
     '
     'ChartTemp
     '
-    ChartArea22.Name = "ChartArea1"
-    Me.ChartTemp.ChartAreas.Add(ChartArea22)
+    ChartArea18.Name = "ChartArea1"
+    Me.ChartTemp.ChartAreas.Add(ChartArea18)
     Me.ChartTemp.Dock = System.Windows.Forms.DockStyle.Fill
-    Legend22.Alignment = System.Drawing.StringAlignment.Far
-    Legend22.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-    Legend22.Name = "Legend1"
-    Me.ChartTemp.Legends.Add(Legend22)
+    Legend18.Alignment = System.Drawing.StringAlignment.Far
+    Legend18.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+    Legend18.Name = "Legend1"
+    Me.ChartTemp.Legends.Add(Legend18)
     Me.ChartTemp.Location = New System.Drawing.Point(0, 0)
     Me.ChartTemp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.ChartTemp.Name = "ChartTemp"
-    Series17.ChartArea = "ChartArea1"
-    Series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-    Series17.Color = System.Drawing.Color.SeaGreen
-    Series17.Legend = "Legend1"
-    Series17.Name = "Temperature"
-    Series17.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
-    Me.ChartTemp.Series.Add(Series17)
-    Me.ChartTemp.Size = New System.Drawing.Size(1019, 285)
+    Series14.ChartArea = "ChartArea1"
+    Series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+    Series14.Color = System.Drawing.Color.SeaGreen
+    Series14.Legend = "Legend1"
+    Series14.Name = "Temperature"
+    Series14.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
+    Me.ChartTemp.Series.Add(Series14)
+    Me.ChartTemp.Size = New System.Drawing.Size(1019, 260)
     Me.ChartTemp.TabIndex = 3
     Me.ChartTemp.Text = "Chart1"
     '
@@ -500,7 +501,7 @@ Partial Class Form1
     Me.SplitContainer5.Panel2.Controls.Add(Me.DTPress)
     Me.SplitContainer5.Panel2.Controls.Add(Me.ChartPressure)
     Me.SplitContainer5.Panel2.Controls.Add(Me.Chart3)
-    Me.SplitContainer5.Size = New System.Drawing.Size(1305, 296)
+    Me.SplitContainer5.Size = New System.Drawing.Size(1305, 271)
     Me.SplitContainer5.SplitterDistance = 284
     Me.SplitContainer5.SplitterWidth = 6
     Me.SplitContainer5.TabIndex = 0
@@ -513,7 +514,7 @@ Partial Class Form1
     Me.gaugePressure.Dock = System.Windows.Forms.DockStyle.Fill
     Me.gaugePressure.Glossiness = 70.0!
     Me.gaugePressure.Location = New System.Drawing.Point(0, 0)
-    Me.gaugePressure.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+    Me.gaugePressure.Margin = New System.Windows.Forms.Padding(6)
     Me.gaugePressure.MaxValue = 200.0!
     Me.gaugePressure.MinValue = 0!
     Me.gaugePressure.Name = "gaugePressure"
@@ -548,40 +549,40 @@ Partial Class Form1
     '
     'ChartPressure
     '
-    ChartArea23.Name = "ChartArea1"
-    Me.ChartPressure.ChartAreas.Add(ChartArea23)
+    ChartArea19.Name = "ChartArea1"
+    Me.ChartPressure.ChartAreas.Add(ChartArea19)
     Me.ChartPressure.Dock = System.Windows.Forms.DockStyle.Fill
-    Legend23.Alignment = System.Drawing.StringAlignment.Far
-    Legend23.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-    Legend23.Name = "Legend1"
-    Me.ChartPressure.Legends.Add(Legend23)
+    Legend19.Alignment = System.Drawing.StringAlignment.Far
+    Legend19.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+    Legend19.Name = "Legend1"
+    Me.ChartPressure.Legends.Add(Legend19)
     Me.ChartPressure.Location = New System.Drawing.Point(0, 0)
     Me.ChartPressure.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.ChartPressure.Name = "ChartPressure"
-    Series18.ChartArea = "ChartArea1"
-    Series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-    Series18.Color = System.Drawing.Color.BlueViolet
-    Series18.Legend = "Legend1"
-    Series18.Name = "Pressure"
-    Series18.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
-    Me.ChartPressure.Series.Add(Series18)
-    Me.ChartPressure.Size = New System.Drawing.Size(1015, 296)
+    Series15.ChartArea = "ChartArea1"
+    Series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+    Series15.Color = System.Drawing.Color.BlueViolet
+    Series15.Legend = "Legend1"
+    Series15.Name = "Pressure"
+    Series15.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
+    Me.ChartPressure.Series.Add(Series15)
+    Me.ChartPressure.Size = New System.Drawing.Size(1015, 271)
     Me.ChartPressure.TabIndex = 4
     Me.ChartPressure.Text = "Chart1"
     '
     'Chart3
     '
-    ChartArea24.Name = "ChartArea1"
-    Me.Chart3.ChartAreas.Add(ChartArea24)
+    ChartArea20.Name = "ChartArea1"
+    Me.Chart3.ChartAreas.Add(ChartArea20)
     Me.Chart3.Dock = System.Windows.Forms.DockStyle.Fill
-    Legend24.Alignment = System.Drawing.StringAlignment.Far
-    Legend24.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
-    Legend24.Name = "Legend1"
-    Me.Chart3.Legends.Add(Legend24)
+    Legend20.Alignment = System.Drawing.StringAlignment.Far
+    Legend20.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+    Legend20.Name = "Legend1"
+    Me.Chart3.Legends.Add(Legend20)
     Me.Chart3.Location = New System.Drawing.Point(0, 0)
     Me.Chart3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Chart3.Name = "Chart3"
-    Me.Chart3.Size = New System.Drawing.Size(1015, 296)
+    Me.Chart3.Size = New System.Drawing.Size(1015, 271)
     Me.Chart3.TabIndex = 3
     Me.Chart3.Text = "Chart3"
     '
@@ -602,12 +603,13 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
     Me.Label3.AutoSize = True
     Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+    Me.Label3.ForeColor = System.Drawing.Color.DarkRed
     Me.Label3.Location = New System.Drawing.Point(525, 11)
     Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label3.Name = "Label3"
-    Me.Label3.Size = New System.Drawing.Size(200, 25)
+    Me.Label3.Size = New System.Drawing.Size(320, 25)
     Me.Label3.TabIndex = 0
-    Me.Label3.Text = "PRESSURE ( Kpa )"
+    Me.Label3.Text = "[DISABLED] PRESSURE ( Bar )"
     '
     'portCom
     '
@@ -673,21 +675,49 @@ Partial Class Form1
     Me.Panel4.Controls.Add(Me.Button1)
     Me.Panel4.Controls.Add(Me.btnRun)
     Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
-    Me.Panel4.Location = New System.Drawing.Point(0, 1026)
+    Me.Panel4.Location = New System.Drawing.Point(0, 952)
     Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Panel4.Name = "Panel4"
     Me.Panel4.Size = New System.Drawing.Size(1770, 46)
     Me.Panel4.TabIndex = 4
     '
+    'Button4
+    '
+    Me.Button4.Location = New System.Drawing.Point(35, 874)
+    Me.Button4.Name = "Button4"
+    Me.Button4.Size = New System.Drawing.Size(179, 37)
+    Me.Button4.TabIndex = 4
+    Me.Button4.Text = "Recalculate"
+    Me.Button4.UseVisualStyleBackColor = True
+    '
+    'Button3
+    '
+    Me.Button3.Location = New System.Drawing.Point(1146, 6)
+    Me.Button3.Name = "Button3"
+    Me.Button3.Size = New System.Drawing.Size(140, 27)
+    Me.Button3.TabIndex = 3
+    Me.Button3.Text = "test write"
+    Me.Button3.UseVisualStyleBackColor = True
+    '
+    'Button2
+    '
+    Me.Button2.Location = New System.Drawing.Point(987, 5)
+    Me.Button2.Name = "Button2"
+    Me.Button2.Size = New System.Drawing.Size(153, 29)
+    Me.Button2.TabIndex = 2
+    Me.Button2.Text = "connect"
+    Me.Button2.UseVisualStyleBackColor = True
+    '
     'Button1
     '
-    Me.Button1.Location = New System.Drawing.Point(1490, 6)
+    Me.Button1.Location = New System.Drawing.Point(1293, 2)
     Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Button1.Name = "Button1"
     Me.Button1.Size = New System.Drawing.Size(112, 35)
     Me.Button1.TabIndex = 1
     Me.Button1.Text = "Button1"
     Me.Button1.UseVisualStyleBackColor = True
+    Me.Button1.Visible = False
     '
     'btnRun
     '
@@ -704,7 +734,7 @@ Partial Class Form1
     '
     Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
     Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SystemStatus, Me.LevelStatus, Me.TempStatus, Me.PressStatus})
-    Me.StatusStrip1.Location = New System.Drawing.Point(0, 1072)
+    Me.StatusStrip1.Location = New System.Drawing.Point(0, 998)
     Me.StatusStrip1.Name = "StatusStrip1"
     Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 21, 0)
     Me.StatusStrip1.Size = New System.Drawing.Size(1770, 30)
@@ -790,6 +820,7 @@ Partial Class Form1
     '
     'Panel5
     '
+    Me.Panel5.Controls.Add(Me.Button4)
     Me.Panel5.Controls.Add(Me.TotalKilograms)
     Me.Panel5.Controls.Add(Me.Panel7)
     Me.Panel5.Controls.Add(Me.Panel6)
@@ -800,12 +831,12 @@ Partial Class Form1
     Me.Panel5.Location = New System.Drawing.Point(1305, 33)
     Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Panel5.Name = "Panel5"
-    Me.Panel5.Size = New System.Drawing.Size(465, 993)
+    Me.Panel5.Size = New System.Drawing.Size(465, 919)
     Me.Panel5.TabIndex = 6
     '
     'TotalKilograms
     '
-    Me.TotalKilograms.Location = New System.Drawing.Point(228, 902)
+    Me.TotalKilograms.Location = New System.Drawing.Point(229, 854)
     Me.TotalKilograms.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.TotalKilograms.Name = "TotalKilograms"
     Me.TotalKilograms.Size = New System.Drawing.Size(148, 26)
@@ -855,10 +886,10 @@ Partial Class Form1
     Me.Panel6.Controls.Add(Me.tBoxPress)
     Me.Panel6.Controls.Add(Me.Label7)
     Me.Panel6.Controls.Add(Me.tBoxTemp)
-    Me.Panel6.Location = New System.Drawing.Point(35, 65)
+    Me.Panel6.Location = New System.Drawing.Point(35, 49)
     Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Panel6.Name = "Panel6"
-    Me.Panel6.Size = New System.Drawing.Size(374, 192)
+    Me.Panel6.Size = New System.Drawing.Size(374, 181)
     Me.Panel6.TabIndex = 3
     '
     'cBoxDensity
@@ -906,9 +937,9 @@ Partial Class Form1
     Me.Label6.Location = New System.Drawing.Point(18, 101)
     Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label6.Name = "Label6"
-    Me.Label6.Size = New System.Drawing.Size(122, 20)
+    Me.Label6.Size = New System.Drawing.Size(119, 20)
     Me.Label6.TabIndex = 0
-    Me.Label6.Text = "Pressure ( Kpa )"
+    Me.Label6.Text = "Pressure ( Bar )"
     '
     'tBoxPress
     '
@@ -952,7 +983,7 @@ Partial Class Form1
     Me.GroupBox2.Controls.Add(Me.Label19)
     Me.GroupBox2.Controls.Add(Me.Label20)
     Me.GroupBox2.Controls.Add(Me.Label21)
-    Me.GroupBox2.Location = New System.Drawing.Point(35, 598)
+    Me.GroupBox2.Location = New System.Drawing.Point(35, 571)
     Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.GroupBox2.Name = "GroupBox2"
     Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -1084,7 +1115,7 @@ Partial Class Form1
     Me.GroupBox1.Controls.Add(Me.Label10)
     Me.GroupBox1.Controls.Add(Me.Label9)
     Me.GroupBox1.Controls.Add(Me.Label8)
-    Me.GroupBox1.Location = New System.Drawing.Point(35, 266)
+    Me.GroupBox1.Location = New System.Drawing.Point(35, 240)
     Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.GroupBox1.Name = "GroupBox1"
     Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -1221,36 +1252,18 @@ Partial Class Form1
     'Label23
     '
     Me.Label23.AutoSize = True
-    Me.Label23.Location = New System.Drawing.Point(44, 908)
+    Me.Label23.Location = New System.Drawing.Point(44, 854)
     Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
     Me.Label23.Name = "Label23"
     Me.Label23.Size = New System.Drawing.Size(117, 20)
     Me.Label23.TabIndex = 5
     Me.Label23.Text = "Total Kilograms"
     '
-    'Button2
-    '
-    Me.Button2.Location = New System.Drawing.Point(1070, 6)
-    Me.Button2.Name = "Button2"
-    Me.Button2.Size = New System.Drawing.Size(153, 29)
-    Me.Button2.TabIndex = 2
-    Me.Button2.Text = "connect"
-    Me.Button2.UseVisualStyleBackColor = True
-    '
-    'Button3
-    '
-    Me.Button3.Location = New System.Drawing.Point(1248, 4)
-    Me.Button3.Name = "Button3"
-    Me.Button3.Size = New System.Drawing.Size(140, 42)
-    Me.Button3.TabIndex = 3
-    Me.Button3.Text = "test write"
-    Me.Button3.UseVisualStyleBackColor = True
-    '
     'Form1
     '
     Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
     Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-    Me.ClientSize = New System.Drawing.Size(1770, 1102)
+    Me.ClientSize = New System.Drawing.Size(1770, 1028)
     Me.Controls.Add(Me.SplitContainer1)
     Me.Controls.Add(Me.Panel5)
     Me.Controls.Add(Me.Panel4)
@@ -1260,6 +1273,7 @@ Partial Class Form1
     Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
     Me.Name = "Form1"
     Me.Text = "Monitoring"
+    Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
     Me.SplitContainer1.Panel1.ResumeLayout(False)
     Me.SplitContainer1.Panel2.ResumeLayout(False)
     CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1418,4 +1432,5 @@ Partial Class Form1
   Friend WithEvents SystemStatus As ToolStripStatusLabel
   Friend WithEvents Button2 As Button
   Friend WithEvents Button3 As Button
+  Friend WithEvents Button4 As Button
 End Class

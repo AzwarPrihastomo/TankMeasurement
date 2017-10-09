@@ -108,7 +108,7 @@ Public Class Form1
   Public ErrTemp As Integer
 
   Public levelDammage As Boolean
-  Public PresDammage As Boolean
+  Public PresDammage As Boolean '= True 'DISABLE PRESSURE
   Public TempDammage As Boolean
 
   Public gotComReplyLevel As Boolean
@@ -398,6 +398,7 @@ Public Class Form1
     If (btnRun.Text = "Run") Then
       add_log("user try connect")
       connect()
+      Threading.Thread.Sleep(5000)
     Else
       add_log("user try disconnect")
       disconnect()
@@ -717,6 +718,7 @@ Public Class Form1
       End If
       rowTempLookup = i
     Next
+
     For i = colDensityStartTable54 To table54.ColumnCount - 1
       If densityVal <= table54.Item(i, rowDensityTable54).value Then
         colDensityLookup = i
@@ -738,6 +740,7 @@ Public Class Form1
       End If
       rowPersenLookup = i
     Next
+
     nettLiterProducLiquid.Text = tableTangki.Item(colLiterTableTangki, rowPersenLookup).value
 
     '------------------------- volCorrectionFactor -------------------------------------------------------
@@ -766,6 +769,8 @@ Public Class Form1
       End If
       rowMaxLookup = i
     Next
+    'add_log("AKUADALAH " & rowMaxLookup)
+    'MsgBox(tableTangki.Item(colLiterTableTangki, rowMaxLookup).value)
     nettLitersProductVapour.Text = tableTangki.Item(colLiterTableTangki, rowMaxLookup).value - Convert.ToDouble(nettLiterProducLiquid.Text)
 
     '--------------------- pressureFactor ----------------------------------------------------------------
@@ -846,7 +851,6 @@ Public Class Form1
       Else
         tempStatus = "FAIL"
         tempVal = 0
-
       End If
 
       tempTime = Now.ToString("yyyy-MM-dd H:mm:ss")
@@ -919,6 +923,12 @@ Public Class Form1
           gotLevel = True
           dataLevel = strip_str.Replace(idLevel & ":", "")
           gotLevelTime = Now
+
+          'hack, no press
+          gotPress = True
+          dataPress = "0" 'strip_str.Replace(idPress & ":", "")
+          gotPressTime = Now
+
         ElseIf strip_str.Contains(idPress & ":") Then
           gotPress = True
           dataPress = strip_str.Replace(idPress & ":", "")
@@ -927,6 +937,11 @@ Public Class Form1
           gotTemp = True
           dataTemp = strip_str.Replace(idTemp & ":", "")
           gotTempTime = Now
+          'hack, no press
+          gotPress = True
+          dataPress = "0" 'strip_str.Replace(idPress & ":", "")
+          gotPressTime = Now
+
         End If
       ElseIf strip_str.Contains(reqDataCommandReply) Then
         If strip_str.Contains(idLevel & ":") Then
@@ -1133,7 +1148,8 @@ Public Class Form1
     PressStatus.ForeColor = Color.Black
   End Sub
   Function toKpa(input As Double) As Double
-    toKpa = input * 98.0665
+    'toKpa = input * 98.0665 disable convertion
+    toKpa = input
   End Function
 
   Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -1155,5 +1171,11 @@ Public Class Form1
     If oMysql.SetData(myQuery) Then
       MsgBox("Succcess")
     End If
+  End Sub
+
+  Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+    calculateData(Convert.ToDouble(tBoxLevel.Text), Convert.ToDouble(tBoxTemp.Text), Convert.ToDouble(tBoxPress.Text), Convert.ToDouble(cBoxDensity.Text))
+    MsgBox(Convert.ToDouble(tBoxPress.Text))
   End Sub
 End Class

@@ -3,8 +3,8 @@
 //#include <EEPROM.h>
 #include <SoftwareSerial.h>
 
-#define TEMPERATURE_GAUGE
-//#define LEVEL_GAUGE
+//#define TEMPERATURE_GAUGE
+#define LEVEL_GAUGE
 //#define PRESSURE_GAUGE
 
 #define TX 11
@@ -27,7 +27,7 @@ int test;
 char byteReceived;
 //int byteSend;
 
-const int DELAY_BEFORE_WRITE = 10;
+const int DELAY_BEFORE_WRITE = 20;//10 before 
 const int DELAY_AFTER_WRITE = 100;
 const int DELAY_BUS_READY = 110;
 
@@ -41,7 +41,7 @@ const int DELAY_BUS_READY = 110;
 
 //#define HOMING_ON_ANALOG 200 //factory calibrated, under this consider kena
 #define HOMING_STEPPING_DELAY 6 //ms
-#define STEPPING_DELAY 4//ms
+#define STEPPING_DELAY 7//ms
 #define LEARN_STEPPING_DELAY 5//ms
 
 #define NUM_OF_STEP 2064
@@ -106,7 +106,7 @@ const float effective_dial_angle = 0.0; //unnessecaru in level, but need in comp
 const float dial_max_unit = 0.0;//unnessecaru in level, but need in compile time
 const float dial_min_unit = 0.0;//unnessecaru in level, but need in compile time
 const uint16_t sensor_offset_master = 0; //in count, offsetting in motor count (if needed (ADV))
-const float K_FACTOR = 0.55;
+const float K_FACTOR = 0.8;
 const uint8_t HYSTERESIS = 10;
 const uint8_t OUTLIERS_THRESHOLD = 8; //in degrees, +- value
 const uint8_t ONE_PEAK_ADJUSTER_THRESHOLD = 10;
@@ -114,7 +114,7 @@ const float dumVal = 90.0; //dummy value for demo mode
 const int HOMING_ON_ANALOG = 600;
 const int motorInverted = -1; // 1 OR -1
 const int  DEMO_MODE = 0;
-const int onePeakMode[4] = { ONE_PEAK_COUNTERWEIGHT, ONE_PEAK_COUNTERWEIGHT, ONE_PEAK_COUNTERWEIGHT, ONE_PEAK_COUNTERWEIGHT };
+const int onePeakMode[4] = { ONE_PEAK_NEEDLE, ONE_PEAK_NEEDLE, ONE_PEAK_NEEDLE, ONE_PEAK_NEEDLE };
 const float minSensibleValue = -1.0; //will be ignored if isLinearScale =0
 const float maxSensibleValue = -1.0;//will be ignored if isLinearScale =0
 #endif
@@ -123,7 +123,7 @@ const float maxSensibleValue = -1.0;//will be ignored if isLinearScale =0
 //-----------------------------CONFIGURATION FOR PRESSURE v2-----------------------------------------------//
 #ifdef PRESSURE_GAUGE
 const String idName = "press"; //id name for pressure
-const bool disable_averaging = false; //disable or enable averaging
+const bool disable_averaging = true; //disable or enable averaging
 const bool isLinearScale = 1; // linear mapping for pressure gauge
 const float master_offset = -184.0; //in degrees, affect measurement angle
 const float angle_offset[4] = { 0.0, 0.0, 0.0, 0.0}; //sensor factory offst, in degrees
@@ -131,17 +131,17 @@ const float effective_dial_angle = 270.0;
 const float dial_min_unit = 0.0;
 const float dial_max_unit = 25.0;
 const uint16_t sensor_offset_master = 0; //in count, offsetting in motor count (if needed (ADV))
-const float K_FACTOR = 0.80;
-const uint8_t HYSTERESIS = 10;
+const float K_FACTOR = 0.85;
+const uint8_t HYSTERESIS = 5;
 const uint8_t OUTLIERS_THRESHOLD = 8; //in degrees, +- value
 const uint8_t ONE_PEAK_ADJUSTER_THRESHOLD = 10;
 const float dumVal = 9.0; //dummy value for demo mode
 const int HOMING_ON_ANALOG = 600;
 const int motorInverted = -1; // 1 OR -1
 const int  DEMO_MODE = 0;
-const int onePeakMode[4] = {ONE_PEAK_NEEDLE , ONE_PEAK_NEEDLE , ONE_PEAK_NEEDLE , ONE_PEAK_NEEDLE };// on pressure gage, needle is the most observable feature
-const float minSensibleValue = 6.118297277867569; //unit : kg/cm2. 6bar
-const float maxSensibleValue = 18.354891833602707; // dial unit. 18 bar
+const int onePeakMode[4] = {ONE_PEAK_COUNTERWEIGHT , ONE_PEAK_COUNTERWEIGHT, ONE_PEAK_COUNTERWEIGHT, ONE_PEAK_COUNTERWEIGHT };// on pressure gage, needle is the most observable feature
+const float minSensibleValue = 0; //unit : kg/cm2. 6bar
+const float maxSensibleValue = 15; // dial unit. 18 bar
 #endif
 //---------------------------------------------------------------------------------------------------------//
 
@@ -150,7 +150,7 @@ const float maxSensibleValue = 18.354891833602707; // dial unit. 18 bar
 const String idName = "temp"; //id name for temp
 const bool disable_averaging = true; //disable or enable averaging
 const bool isLinearScale = 1; // linear mapping for temperature gauge
-const float master_offset = -184.0; //in degrees, affect measurement angle
+const float master_offset = -184.0-5.0; //in degrees, affect measurement angle
 const float angle_offset[4] = { -1.0 , -1.5 , 0.0 , 1.3 }; //sensor factory offst, in degrees
 const float effective_dial_angle = 280.0; //pengukuran manual
 const float dial_min_unit = 0.0;
@@ -1104,7 +1104,6 @@ void read_main(bool debug) {
         Serial.println(F("No valid sensor after learning"));
         //        delay(100);
         delay(DELAY_BUS_READY);
-
         mode485(RS485_WRITE);
         delay(DELAY_BEFORE_WRITE);
         mySoftSerial.println(idName + ":Err200");

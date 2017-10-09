@@ -531,9 +531,9 @@ Partial Class setting
     Me.usePredCheck.CheckState = System.Windows.Forms.CheckState.Checked
     Me.usePredCheck.Location = New System.Drawing.Point(427, 419)
     Me.usePredCheck.Name = "usePredCheck"
-    Me.usePredCheck.Size = New System.Drawing.Size(138, 24)
+    Me.usePredCheck.Size = New System.Drawing.Size(209, 24)
     Me.usePredCheck.TabIndex = 4
-    Me.usePredCheck.Text = "Use Prediction"
+    Me.usePredCheck.Text = "Use Prediction Algorithm"
     Me.usePredCheck.UseVisualStyleBackColor = True
     '
     'setting
