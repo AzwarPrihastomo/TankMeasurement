@@ -80,10 +80,6 @@ Public Class Form1
   Public lastOkTemp As Double
   Public lastOkLevel As Double
 
-  Public lastOkPress1 As Double
-  Public lastOkTemp1 As Double
-  Public lastOkLevel1 As Double
-
 
   Public reqDataCommandReply As String = "ComAccepted"
   Public OutliersDetetionFailed As String = "Err500"
@@ -370,7 +366,7 @@ Public Class Form1
       ErrTemp = ERROR_CODE.NoError
 
       levelDammage = False
-      PresDammage = False
+      PresDammage = True	'hack pressure disable
       TempDammage = False
 
       ComRetryCountLevel = 0
@@ -549,7 +545,7 @@ Public Class Form1
       presRequested = False
     End If
 
-    If ((gotLevel Or levelRequestedTimeout) And (gotPress Or presRequestedTimeout) And (gotTemp Or tempRequestedTimeout)) Then
+    If ((gotLevel Or levelDammage) And (gotPress Or presDammage) And (gotTemp Or tempDammage)) Then
 
       store_data()
       update_chart_tankLevel()
@@ -923,12 +919,6 @@ Public Class Form1
           gotLevel = True
           dataLevel = strip_str.Replace(idLevel & ":", "")
           gotLevelTime = Now
-
-          'hack, no press
-          gotPress = True
-          dataPress = "0" 'strip_str.Replace(idPress & ":", "")
-          gotPressTime = Now
-
         ElseIf strip_str.Contains(idPress & ":") Then
           gotPress = True
           dataPress = strip_str.Replace(idPress & ":", "")
@@ -937,11 +927,6 @@ Public Class Form1
           gotTemp = True
           dataTemp = strip_str.Replace(idTemp & ":", "")
           gotTempTime = Now
-          'hack, no press
-          gotPress = True
-          dataPress = "0" 'strip_str.Replace(idPress & ":", "")
-          gotPressTime = Now
-
         End If
       ElseIf strip_str.Contains(reqDataCommandReply) Then
         If strip_str.Contains(idLevel & ":") Then
