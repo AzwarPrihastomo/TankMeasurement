@@ -3,8 +3,8 @@
 //#include <EEPROM.h>
 #include <SoftwareSerial.h>
 
-//#define TEMPERATURE_GAUGE
-#define LEVEL_GAUGE
+#define TEMPERATURE_GAUGE
+//#define LEVEL_GAUGE
 //#define PRESSURE_GAUGE
 
 #define TX 11
