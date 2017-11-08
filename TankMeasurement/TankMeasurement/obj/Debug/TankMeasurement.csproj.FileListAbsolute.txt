@@ -1,0 +1,17 @@
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.exe
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.pdb
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\bin\Debug\AquaGauge.dll
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\bin\Debug\MySql.Data.dll
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\ResolveAssemblyReference.cache
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Form1.resources
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Properties.Resources.resources
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csproj.GenerateResource.Cache
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.exe
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.pdb
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\bin\Debug\System.Windows.Forms.DataVisualization.Design.dll
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\bin\Debug\System.Windows.Forms.DataVisualization.dll
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.About.resources
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.ExportCsv.resources
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Password.resources
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Setting.resources
+D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Tables.resources
