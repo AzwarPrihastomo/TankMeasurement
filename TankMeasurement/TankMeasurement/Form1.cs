@@ -271,7 +271,10 @@ namespace TankMeasurement
                 return;
             connstring = "server=" + sql_address + ";user id=" + master_user + ";password=" + master_pass + "; port=3307; database=" + (char)34 + database_name + (char)34 + ";";
             if (!oMysql.Connect(connstring))
+            {
+                WriteLog("Cannot Connect to mySql Server");
                 return;
+            }
             {
                 btnRun.Text = "Stop";
                 timer.AutoReset = true;
@@ -788,6 +791,11 @@ namespace TankMeasurement
                 btnLog.Text = "Show Log";
             }
 
+        }
+
+        private void ExitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

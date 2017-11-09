@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.SplitContainer1 = new System.Windows.Forms.SplitContainer();
             this.SplitContainer3 = new System.Windows.Forms.SplitContainer();
@@ -110,6 +110,8 @@
             this.Label8 = new System.Windows.Forms.Label();
             this.Label23 = new System.Windows.Forms.Label();
             this.Panel4 = new System.Windows.Forms.Panel();
+            this.btnLog = new System.Windows.Forms.Button();
+            this.btnHide = new System.Windows.Forms.Button();
             this.btnRun = new System.Windows.Forms.Button();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -130,10 +132,8 @@
             this.menuPress = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ExportCsvToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.NotifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btnHide = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.textLog = new System.Windows.Forms.TextBox();
-            this.btnLog = new System.Windows.Forms.Button();
             this.SplitContainer1.Panel1.SuspendLayout();
             this.SplitContainer1.Panel2.SuspendLayout();
             this.SplitContainer1.SuspendLayout();
@@ -255,22 +255,22 @@
             // 
             // ChartLevel
             // 
-            chartArea13.Name = "ChartArea1";
-            this.ChartLevel.ChartAreas.Add(chartArea13);
+            chartArea4.Name = "ChartArea1";
+            this.ChartLevel.ChartAreas.Add(chartArea4);
             this.ChartLevel.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend13.Alignment = System.Drawing.StringAlignment.Far;
-            legend13.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend13.Name = "Legend1";
-            this.ChartLevel.Legends.Add(legend13);
+            legend4.Alignment = System.Drawing.StringAlignment.Far;
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend4.Name = "Legend1";
+            this.ChartLevel.Legends.Add(legend4);
             this.ChartLevel.Location = new System.Drawing.Point(0, 0);
             this.ChartLevel.Name = "ChartLevel";
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series13.Color = System.Drawing.Color.Blue;
-            series13.Legend = "Legend1";
-            series13.Name = "Tank Level";
-            series13.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartLevel.Series.Add(series13);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Blue;
+            series4.Legend = "Legend1";
+            series4.Name = "Tank Level";
+            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartLevel.Series.Add(series4);
             this.ChartLevel.Size = new System.Drawing.Size(617, 177);
             this.ChartLevel.TabIndex = 13;
             this.ChartLevel.Text = "Chart1";
@@ -406,22 +406,22 @@
             // 
             // ChartTemp
             // 
-            chartArea14.Name = "ChartArea1";
-            this.ChartTemp.ChartAreas.Add(chartArea14);
+            chartArea5.Name = "ChartArea1";
+            this.ChartTemp.ChartAreas.Add(chartArea5);
             this.ChartTemp.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend14.Alignment = System.Drawing.StringAlignment.Far;
-            legend14.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend14.Name = "Legend1";
-            this.ChartTemp.Legends.Add(legend14);
+            legend5.Alignment = System.Drawing.StringAlignment.Far;
+            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend5.Name = "Legend1";
+            this.ChartTemp.Legends.Add(legend5);
             this.ChartTemp.Location = new System.Drawing.Point(0, 0);
             this.ChartTemp.Name = "ChartTemp";
-            series14.ChartArea = "ChartArea1";
-            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series14.Color = System.Drawing.Color.SeaGreen;
-            series14.Legend = "Legend1";
-            series14.Name = "Temperature";
-            series14.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartTemp.Series.Add(series14);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Color = System.Drawing.Color.SeaGreen;
+            series5.Legend = "Legend1";
+            series5.Name = "Temperature";
+            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartTemp.Series.Add(series5);
             this.ChartTemp.Size = new System.Drawing.Size(617, 179);
             this.ChartTemp.TabIndex = 13;
             this.ChartTemp.Text = "Chart1";
@@ -520,22 +520,22 @@
             // 
             // ChartPressure
             // 
-            chartArea15.Name = "ChartArea1";
-            this.ChartPressure.ChartAreas.Add(chartArea15);
+            chartArea6.Name = "ChartArea1";
+            this.ChartPressure.ChartAreas.Add(chartArea6);
             this.ChartPressure.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend15.Alignment = System.Drawing.StringAlignment.Far;
-            legend15.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend15.Name = "Legend1";
-            this.ChartPressure.Legends.Add(legend15);
+            legend6.Alignment = System.Drawing.StringAlignment.Far;
+            legend6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend6.Name = "Legend1";
+            this.ChartPressure.Legends.Add(legend6);
             this.ChartPressure.Location = new System.Drawing.Point(0, 0);
             this.ChartPressure.Name = "ChartPressure";
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series15.Color = System.Drawing.Color.BlueViolet;
-            series15.Legend = "Legend1";
-            series15.Name = "Pressure";
-            series15.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartPressure.Series.Add(series15);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Color = System.Drawing.Color.BlueViolet;
+            series6.Legend = "Legend1";
+            series6.Name = "Pressure";
+            series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartPressure.Series.Add(series6);
             this.ChartPressure.Size = new System.Drawing.Size(614, 184);
             this.ChartPressure.TabIndex = 12;
             this.ChartPressure.Text = "Chart1";
@@ -987,6 +987,28 @@
             this.Panel4.Size = new System.Drawing.Size(1100, 30);
             this.Panel4.TabIndex = 9;
             // 
+            // btnLog
+            // 
+            this.btnLog.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnLog.Location = new System.Drawing.Point(790, 4);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(93, 23);
+            this.btnLog.TabIndex = 2;
+            this.btnLog.Text = "Show Log";
+            this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
+            // 
+            // btnHide
+            // 
+            this.btnHide.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnHide.Location = new System.Drawing.Point(889, 4);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(108, 23);
+            this.btnHide.TabIndex = 1;
+            this.btnHide.Text = "Hide Calculation";
+            this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            // 
             // btnRun
             // 
             this.btnRun.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -1050,8 +1072,9 @@
             // ExitToolStripMenuItem1
             // 
             this.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1";
-            this.ExitToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
+            this.ExitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.ExitToolStripMenuItem1.Text = "Exit";
+            this.ExitToolStripMenuItem1.Click += new System.EventHandler(this.ExitToolStripMenuItem1_Click);
             // 
             // AboutToolStripMenuItem
             // 
@@ -1129,17 +1152,6 @@
             this.NotifyIcon1.Visible = true;
             this.NotifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon1_MouseDoubleClick);
             // 
-            // btnHide
-            // 
-            this.btnHide.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnHide.Location = new System.Drawing.Point(889, 4);
-            this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(108, 23);
-            this.btnHide.TabIndex = 1;
-            this.btnHide.Text = "Hide Calculation";
-            this.btnHide.UseVisualStyleBackColor = true;
-            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.textLog);
@@ -1153,6 +1165,7 @@
             // 
             this.textLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textLog.Location = new System.Drawing.Point(0, 0);
+            this.textLog.MaxLength = 32766;
             this.textLog.Multiline = true;
             this.textLog.Name = "textLog";
             this.textLog.ReadOnly = true;
@@ -1160,17 +1173,6 @@
             this.textLog.Size = new System.Drawing.Size(790, 626);
             this.textLog.TabIndex = 0;
             this.textLog.WordWrap = false;
-            // 
-            // btnLog
-            // 
-            this.btnLog.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnLog.Location = new System.Drawing.Point(790, 4);
-            this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(93, 23);
-            this.btnLog.TabIndex = 2;
-            this.btnLog.Text = "Show Log";
-            this.btnLog.UseVisualStyleBackColor = true;
-            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
             // 
             // Form1
             // 
