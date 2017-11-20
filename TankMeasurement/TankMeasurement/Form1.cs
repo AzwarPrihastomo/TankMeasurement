@@ -366,7 +366,12 @@ namespace TankMeasurement
             calculateData(valLevel, valPress, valTemp, Convert.ToDouble(cBoxDensity.Text));
             myQuery = "INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '" + Convert.ToString(valLevel) + "', '" + Convert.ToString(valPress) + "', '" + Convert.ToString(valTemp) + "', '" + kilogramLiquid.Text + "', '" + kilogramsVapour.Text + "', '" + TotalKilograms.Text + "');";
             WriteLog(myQuery);
-            oMysql.SetData(myQuery);
+            if (!oMysql.SetData(myQuery))
+            {
+                MessageBox.Show("Error upload, Process stopped");
+                StopProcess();
+                WriteLog("update database error, process stop");
+            }
             WriteLog("updating chart");
             updateLevelChart();
             updatePressChart();
