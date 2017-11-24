@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "Libuv/1.9.1": {
@@ -3226,12 +3226,6 @@
           "System.Threading.Tasks": "4.3.0",
           "System.Threading.ThreadPool": "4.3.0",
           "System.Threading.Timer": "4.3.0"
-        },
-        "compile": {
-          "bin/placeholder/MySql.Data.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MySql.Data.dll": {}
         }
       }
     },
@@ -3322,13 +3316,7 @@
       },
       "MySql.Data/6.10.4": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.5.2",
-        "compile": {
-          "bin/placeholder/MySql.Data.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MySql.Data.dll": {}
-        }
+        "framework": ".NETFramework,Version=v4.5.2"
       }
     }
   },
@@ -9246,45 +9234,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER PC\\.nuget\\packages\\": {}
+    "C:\\Users\\Formulatrix\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "6.10.4",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACER PC\\Documents\\Visual Studio 2017\\Project\\MySQL.Data\\tests\\MySql.Data.Tests.csproj",
+      "projectUniqueName": "C:\\Git\\Dial Reader\\DialReader_2017\\MySQL.Data\\tests\\MySql.Data.Tests.csproj",
       "projectName": "MySql.Data.Tests",
-      "projectPath": "C:\\Users\\ACER PC\\Documents\\Visual Studio 2017\\Project\\MySQL.Data\\tests\\MySql.Data.Tests.csproj",
-      "packagesPath": "C:\\Users\\ACER PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACER PC\\Documents\\Visual Studio 2017\\Project\\MySQL.Data\\tests\\obj\\",
+      "projectPath": "C:\\Git\\Dial Reader\\DialReader_2017\\MySQL.Data\\tests\\MySql.Data.Tests.csproj",
+      "outputPath": "C:\\Git\\Dial Reader\\DialReader_2017\\MySQL.Data\\tests\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
-      "configFilePaths": [
-        "C:\\Users\\ACER PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-      ],
       "originalTargetFrameworks": [
         "net452",
         "netcoreapp1.1"
       ],
-      "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "net452": {
           "projectReferences": {
-            "C:\\Users\\ACER PC\\Documents\\Visual Studio 2017\\Project\\MySQL.Data\\src\\MySql.Data.csproj": {
-              "projectPath": "C:\\Users\\ACER PC\\Documents\\Visual Studio 2017\\Project\\MySQL.Data\\src\\MySql.Data.csproj"
+            "C:\\Git\\Dial Reader\\DialReader_2017\\MySQL.Data\\src\\MySql.Data.csproj": {
+              "projectPath": "C:\\Git\\Dial Reader\\DialReader_2017\\MySQL.Data\\src\\MySql.Data.csproj"
             }
           }
         },
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\Users\\ACER PC\\Documents\\Visual Studio 2017\\Project\\MySQL.Data\\src\\MySql.Data.csproj": {
-              "projectPath": "C:\\Users\\ACER PC\\Documents\\Visual Studio 2017\\Project\\MySQL.Data\\src\\MySql.Data.csproj"
+            "C:\\Git\\Dial Reader\\DialReader_2017\\MySQL.Data\\src\\MySql.Data.csproj": {
+              "projectPath": "C:\\Git\\Dial Reader\\DialReader_2017\\MySQL.Data\\src\\MySql.Data.csproj"
             }
           }
         }
