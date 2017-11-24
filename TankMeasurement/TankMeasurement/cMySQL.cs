@@ -66,7 +66,7 @@ namespace TankMeasurement
             }
             catch (MySqlException myError)
             {
-                MessageBox.Show("Error Connecting to Database: " + myError.Message);
+                MessageBox.Show("Error upload Database: " + myError.Message);
                 setDataSuccess = false;
             }
             return setDataSuccess;
@@ -79,7 +79,7 @@ namespace TankMeasurement
             }
             catch (MySqlException myError)
             {
-                MessageBox.Show("Error Connecting to Database: " + myError.Message);
+                MessageBox.Show("Error command Database: " + myError.Message);
                 return false;
             }
             return true;
