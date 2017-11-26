@@ -78,11 +78,11 @@
     <Compile Include="ExportCsv.Designer.cs">
       <DependentUpon>ExportCsv.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="TankMeasurement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="TankMeasurement.Designer.cs">
+      <DependentUpon>TankMeasurement.cs</DependentUpon>
     </Compile>
     <Compile Include="modbus.cs" />
     <Compile Include="Password.cs">
@@ -99,8 +99,8 @@
     <EmbeddedResource Include="ExportCsv.resx">
       <DependentUpon>ExportCsv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="TankMeasurement.resx">
+      <DependentUpon>TankMeasurement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Password.resx">
       <DependentUpon>Password.cs</DependentUpon>

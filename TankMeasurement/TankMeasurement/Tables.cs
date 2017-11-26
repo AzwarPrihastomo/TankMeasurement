@@ -20,7 +20,7 @@ namespace TankMeasurement
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                Form1 test = new Form1();
+                TankMeasurement test = new TankMeasurement();
                 test.openCsv(openFileDialog1.FileName, ref table54);
                 File54.Text = openFileDialog1.FileName;
             }
@@ -30,7 +30,7 @@ namespace TankMeasurement
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                Form1 test = new Form1();
+                TankMeasurement test = new TankMeasurement();
                 test.openCsv(openFileDialog1.FileName, ref tableTangki);
                 FileTangki.Text = openFileDialog1.FileName;
             }

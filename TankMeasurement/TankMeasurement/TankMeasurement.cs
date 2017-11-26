@@ -13,7 +13,7 @@ using System.IO;
 
 namespace TankMeasurement
 {
-    public partial class Form1 : Form
+    public partial class TankMeasurement : Form
     {
         public delegate void GUIDelegate();
         public delegate void LogDelegate(string item);
@@ -88,7 +88,7 @@ namespace TankMeasurement
         string myQuery;
         int dateNow;
 
-        public Form1()
+        public TankMeasurement()
         {
             InitializeComponent();
             timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
@@ -256,11 +256,13 @@ namespace TankMeasurement
             if (btnRun.Text == "Run")
             {
                 WriteLog("Running Process");
+                ConnectionStatus.Text = "Connecting ...";
                 RunProcess();
             }
             else
             {
                 WriteLog("Stopping Process");
+                ConnectionStatus.Text = "Stopping process...";
                 StopProcess();
             }
         }
@@ -268,11 +270,16 @@ namespace TankMeasurement
         private void RunProcess()
         {
             if (!mb.Open(portModbus, modBusBaud, 8, Parity.None, StopBits.One))
+            {
+                ConnectionStatus.Text = "Cannot Connect to Modbus";
+                WriteLog("Cannot Connect to Modbus");
                 return;
+            }
             connstring = "server=" + sql_address + ";user id=" + master_user + ";password=" + master_pass + "; port=3307; database=" + (char)34 + database_name + (char)34 + ";";
             if (!oMysql.Connect(connstring))
             {
                 WriteLog("Cannot Connect to mySql Server");
+                ConnectionStatus.Text = "Cannot Connect to MySql Server";
                 return;
             }
             {
@@ -281,6 +288,7 @@ namespace TankMeasurement
                 timer.Interval = 1000 * update_period;
                 timer.Start();
                 isConnect = true;
+                ConnectionStatus.Text = "Connected";
             }
 
         }
@@ -292,6 +300,8 @@ namespace TankMeasurement
             mb.Close();
             btnRun.Text = "Run";
             isConnect = false;
+            WriteLog("Disconnected, Process stopped");
+            ConnectionStatus.Text = "Disconnected, Process stopped";
         }
 
         void timer_Elapsed(object sender, ElapsedEventArgs e)
@@ -309,9 +319,11 @@ namespace TankMeasurement
 
             try
             {
+                ConnectionStatus.Text = "Requesting Data";
                 WriteLog("Requesting Data");
                 while (!mb.SendFc3(Convert.ToByte("1"), pollStart, pollLength, ref values)) ;
                 WriteLog("Data accuired");
+                ConnectionStatus.Text = "Data accuired";
                 String data = "Data = ";
                 for (int i = 0; i < pollLength; i++)
                 {
@@ -322,6 +334,7 @@ namespace TankMeasurement
             catch (Exception err)
             {
                 WriteLog("Error in modbus read: " + err.Message);
+                ConnectionStatus.Text = "Error in modbus read";
                 MessageBox.Show("Error in modbus read: " + err.Message);
             }
 
@@ -369,6 +382,7 @@ namespace TankMeasurement
             if (!oMysql.SetData(myQuery))
             {
                 MessageBox.Show("Error upload, Process stopped");
+                ConnectionStatus.Text = "Error upload, Process stopped";
                 StopProcess();
                 WriteLog("update database error, process stop");
             }
@@ -801,6 +815,28 @@ namespace TankMeasurement
         private void ExitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void hideOnSystrayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //if (isConnect)
+            {
+                NotifyIcon1.Visible = true;
+                NotifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+                NotifyIcon1.BalloonTipTitle = "Tank Manitoring";
+                NotifyIcon1.BalloonTipText = "Click Here to show";
+                NotifyIcon1.ShowBalloonTip(50000);
+                this.Hide();
+                ShowInTaskbar = false;
+            }
+        }
+
+        private void NotifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+        {
+            ShowInTaskbar = true;
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+            NotifyIcon1.Visible = false;
         }
     }
 }

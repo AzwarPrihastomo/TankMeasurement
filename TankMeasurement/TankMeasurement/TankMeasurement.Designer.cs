@@ -1,6 +1,6 @@
 ﻿namespace TankMeasurement
 {
-    partial class Form1
+    partial class TankMeasurement
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TankMeasurement));
             this.SplitContainer1 = new System.Windows.Forms.SplitContainer();
             this.SplitContainer3 = new System.Windows.Forms.SplitContainer();
             this.gaugeLevel = new AquaControls.AquaGauge();
@@ -52,11 +52,11 @@
             this.SplitContainer2 = new System.Windows.Forms.SplitContainer();
             this.SplitContainer4 = new System.Windows.Forms.SplitContainer();
             this.gaugeTemp = new AquaControls.AquaGauge();
-            this.data_log_table = new System.Windows.Forms.DataGridView();
             this.ChkTodayTemp = new System.Windows.Forms.CheckBox();
             this.DTTemp = new System.Windows.Forms.DateTimePicker();
             this.ChartTemp = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridExport = new System.Windows.Forms.DataGridView();
+            this.data_log_table = new System.Windows.Forms.DataGridView();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.Label2 = new System.Windows.Forms.Label();
             this.SplitContainer5 = new System.Windows.Forms.SplitContainer();
@@ -67,47 +67,47 @@
             this.Panel3 = new System.Windows.Forms.Panel();
             this.Label3 = new System.Windows.Forms.Label();
             this.Panel5 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.kilogramsVapour = new System.Windows.Forms.TextBox();
+            this.Label21 = new System.Windows.Forms.Label();
+            this.vapourDensity = new System.Windows.Forms.TextBox();
+            this.Label20 = new System.Windows.Forms.Label();
+            this.TemperatureFactor = new System.Windows.Forms.TextBox();
+            this.Label19 = new System.Windows.Forms.Label();
+            this.pressureFactor = new System.Windows.Forms.TextBox();
+            this.Label18 = new System.Windows.Forms.Label();
+            this.nettLitersProductVapour = new System.Windows.Forms.TextBox();
+            this.Label17 = new System.Windows.Forms.Label();
+            this.levelVapour = new System.Windows.Forms.TextBox();
+            this.Label16 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.kilogramLiquid = new System.Windows.Forms.TextBox();
+            this.Label9 = new System.Windows.Forms.Label();
+            this.Multiplier = new System.Windows.Forms.TextBox();
+            this.Label8 = new System.Windows.Forms.Label();
+            this.Liters15C = new System.Windows.Forms.TextBox();
+            this.Label10 = new System.Windows.Forms.Label();
+            this.volCorrectionFactor = new System.Windows.Forms.TextBox();
+            this.Label11 = new System.Windows.Forms.Label();
+            this.nettLiterProducLiquid = new System.Windows.Forms.TextBox();
+            this.Label12 = new System.Windows.Forms.Label();
+            this.density15C = new System.Windows.Forms.TextBox();
+            this.Label13 = new System.Windows.Forms.Label();
+            this.faktorKoreksiTemp = new System.Windows.Forms.TextBox();
+            this.Label14 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.cBoxDensity = new System.Windows.Forms.ComboBox();
+            this.Label6 = new System.Windows.Forms.Label();
+            this.tBoxPress = new System.Windows.Forms.TextBox();
+            this.tBoxLevel = new System.Windows.Forms.TextBox();
+            this.Label4 = new System.Windows.Forms.Label();
+            this.Label7 = new System.Windows.Forms.Label();
+            this.tBoxTemp = new System.Windows.Forms.TextBox();
+            this.Label5 = new System.Windows.Forms.Label();
             this.TotalKilograms = new System.Windows.Forms.TextBox();
             this.Panel7 = new System.Windows.Forms.Panel();
             this.Label22 = new System.Windows.Forms.Label();
             this.Label15 = new System.Windows.Forms.Label();
-            this.Panel6 = new System.Windows.Forms.Panel();
-            this.cBoxDensity = new System.Windows.Forms.ComboBox();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.tBoxLevel = new System.Windows.Forms.TextBox();
-            this.Label6 = new System.Windows.Forms.Label();
-            this.tBoxPress = new System.Windows.Forms.TextBox();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.tBoxTemp = new System.Windows.Forms.TextBox();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.kilogramsVapour = new System.Windows.Forms.TextBox();
-            this.vapourDensity = new System.Windows.Forms.TextBox();
-            this.TemperatureFactor = new System.Windows.Forms.TextBox();
-            this.pressureFactor = new System.Windows.Forms.TextBox();
-            this.nettLitersProductVapour = new System.Windows.Forms.TextBox();
-            this.levelVapour = new System.Windows.Forms.TextBox();
-            this.Label16 = new System.Windows.Forms.Label();
-            this.Label17 = new System.Windows.Forms.Label();
-            this.Label18 = new System.Windows.Forms.Label();
-            this.Label19 = new System.Windows.Forms.Label();
-            this.Label20 = new System.Windows.Forms.Label();
-            this.Label21 = new System.Windows.Forms.Label();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.kilogramLiquid = new System.Windows.Forms.TextBox();
-            this.Multiplier = new System.Windows.Forms.TextBox();
-            this.Liters15C = new System.Windows.Forms.TextBox();
-            this.volCorrectionFactor = new System.Windows.Forms.TextBox();
-            this.nettLiterProducLiquid = new System.Windows.Forms.TextBox();
-            this.density15C = new System.Windows.Forms.TextBox();
-            this.faktorKoreksiTemp = new System.Windows.Forms.TextBox();
-            this.Label14 = new System.Windows.Forms.Label();
-            this.Label13 = new System.Windows.Forms.Label();
-            this.Label12 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.Label8 = new System.Windows.Forms.Label();
             this.Label23 = new System.Windows.Forms.Label();
             this.Panel4 = new System.Windows.Forms.Panel();
             this.btnLog = new System.Windows.Forms.Button();
@@ -122,7 +122,7 @@
             this.ExitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.LevelStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ConnectionStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.portCom = new System.IO.Ports.SerialPort(this.components);
             this.SaveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuLevel = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -134,6 +134,8 @@
             this.NotifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel8 = new System.Windows.Forms.Panel();
             this.textLog = new System.Windows.Forms.TextBox();
+            this.hideOnSystrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.SplitContainer1.Panel1.SuspendLayout();
             this.SplitContainer1.Panel2.SuspendLayout();
             this.SplitContainer1.SuspendLayout();
@@ -150,9 +152,9 @@
             this.SplitContainer4.Panel1.SuspendLayout();
             this.SplitContainer4.Panel2.SuspendLayout();
             this.SplitContainer4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.data_log_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartTemp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridExport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_log_table)).BeginInit();
             this.Panel2.SuspendLayout();
             this.SplitContainer5.Panel1.SuspendLayout();
             this.SplitContainer5.Panel2.SuspendLayout();
@@ -160,10 +162,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ChartPressure)).BeginInit();
             this.Panel3.SuspendLayout();
             this.Panel5.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.Panel7.SuspendLayout();
-            this.Panel6.SuspendLayout();
-            this.GroupBox2.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
             this.Panel4.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.StatusStrip1.SuspendLayout();
@@ -175,6 +177,7 @@
             // 
             // SplitContainer1
             // 
+            this.SplitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SplitContainer1.Location = new System.Drawing.Point(0, 24);
             this.SplitContainer1.Name = "SplitContainer1";
@@ -188,18 +191,21 @@
             // SplitContainer1.Panel2
             // 
             this.SplitContainer1.Panel2.Controls.Add(this.SplitContainer2);
-            this.SplitContainer1.Size = new System.Drawing.Size(790, 626);
+            this.SplitContainer1.Size = new System.Drawing.Size(812, 626);
             this.SplitContainer1.SplitterDistance = 203;
+            this.SplitContainer1.SplitterWidth = 1;
             this.SplitContainer1.TabIndex = 7;
             // 
             // SplitContainer3
             // 
             this.SplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SplitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.SplitContainer3.Location = new System.Drawing.Point(0, 26);
             this.SplitContainer3.Name = "SplitContainer3";
             // 
             // SplitContainer3.Panel1
             // 
+            this.SplitContainer3.Panel1.BackColor = System.Drawing.Color.DarkGray;
             this.SplitContainer3.Panel1.Controls.Add(this.gaugeLevel);
             // 
             // SplitContainer3.Panel2
@@ -209,17 +215,17 @@
             this.SplitContainer3.Panel2.Controls.Add(this.ChartLevel);
             this.SplitContainer3.Panel2.Controls.Add(this.tableTangki);
             this.SplitContainer3.Panel2.Controls.Add(this.table54);
-            this.SplitContainer3.Size = new System.Drawing.Size(790, 177);
+            this.SplitContainer3.Size = new System.Drawing.Size(810, 175);
             this.SplitContainer3.SplitterDistance = 169;
             this.SplitContainer3.TabIndex = 0;
             // 
             // gaugeLevel
             // 
-            this.gaugeLevel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.gaugeLevel.BackColor = System.Drawing.Color.Transparent;
-            this.gaugeLevel.DialColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gaugeLevel.DialText = null;
-            this.gaugeLevel.Glossiness = 70F;
+            this.gaugeLevel.DialColor = System.Drawing.Color.Black;
+            this.gaugeLevel.DialText = "Level (%)";
+            this.gaugeLevel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gaugeLevel.Glossiness = 50F;
             this.gaugeLevel.Location = new System.Drawing.Point(0, 0);
             this.gaugeLevel.MaxValue = 100F;
             this.gaugeLevel.MinValue = 0F;
@@ -227,7 +233,7 @@
             this.gaugeLevel.RecommendedValue = 0F;
             this.gaugeLevel.Size = new System.Drawing.Size(169, 169);
             this.gaugeLevel.TabIndex = 1;
-            this.gaugeLevel.ThresholdPercent = 0F;
+            this.gaugeLevel.ThresholdPercent = 1F;
             this.gaugeLevel.Value = 0F;
             // 
             // ChkTodayLevel
@@ -264,6 +270,7 @@
             this.ChartLevel.Legends.Add(legend4);
             this.ChartLevel.Location = new System.Drawing.Point(0, 0);
             this.ChartLevel.Name = "ChartLevel";
+            series4.BorderWidth = 2;
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series4.Color = System.Drawing.Color.Blue;
@@ -271,7 +278,7 @@
             series4.Name = "Tank Level";
             series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
             this.ChartLevel.Series.Add(series4);
-            this.ChartLevel.Size = new System.Drawing.Size(617, 177);
+            this.ChartLevel.Size = new System.Drawing.Size(637, 175);
             this.ChartLevel.TabIndex = 13;
             this.ChartLevel.Text = "Chart1";
             this.ChartLevel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ChartLevel_MouseDown);
@@ -294,12 +301,12 @@
             // 
             // Panel1
             // 
-            this.Panel1.BackColor = System.Drawing.Color.Silver;
+            this.Panel1.BackColor = System.Drawing.Color.Gray;
             this.Panel1.Controls.Add(this.Label1);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel1.Location = new System.Drawing.Point(0, 0);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(790, 26);
+            this.Panel1.Size = new System.Drawing.Size(810, 26);
             this.Panel1.TabIndex = 1;
             // 
             // Label1
@@ -314,6 +321,7 @@
             // 
             // SplitContainer2
             // 
+            this.SplitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SplitContainer2.Location = new System.Drawing.Point(0, 0);
             this.SplitContainer2.Name = "SplitContainer2";
@@ -328,40 +336,43 @@
             // 
             this.SplitContainer2.Panel2.Controls.Add(this.SplitContainer5);
             this.SplitContainer2.Panel2.Controls.Add(this.Panel3);
-            this.SplitContainer2.Size = new System.Drawing.Size(790, 419);
+            this.SplitContainer2.Size = new System.Drawing.Size(812, 422);
             this.SplitContainer2.SplitterDistance = 205;
+            this.SplitContainer2.SplitterWidth = 1;
             this.SplitContainer2.TabIndex = 0;
             // 
             // SplitContainer4
             // 
             this.SplitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SplitContainer4.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.SplitContainer4.Location = new System.Drawing.Point(0, 26);
             this.SplitContainer4.Name = "SplitContainer4";
             // 
             // SplitContainer4.Panel1
             // 
+            this.SplitContainer4.Panel1.BackColor = System.Drawing.Color.Silver;
             this.SplitContainer4.Panel1.Controls.Add(this.gaugeTemp);
             // 
             // SplitContainer4.Panel2
             // 
-            this.SplitContainer4.Panel2.Controls.Add(this.data_log_table);
             this.SplitContainer4.Panel2.Controls.Add(this.ChkTodayTemp);
             this.SplitContainer4.Panel2.Controls.Add(this.DTTemp);
             this.SplitContainer4.Panel2.Controls.Add(this.ChartTemp);
             this.SplitContainer4.Panel2.Controls.Add(this.dataGridExport);
-            this.SplitContainer4.Size = new System.Drawing.Size(790, 179);
+            this.SplitContainer4.Panel2.Controls.Add(this.data_log_table);
+            this.SplitContainer4.Size = new System.Drawing.Size(810, 177);
             this.SplitContainer4.SplitterDistance = 169;
             this.SplitContainer4.TabIndex = 0;
             // 
             // gaugeTemp
             // 
-            this.gaugeTemp.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.gaugeTemp.BackColor = System.Drawing.Color.Transparent;
-            this.gaugeTemp.DialColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gaugeTemp.DialText = null;
-            this.gaugeTemp.Glossiness = 70F;
+            this.gaugeTemp.DialColor = System.Drawing.Color.Black;
+            this.gaugeTemp.DialText = "Temp ( ° C )";
+            this.gaugeTemp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gaugeTemp.Glossiness = 50F;
             this.gaugeTemp.Location = new System.Drawing.Point(0, 0);
-            this.gaugeTemp.MaxValue = 200F;
+            this.gaugeTemp.MaxValue = 60F;
             this.gaugeTemp.MinValue = 0F;
             this.gaugeTemp.Name = "gaugeTemp";
             this.gaugeTemp.RecommendedValue = 0F;
@@ -369,17 +380,6 @@
             this.gaugeTemp.TabIndex = 1;
             this.gaugeTemp.ThresholdPercent = 0F;
             this.gaugeTemp.Value = 0F;
-            // 
-            // data_log_table
-            // 
-            this.data_log_table.AllowUserToAddRows = false;
-            this.data_log_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_log_table.Location = new System.Drawing.Point(322, 30);
-            this.data_log_table.Name = "data_log_table";
-            this.data_log_table.RowHeadersVisible = false;
-            this.data_log_table.Size = new System.Drawing.Size(226, 147);
-            this.data_log_table.TabIndex = 12;
-            this.data_log_table.Visible = false;
             // 
             // ChkTodayTemp
             // 
@@ -415,6 +415,7 @@
             this.ChartTemp.Legends.Add(legend5);
             this.ChartTemp.Location = new System.Drawing.Point(0, 0);
             this.ChartTemp.Name = "ChartTemp";
+            series5.BorderWidth = 2;
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series5.Color = System.Drawing.Color.SeaGreen;
@@ -422,7 +423,7 @@
             series5.Name = "Temperature";
             series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
             this.ChartTemp.Series.Add(series5);
-            this.ChartTemp.Size = new System.Drawing.Size(617, 179);
+            this.ChartTemp.Size = new System.Drawing.Size(637, 177);
             this.ChartTemp.TabIndex = 13;
             this.ChartTemp.Text = "Chart1";
             this.ChartTemp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ChartTemp_MouseDown);
@@ -437,14 +438,25 @@
             this.dataGridExport.TabIndex = 12;
             this.dataGridExport.Visible = false;
             // 
+            // data_log_table
+            // 
+            this.data_log_table.AllowUserToAddRows = false;
+            this.data_log_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_log_table.Location = new System.Drawing.Point(322, 30);
+            this.data_log_table.Name = "data_log_table";
+            this.data_log_table.RowHeadersVisible = false;
+            this.data_log_table.Size = new System.Drawing.Size(226, 147);
+            this.data_log_table.TabIndex = 12;
+            this.data_log_table.Visible = false;
+            // 
             // Panel2
             // 
-            this.Panel2.BackColor = System.Drawing.Color.Silver;
+            this.Panel2.BackColor = System.Drawing.Color.Gray;
             this.Panel2.Controls.Add(this.Label2);
             this.Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel2.Location = new System.Drawing.Point(0, 0);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(790, 26);
+            this.Panel2.Size = new System.Drawing.Size(810, 26);
             this.Panel2.TabIndex = 2;
             // 
             // Label2
@@ -462,11 +474,13 @@
             // SplitContainer5
             // 
             this.SplitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SplitContainer5.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.SplitContainer5.Location = new System.Drawing.Point(0, 26);
             this.SplitContainer5.Name = "SplitContainer5";
             // 
             // SplitContainer5.Panel1
             // 
+            this.SplitContainer5.Panel1.BackColor = System.Drawing.Color.Silver;
             this.SplitContainer5.Panel1.Controls.Add(this.gaugePressure);
             // 
             // SplitContainer5.Panel2
@@ -474,23 +488,24 @@
             this.SplitContainer5.Panel2.Controls.Add(this.ChkTodayPress);
             this.SplitContainer5.Panel2.Controls.Add(this.DTPress);
             this.SplitContainer5.Panel2.Controls.Add(this.ChartPressure);
-            this.SplitContainer5.Size = new System.Drawing.Size(790, 184);
+            this.SplitContainer5.Size = new System.Drawing.Size(810, 188);
             this.SplitContainer5.SplitterDistance = 172;
             this.SplitContainer5.TabIndex = 0;
             // 
             // gaugePressure
             // 
-            this.gaugePressure.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.gaugePressure.BackColor = System.Drawing.Color.Transparent;
-            this.gaugePressure.DialColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gaugePressure.DialText = null;
-            this.gaugePressure.Glossiness = 70F;
+            this.gaugePressure.DialColor = System.Drawing.Color.Black;
+            this.gaugePressure.DialText = "Press (Bar)";
+            this.gaugePressure.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gaugePressure.EnableTransparentBackground = true;
+            this.gaugePressure.Glossiness = 50F;
             this.gaugePressure.Location = new System.Drawing.Point(0, 0);
             this.gaugePressure.MaxValue = 200F;
             this.gaugePressure.MinValue = 0F;
             this.gaugePressure.Name = "gaugePressure";
             this.gaugePressure.RecommendedValue = 0F;
-            this.gaugePressure.Size = new System.Drawing.Size(169, 169);
+            this.gaugePressure.Size = new System.Drawing.Size(172, 172);
             this.gaugePressure.TabIndex = 1;
             this.gaugePressure.ThresholdPercent = 0F;
             this.gaugePressure.Value = 0F;
@@ -529,6 +544,7 @@
             this.ChartPressure.Legends.Add(legend6);
             this.ChartPressure.Location = new System.Drawing.Point(0, 0);
             this.ChartPressure.Name = "ChartPressure";
+            series6.BorderWidth = 2;
             series6.ChartArea = "ChartArea1";
             series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series6.Color = System.Drawing.Color.BlueViolet;
@@ -536,19 +552,19 @@
             series6.Name = "Pressure";
             series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
             this.ChartPressure.Series.Add(series6);
-            this.ChartPressure.Size = new System.Drawing.Size(614, 184);
+            this.ChartPressure.Size = new System.Drawing.Size(634, 188);
             this.ChartPressure.TabIndex = 12;
             this.ChartPressure.Text = "Chart1";
             this.ChartPressure.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ChartPressure_MouseDown);
             // 
             // Panel3
             // 
-            this.Panel3.BackColor = System.Drawing.Color.Silver;
+            this.Panel3.BackColor = System.Drawing.Color.Gray;
             this.Panel3.Controls.Add(this.Label3);
             this.Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel3.Location = new System.Drawing.Point(0, 0);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(790, 26);
+            this.Panel3.Size = new System.Drawing.Size(810, 26);
             this.Panel3.TabIndex = 3;
             // 
             // Label3
@@ -559,23 +575,375 @@
             this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.Location = new System.Drawing.Point(350, 7);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(135, 16);
+            this.Label3.Size = new System.Drawing.Size(137, 16);
             this.Label3.TabIndex = 0;
-            this.Label3.Text = "PRESSURE ( Psi )";
+            this.Label3.Text = "PRESSURE ( Bar )";
             // 
             // Panel5
             // 
+            this.Panel5.BackColor = System.Drawing.Color.Silver;
+            this.Panel5.Controls.Add(this.panel10);
+            this.Panel5.Controls.Add(this.panel9);
+            this.Panel5.Controls.Add(this.panel6);
             this.Panel5.Controls.Add(this.TotalKilograms);
             this.Panel5.Controls.Add(this.Panel7);
-            this.Panel5.Controls.Add(this.Panel6);
-            this.Panel5.Controls.Add(this.GroupBox2);
-            this.Panel5.Controls.Add(this.GroupBox1);
             this.Panel5.Controls.Add(this.Label23);
             this.Panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Panel5.Location = new System.Drawing.Point(790, 24);
+            this.Panel5.Location = new System.Drawing.Point(812, 24);
             this.Panel5.Name = "Panel5";
-            this.Panel5.Size = new System.Drawing.Size(310, 626);
+            this.Panel5.Size = new System.Drawing.Size(288, 626);
             this.Panel5.TabIndex = 11;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.DarkGray;
+            this.panel10.Controls.Add(this.kilogramsVapour);
+            this.panel10.Controls.Add(this.Label21);
+            this.panel10.Controls.Add(this.vapourDensity);
+            this.panel10.Controls.Add(this.Label20);
+            this.panel10.Controls.Add(this.TemperatureFactor);
+            this.panel10.Controls.Add(this.Label19);
+            this.panel10.Controls.Add(this.pressureFactor);
+            this.panel10.Controls.Add(this.Label18);
+            this.panel10.Controls.Add(this.nettLitersProductVapour);
+            this.panel10.Controls.Add(this.Label17);
+            this.panel10.Controls.Add(this.levelVapour);
+            this.panel10.Controls.Add(this.Label16);
+            this.panel10.Location = new System.Drawing.Point(23, 384);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(249, 177);
+            this.panel10.TabIndex = 14;
+            // 
+            // kilogramsVapour
+            // 
+            this.kilogramsVapour.Location = new System.Drawing.Point(129, 140);
+            this.kilogramsVapour.Name = "kilogramsVapour";
+            this.kilogramsVapour.ReadOnly = true;
+            this.kilogramsVapour.Size = new System.Drawing.Size(100, 20);
+            this.kilogramsVapour.TabIndex = 12;
+            // 
+            // Label21
+            // 
+            this.Label21.AutoSize = true;
+            this.Label21.Location = new System.Drawing.Point(12, 13);
+            this.Label21.Name = "Label21";
+            this.Label21.Size = new System.Drawing.Size(70, 13);
+            this.Label21.TabIndex = 6;
+            this.Label21.Text = "Level Vapour";
+            // 
+            // vapourDensity
+            // 
+            this.vapourDensity.Location = new System.Drawing.Point(129, 114);
+            this.vapourDensity.Name = "vapourDensity";
+            this.vapourDensity.ReadOnly = true;
+            this.vapourDensity.Size = new System.Drawing.Size(100, 20);
+            this.vapourDensity.TabIndex = 11;
+            // 
+            // Label20
+            // 
+            this.Label20.AutoSize = true;
+            this.Label20.Location = new System.Drawing.Point(12, 39);
+            this.Label20.Name = "Label20";
+            this.Label20.Size = new System.Drawing.Size(107, 13);
+            this.Label20.TabIndex = 7;
+            this.Label20.Text = "Nett Liters at Product";
+            // 
+            // TemperatureFactor
+            // 
+            this.TemperatureFactor.Location = new System.Drawing.Point(129, 88);
+            this.TemperatureFactor.Name = "TemperatureFactor";
+            this.TemperatureFactor.ReadOnly = true;
+            this.TemperatureFactor.Size = new System.Drawing.Size(100, 20);
+            this.TemperatureFactor.TabIndex = 10;
+            // 
+            // Label19
+            // 
+            this.Label19.AutoSize = true;
+            this.Label19.Location = new System.Drawing.Point(12, 65);
+            this.Label19.Name = "Label19";
+            this.Label19.Size = new System.Drawing.Size(81, 13);
+            this.Label19.TabIndex = 8;
+            this.Label19.Text = "Pressure Factor";
+            // 
+            // pressureFactor
+            // 
+            this.pressureFactor.Location = new System.Drawing.Point(129, 62);
+            this.pressureFactor.Name = "pressureFactor";
+            this.pressureFactor.ReadOnly = true;
+            this.pressureFactor.Size = new System.Drawing.Size(100, 20);
+            this.pressureFactor.TabIndex = 15;
+            // 
+            // Label18
+            // 
+            this.Label18.AutoSize = true;
+            this.Label18.Location = new System.Drawing.Point(12, 91);
+            this.Label18.Name = "Label18";
+            this.Label18.Size = new System.Drawing.Size(94, 13);
+            this.Label18.TabIndex = 3;
+            this.Label18.Text = "Temperatur Factor";
+            // 
+            // nettLitersProductVapour
+            // 
+            this.nettLitersProductVapour.Location = new System.Drawing.Point(129, 36);
+            this.nettLitersProductVapour.Name = "nettLitersProductVapour";
+            this.nettLitersProductVapour.ReadOnly = true;
+            this.nettLitersProductVapour.Size = new System.Drawing.Size(100, 20);
+            this.nettLitersProductVapour.TabIndex = 14;
+            // 
+            // Label17
+            // 
+            this.Label17.AutoSize = true;
+            this.Label17.Location = new System.Drawing.Point(12, 117);
+            this.Label17.Name = "Label17";
+            this.Label17.Size = new System.Drawing.Size(79, 13);
+            this.Label17.TabIndex = 2;
+            this.Label17.Text = "Vapour Density";
+            // 
+            // levelVapour
+            // 
+            this.levelVapour.Location = new System.Drawing.Point(129, 10);
+            this.levelVapour.Name = "levelVapour";
+            this.levelVapour.ReadOnly = true;
+            this.levelVapour.Size = new System.Drawing.Size(100, 20);
+            this.levelVapour.TabIndex = 13;
+            // 
+            // Label16
+            // 
+            this.Label16.AutoSize = true;
+            this.Label16.Location = new System.Drawing.Point(12, 143);
+            this.Label16.Name = "Label16";
+            this.Label16.Size = new System.Drawing.Size(89, 13);
+            this.Label16.TabIndex = 5;
+            this.Label16.Text = "Kilograms Vapour";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.DarkGray;
+            this.panel9.Controls.Add(this.kilogramLiquid);
+            this.panel9.Controls.Add(this.Label9);
+            this.panel9.Controls.Add(this.Multiplier);
+            this.panel9.Controls.Add(this.Label8);
+            this.panel9.Controls.Add(this.Liters15C);
+            this.panel9.Controls.Add(this.Label10);
+            this.panel9.Controls.Add(this.volCorrectionFactor);
+            this.panel9.Controls.Add(this.Label11);
+            this.panel9.Controls.Add(this.nettLiterProducLiquid);
+            this.panel9.Controls.Add(this.Label12);
+            this.panel9.Controls.Add(this.density15C);
+            this.panel9.Controls.Add(this.Label13);
+            this.panel9.Controls.Add(this.faktorKoreksiTemp);
+            this.panel9.Controls.Add(this.Label14);
+            this.panel9.Location = new System.Drawing.Point(23, 173);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(249, 196);
+            this.panel9.TabIndex = 14;
+            // 
+            // kilogramLiquid
+            // 
+            this.kilogramLiquid.Location = new System.Drawing.Point(129, 167);
+            this.kilogramLiquid.Name = "kilogramLiquid";
+            this.kilogramLiquid.ReadOnly = true;
+            this.kilogramLiquid.Size = new System.Drawing.Size(100, 20);
+            this.kilogramLiquid.TabIndex = 9;
+            // 
+            // Label9
+            // 
+            this.Label9.AutoSize = true;
+            this.Label9.Location = new System.Drawing.Point(12, 41);
+            this.Label9.Name = "Label9";
+            this.Label9.Size = new System.Drawing.Size(83, 13);
+            this.Label9.TabIndex = 7;
+            this.Label9.Text = "Density at 15° C";
+            // 
+            // Multiplier
+            // 
+            this.Multiplier.Location = new System.Drawing.Point(129, 141);
+            this.Multiplier.Name = "Multiplier";
+            this.Multiplier.ReadOnly = true;
+            this.Multiplier.Size = new System.Drawing.Size(100, 20);
+            this.Multiplier.TabIndex = 12;
+            // 
+            // Label8
+            // 
+            this.Label8.AutoSize = true;
+            this.Label8.Location = new System.Drawing.Point(12, 15);
+            this.Label8.Name = "Label8";
+            this.Label8.Size = new System.Drawing.Size(105, 13);
+            this.Label8.TabIndex = 6;
+            this.Label8.Text = "Faktor Koreksi Temp";
+            // 
+            // Liters15C
+            // 
+            this.Liters15C.Location = new System.Drawing.Point(129, 115);
+            this.Liters15C.Name = "Liters15C";
+            this.Liters15C.ReadOnly = true;
+            this.Liters15C.Size = new System.Drawing.Size(100, 20);
+            this.Liters15C.TabIndex = 11;
+            // 
+            // Label10
+            // 
+            this.Label10.AutoSize = true;
+            this.Label10.Location = new System.Drawing.Point(12, 67);
+            this.Label10.Name = "Label10";
+            this.Label10.Size = new System.Drawing.Size(107, 13);
+            this.Label10.TabIndex = 8;
+            this.Label10.Text = "Nett Liters at Product";
+            // 
+            // volCorrectionFactor
+            // 
+            this.volCorrectionFactor.Location = new System.Drawing.Point(129, 89);
+            this.volCorrectionFactor.Name = "volCorrectionFactor";
+            this.volCorrectionFactor.ReadOnly = true;
+            this.volCorrectionFactor.Size = new System.Drawing.Size(100, 20);
+            this.volCorrectionFactor.TabIndex = 10;
+            // 
+            // Label11
+            // 
+            this.Label11.AutoSize = true;
+            this.Label11.Location = new System.Drawing.Point(12, 93);
+            this.Label11.Name = "Label11";
+            this.Label11.Size = new System.Drawing.Size(109, 13);
+            this.Label11.TabIndex = 3;
+            this.Label11.Text = "Vol. Correction Factor";
+            // 
+            // nettLiterProducLiquid
+            // 
+            this.nettLiterProducLiquid.Location = new System.Drawing.Point(129, 63);
+            this.nettLiterProducLiquid.Name = "nettLiterProducLiquid";
+            this.nettLiterProducLiquid.ReadOnly = true;
+            this.nettLiterProducLiquid.Size = new System.Drawing.Size(100, 20);
+            this.nettLiterProducLiquid.TabIndex = 15;
+            // 
+            // Label12
+            // 
+            this.Label12.AutoSize = true;
+            this.Label12.Location = new System.Drawing.Point(12, 119);
+            this.Label12.Name = "Label12";
+            this.Label12.Size = new System.Drawing.Size(73, 13);
+            this.Label12.TabIndex = 2;
+            this.Label12.Text = "Liters at 15° C";
+            // 
+            // density15C
+            // 
+            this.density15C.Location = new System.Drawing.Point(129, 37);
+            this.density15C.Name = "density15C";
+            this.density15C.ReadOnly = true;
+            this.density15C.Size = new System.Drawing.Size(100, 20);
+            this.density15C.TabIndex = 14;
+            // 
+            // Label13
+            // 
+            this.Label13.AutoSize = true;
+            this.Label13.Location = new System.Drawing.Point(12, 145);
+            this.Label13.Name = "Label13";
+            this.Label13.Size = new System.Drawing.Size(48, 13);
+            this.Label13.TabIndex = 5;
+            this.Label13.Text = "Multiplier";
+            // 
+            // faktorKoreksiTemp
+            // 
+            this.faktorKoreksiTemp.Location = new System.Drawing.Point(129, 11);
+            this.faktorKoreksiTemp.Name = "faktorKoreksiTemp";
+            this.faktorKoreksiTemp.ReadOnly = true;
+            this.faktorKoreksiTemp.Size = new System.Drawing.Size(100, 20);
+            this.faktorKoreksiTemp.TabIndex = 13;
+            // 
+            // Label14
+            // 
+            this.Label14.AutoSize = true;
+            this.Label14.Location = new System.Drawing.Point(12, 171);
+            this.Label14.Name = "Label14";
+            this.Label14.Size = new System.Drawing.Size(83, 13);
+            this.Label14.TabIndex = 4;
+            this.Label14.Text = "Kilograms Liquid";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DarkGray;
+            this.panel6.Controls.Add(this.cBoxDensity);
+            this.panel6.Controls.Add(this.Label6);
+            this.panel6.Controls.Add(this.tBoxPress);
+            this.panel6.Controls.Add(this.tBoxLevel);
+            this.panel6.Controls.Add(this.Label4);
+            this.panel6.Controls.Add(this.Label7);
+            this.panel6.Controls.Add(this.tBoxTemp);
+            this.panel6.Controls.Add(this.Label5);
+            this.panel6.Location = new System.Drawing.Point(23, 34);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(249, 122);
+            this.panel6.TabIndex = 14;
+            // 
+            // cBoxDensity
+            // 
+            this.cBoxDensity.FormattingEnabled = true;
+            this.cBoxDensity.Location = new System.Drawing.Point(129, 89);
+            this.cBoxDensity.Name = "cBoxDensity";
+            this.cBoxDensity.Size = new System.Drawing.Size(100, 21);
+            this.cBoxDensity.TabIndex = 2;
+            this.cBoxDensity.Text = "0.510";
+            // 
+            // Label6
+            // 
+            this.Label6.AutoSize = true;
+            this.Label6.Location = new System.Drawing.Point(12, 65);
+            this.Label6.Name = "Label6";
+            this.Label6.Size = new System.Drawing.Size(79, 13);
+            this.Label6.TabIndex = 0;
+            this.Label6.Text = "Pressure ( Bar )";
+            // 
+            // tBoxPress
+            // 
+            this.tBoxPress.Location = new System.Drawing.Point(129, 62);
+            this.tBoxPress.Name = "tBoxPress";
+            this.tBoxPress.ReadOnly = true;
+            this.tBoxPress.Size = new System.Drawing.Size(100, 20);
+            this.tBoxPress.TabIndex = 1;
+            this.tBoxPress.Text = "15";
+            // 
+            // tBoxLevel
+            // 
+            this.tBoxLevel.Location = new System.Drawing.Point(129, 10);
+            this.tBoxLevel.Name = "tBoxLevel";
+            this.tBoxLevel.ReadOnly = true;
+            this.tBoxLevel.Size = new System.Drawing.Size(100, 20);
+            this.tBoxLevel.TabIndex = 1;
+            this.tBoxLevel.Text = "70";
+            // 
+            // Label4
+            // 
+            this.Label4.AutoSize = true;
+            this.Label4.Location = new System.Drawing.Point(12, 13);
+            this.Label4.Name = "Label4";
+            this.Label4.Size = new System.Drawing.Size(87, 13);
+            this.Label4.TabIndex = 0;
+            this.Label4.Text = "Level Liquid ( % )";
+            // 
+            // Label7
+            // 
+            this.Label7.AutoSize = true;
+            this.Label7.Location = new System.Drawing.Point(12, 92);
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(42, 13);
+            this.Label7.TabIndex = 0;
+            this.Label7.Text = "Density";
+            // 
+            // tBoxTemp
+            // 
+            this.tBoxTemp.Location = new System.Drawing.Point(129, 36);
+            this.tBoxTemp.Name = "tBoxTemp";
+            this.tBoxTemp.ReadOnly = true;
+            this.tBoxTemp.Size = new System.Drawing.Size(100, 20);
+            this.tBoxTemp.TabIndex = 1;
+            this.tBoxTemp.Text = "30";
+            // 
+            // Label5
+            // 
+            this.Label5.AutoSize = true;
+            this.Label5.Location = new System.Drawing.Point(12, 39);
+            this.Label5.Name = "Label5";
+            this.Label5.Size = new System.Drawing.Size(96, 13);
+            this.Label5.TabIndex = 0;
+            this.Label5.Text = "Temperature ( ° C )";
             // 
             // TotalKilograms
             // 
@@ -587,13 +955,13 @@
             // 
             // Panel7
             // 
-            this.Panel7.BackColor = System.Drawing.Color.Silver;
+            this.Panel7.BackColor = System.Drawing.Color.Gray;
             this.Panel7.Controls.Add(this.Label22);
             this.Panel7.Controls.Add(this.Label15);
             this.Panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel7.Location = new System.Drawing.Point(0, 0);
             this.Panel7.Name = "Panel7";
-            this.Panel7.Size = new System.Drawing.Size(310, 26);
+            this.Panel7.Size = new System.Drawing.Size(288, 26);
             this.Panel7.TabIndex = 4;
             // 
             // Label22
@@ -616,356 +984,6 @@
             this.Label15.TabIndex = 0;
             this.Label15.Text = "Tank Level ( % )";
             // 
-            // Panel6
-            // 
-            this.Panel6.Controls.Add(this.cBoxDensity);
-            this.Panel6.Controls.Add(this.Label4);
-            this.Panel6.Controls.Add(this.Label5);
-            this.Panel6.Controls.Add(this.tBoxLevel);
-            this.Panel6.Controls.Add(this.Label6);
-            this.Panel6.Controls.Add(this.tBoxPress);
-            this.Panel6.Controls.Add(this.Label7);
-            this.Panel6.Controls.Add(this.tBoxTemp);
-            this.Panel6.Location = new System.Drawing.Point(23, 42);
-            this.Panel6.Name = "Panel6";
-            this.Panel6.Size = new System.Drawing.Size(249, 125);
-            this.Panel6.TabIndex = 3;
-            // 
-            // cBoxDensity
-            // 
-            this.cBoxDensity.FormattingEnabled = true;
-            this.cBoxDensity.Location = new System.Drawing.Point(129, 90);
-            this.cBoxDensity.Name = "cBoxDensity";
-            this.cBoxDensity.Size = new System.Drawing.Size(100, 21);
-            this.cBoxDensity.TabIndex = 2;
-            this.cBoxDensity.Text = "0.510";
-            // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(12, 14);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(87, 13);
-            this.Label4.TabIndex = 0;
-            this.Label4.Text = "Level Liquid ( % )";
-            // 
-            // Label5
-            // 
-            this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(12, 40);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(96, 13);
-            this.Label5.TabIndex = 0;
-            this.Label5.Text = "Temperature ( ° C )";
-            // 
-            // tBoxLevel
-            // 
-            this.tBoxLevel.Location = new System.Drawing.Point(129, 11);
-            this.tBoxLevel.Name = "tBoxLevel";
-            this.tBoxLevel.ReadOnly = true;
-            this.tBoxLevel.Size = new System.Drawing.Size(100, 20);
-            this.tBoxLevel.TabIndex = 1;
-            this.tBoxLevel.Text = "70";
-            // 
-            // Label6
-            // 
-            this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(12, 66);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(79, 13);
-            this.Label6.TabIndex = 0;
-            this.Label6.Text = "Pressure ( Bar )";
-            // 
-            // tBoxPress
-            // 
-            this.tBoxPress.Location = new System.Drawing.Point(129, 63);
-            this.tBoxPress.Name = "tBoxPress";
-            this.tBoxPress.ReadOnly = true;
-            this.tBoxPress.Size = new System.Drawing.Size(100, 20);
-            this.tBoxPress.TabIndex = 1;
-            this.tBoxPress.Text = "15";
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(12, 93);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(42, 13);
-            this.Label7.TabIndex = 0;
-            this.Label7.Text = "Density";
-            // 
-            // tBoxTemp
-            // 
-            this.tBoxTemp.Location = new System.Drawing.Point(129, 37);
-            this.tBoxTemp.Name = "tBoxTemp";
-            this.tBoxTemp.ReadOnly = true;
-            this.tBoxTemp.Size = new System.Drawing.Size(100, 20);
-            this.tBoxTemp.TabIndex = 1;
-            this.tBoxTemp.Text = "30";
-            // 
-            // GroupBox2
-            // 
-            this.GroupBox2.Controls.Add(this.kilogramsVapour);
-            this.GroupBox2.Controls.Add(this.vapourDensity);
-            this.GroupBox2.Controls.Add(this.TemperatureFactor);
-            this.GroupBox2.Controls.Add(this.pressureFactor);
-            this.GroupBox2.Controls.Add(this.nettLitersProductVapour);
-            this.GroupBox2.Controls.Add(this.levelVapour);
-            this.GroupBox2.Controls.Add(this.Label16);
-            this.GroupBox2.Controls.Add(this.Label17);
-            this.GroupBox2.Controls.Add(this.Label18);
-            this.GroupBox2.Controls.Add(this.Label19);
-            this.GroupBox2.Controls.Add(this.Label20);
-            this.GroupBox2.Controls.Add(this.Label21);
-            this.GroupBox2.Location = new System.Drawing.Point(23, 388);
-            this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(249, 180);
-            this.GroupBox2.TabIndex = 2;
-            this.GroupBox2.TabStop = false;
-            // 
-            // kilogramsVapour
-            // 
-            this.kilogramsVapour.Location = new System.Drawing.Point(129, 144);
-            this.kilogramsVapour.Name = "kilogramsVapour";
-            this.kilogramsVapour.ReadOnly = true;
-            this.kilogramsVapour.Size = new System.Drawing.Size(100, 20);
-            this.kilogramsVapour.TabIndex = 12;
-            // 
-            // vapourDensity
-            // 
-            this.vapourDensity.Location = new System.Drawing.Point(129, 118);
-            this.vapourDensity.Name = "vapourDensity";
-            this.vapourDensity.ReadOnly = true;
-            this.vapourDensity.Size = new System.Drawing.Size(100, 20);
-            this.vapourDensity.TabIndex = 11;
-            // 
-            // TemperatureFactor
-            // 
-            this.TemperatureFactor.Location = new System.Drawing.Point(129, 92);
-            this.TemperatureFactor.Name = "TemperatureFactor";
-            this.TemperatureFactor.ReadOnly = true;
-            this.TemperatureFactor.Size = new System.Drawing.Size(100, 20);
-            this.TemperatureFactor.TabIndex = 10;
-            // 
-            // pressureFactor
-            // 
-            this.pressureFactor.Location = new System.Drawing.Point(129, 66);
-            this.pressureFactor.Name = "pressureFactor";
-            this.pressureFactor.ReadOnly = true;
-            this.pressureFactor.Size = new System.Drawing.Size(100, 20);
-            this.pressureFactor.TabIndex = 15;
-            // 
-            // nettLitersProductVapour
-            // 
-            this.nettLitersProductVapour.Location = new System.Drawing.Point(129, 40);
-            this.nettLitersProductVapour.Name = "nettLitersProductVapour";
-            this.nettLitersProductVapour.ReadOnly = true;
-            this.nettLitersProductVapour.Size = new System.Drawing.Size(100, 20);
-            this.nettLitersProductVapour.TabIndex = 14;
-            // 
-            // levelVapour
-            // 
-            this.levelVapour.Location = new System.Drawing.Point(129, 14);
-            this.levelVapour.Name = "levelVapour";
-            this.levelVapour.ReadOnly = true;
-            this.levelVapour.Size = new System.Drawing.Size(100, 20);
-            this.levelVapour.TabIndex = 13;
-            // 
-            // Label16
-            // 
-            this.Label16.AutoSize = true;
-            this.Label16.Location = new System.Drawing.Point(6, 147);
-            this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(89, 13);
-            this.Label16.TabIndex = 5;
-            this.Label16.Text = "Kilograms Vapour";
-            // 
-            // Label17
-            // 
-            this.Label17.AutoSize = true;
-            this.Label17.Location = new System.Drawing.Point(6, 121);
-            this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(79, 13);
-            this.Label17.TabIndex = 2;
-            this.Label17.Text = "Vapour Density";
-            // 
-            // Label18
-            // 
-            this.Label18.AutoSize = true;
-            this.Label18.Location = new System.Drawing.Point(6, 95);
-            this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(94, 13);
-            this.Label18.TabIndex = 3;
-            this.Label18.Text = "Temperatur Factor";
-            // 
-            // Label19
-            // 
-            this.Label19.AutoSize = true;
-            this.Label19.Location = new System.Drawing.Point(6, 69);
-            this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(81, 13);
-            this.Label19.TabIndex = 8;
-            this.Label19.Text = "Pressure Factor";
-            // 
-            // Label20
-            // 
-            this.Label20.AutoSize = true;
-            this.Label20.Location = new System.Drawing.Point(6, 43);
-            this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(107, 13);
-            this.Label20.TabIndex = 7;
-            this.Label20.Text = "Nett Liters at Product";
-            // 
-            // Label21
-            // 
-            this.Label21.AutoSize = true;
-            this.Label21.Location = new System.Drawing.Point(6, 17);
-            this.Label21.Name = "Label21";
-            this.Label21.Size = new System.Drawing.Size(70, 13);
-            this.Label21.TabIndex = 6;
-            this.Label21.Text = "Level Vapour";
-            // 
-            // GroupBox1
-            // 
-            this.GroupBox1.Controls.Add(this.kilogramLiquid);
-            this.GroupBox1.Controls.Add(this.Multiplier);
-            this.GroupBox1.Controls.Add(this.Liters15C);
-            this.GroupBox1.Controls.Add(this.volCorrectionFactor);
-            this.GroupBox1.Controls.Add(this.nettLiterProducLiquid);
-            this.GroupBox1.Controls.Add(this.density15C);
-            this.GroupBox1.Controls.Add(this.faktorKoreksiTemp);
-            this.GroupBox1.Controls.Add(this.Label14);
-            this.GroupBox1.Controls.Add(this.Label13);
-            this.GroupBox1.Controls.Add(this.Label12);
-            this.GroupBox1.Controls.Add(this.Label11);
-            this.GroupBox1.Controls.Add(this.Label10);
-            this.GroupBox1.Controls.Add(this.Label9);
-            this.GroupBox1.Controls.Add(this.Label8);
-            this.GroupBox1.Location = new System.Drawing.Point(23, 173);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(249, 209);
-            this.GroupBox1.TabIndex = 2;
-            this.GroupBox1.TabStop = false;
-            // 
-            // kilogramLiquid
-            // 
-            this.kilogramLiquid.Location = new System.Drawing.Point(129, 170);
-            this.kilogramLiquid.Name = "kilogramLiquid";
-            this.kilogramLiquid.ReadOnly = true;
-            this.kilogramLiquid.Size = new System.Drawing.Size(100, 20);
-            this.kilogramLiquid.TabIndex = 9;
-            // 
-            // Multiplier
-            // 
-            this.Multiplier.Location = new System.Drawing.Point(129, 144);
-            this.Multiplier.Name = "Multiplier";
-            this.Multiplier.ReadOnly = true;
-            this.Multiplier.Size = new System.Drawing.Size(100, 20);
-            this.Multiplier.TabIndex = 12;
-            // 
-            // Liters15C
-            // 
-            this.Liters15C.Location = new System.Drawing.Point(129, 118);
-            this.Liters15C.Name = "Liters15C";
-            this.Liters15C.ReadOnly = true;
-            this.Liters15C.Size = new System.Drawing.Size(100, 20);
-            this.Liters15C.TabIndex = 11;
-            // 
-            // volCorrectionFactor
-            // 
-            this.volCorrectionFactor.Location = new System.Drawing.Point(129, 92);
-            this.volCorrectionFactor.Name = "volCorrectionFactor";
-            this.volCorrectionFactor.ReadOnly = true;
-            this.volCorrectionFactor.Size = new System.Drawing.Size(100, 20);
-            this.volCorrectionFactor.TabIndex = 10;
-            // 
-            // nettLiterProducLiquid
-            // 
-            this.nettLiterProducLiquid.Location = new System.Drawing.Point(129, 66);
-            this.nettLiterProducLiquid.Name = "nettLiterProducLiquid";
-            this.nettLiterProducLiquid.ReadOnly = true;
-            this.nettLiterProducLiquid.Size = new System.Drawing.Size(100, 20);
-            this.nettLiterProducLiquid.TabIndex = 15;
-            // 
-            // density15C
-            // 
-            this.density15C.Location = new System.Drawing.Point(129, 40);
-            this.density15C.Name = "density15C";
-            this.density15C.ReadOnly = true;
-            this.density15C.Size = new System.Drawing.Size(100, 20);
-            this.density15C.TabIndex = 14;
-            // 
-            // faktorKoreksiTemp
-            // 
-            this.faktorKoreksiTemp.Location = new System.Drawing.Point(129, 14);
-            this.faktorKoreksiTemp.Name = "faktorKoreksiTemp";
-            this.faktorKoreksiTemp.ReadOnly = true;
-            this.faktorKoreksiTemp.Size = new System.Drawing.Size(100, 20);
-            this.faktorKoreksiTemp.TabIndex = 13;
-            // 
-            // Label14
-            // 
-            this.Label14.AutoSize = true;
-            this.Label14.Location = new System.Drawing.Point(6, 173);
-            this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(83, 13);
-            this.Label14.TabIndex = 4;
-            this.Label14.Text = "Kilograms Liquid";
-            // 
-            // Label13
-            // 
-            this.Label13.AutoSize = true;
-            this.Label13.Location = new System.Drawing.Point(6, 147);
-            this.Label13.Name = "Label13";
-            this.Label13.Size = new System.Drawing.Size(48, 13);
-            this.Label13.TabIndex = 5;
-            this.Label13.Text = "Multiplier";
-            // 
-            // Label12
-            // 
-            this.Label12.AutoSize = true;
-            this.Label12.Location = new System.Drawing.Point(6, 121);
-            this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(73, 13);
-            this.Label12.TabIndex = 2;
-            this.Label12.Text = "Liters at 15° C";
-            // 
-            // Label11
-            // 
-            this.Label11.AutoSize = true;
-            this.Label11.Location = new System.Drawing.Point(6, 95);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(109, 13);
-            this.Label11.TabIndex = 3;
-            this.Label11.Text = "Vol. Correction Factor";
-            // 
-            // Label10
-            // 
-            this.Label10.AutoSize = true;
-            this.Label10.Location = new System.Drawing.Point(6, 69);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(107, 13);
-            this.Label10.TabIndex = 8;
-            this.Label10.Text = "Nett Liters at Product";
-            // 
-            // Label9
-            // 
-            this.Label9.AutoSize = true;
-            this.Label9.Location = new System.Drawing.Point(6, 43);
-            this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(83, 13);
-            this.Label9.TabIndex = 7;
-            this.Label9.Text = "Density at 15° C";
-            // 
-            // Label8
-            // 
-            this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(6, 17);
-            this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(105, 13);
-            this.Label8.TabIndex = 6;
-            this.Label8.Text = "Faktor Koreksi Temp";
-            // 
             // Label23
             // 
             this.Label23.AutoSize = true;
@@ -977,7 +995,7 @@
             // 
             // Panel4
             // 
-            this.Panel4.BackColor = System.Drawing.Color.Silver;
+            this.Panel4.BackColor = System.Drawing.Color.Gray;
             this.Panel4.Controls.Add(this.btnLog);
             this.Panel4.Controls.Add(this.btnHide);
             this.Panel4.Controls.Add(this.btnRun);
@@ -990,38 +1008,48 @@
             // btnLog
             // 
             this.btnLog.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnLog.Location = new System.Drawing.Point(790, 4);
+            this.btnLog.BackColor = System.Drawing.Color.Gray;
+            this.btnLog.FlatAppearance.BorderSize = 0;
+            this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLog.Location = new System.Drawing.Point(796, 3);
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(93, 23);
             this.btnLog.TabIndex = 2;
             this.btnLog.Text = "Show Log";
-            this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.UseVisualStyleBackColor = false;
             this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
             // 
             // btnHide
             // 
             this.btnHide.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnHide.Location = new System.Drawing.Point(889, 4);
+            this.btnHide.BackColor = System.Drawing.Color.Gray;
+            this.btnHide.FlatAppearance.BorderSize = 0;
+            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHide.Location = new System.Drawing.Point(895, 3);
             this.btnHide.Name = "btnHide";
             this.btnHide.Size = new System.Drawing.Size(108, 23);
             this.btnHide.TabIndex = 1;
             this.btnHide.Text = "Hide Calculation";
-            this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.UseVisualStyleBackColor = false;
             this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // btnRun
             // 
             this.btnRun.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnRun.Location = new System.Drawing.Point(1003, 4);
+            this.btnRun.BackColor = System.Drawing.Color.Gray;
+            this.btnRun.FlatAppearance.BorderSize = 0;
+            this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRun.Location = new System.Drawing.Point(1009, 3);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(75, 23);
             this.btnRun.TabIndex = 0;
             this.btnRun.Text = "Run";
-            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.UseVisualStyleBackColor = false;
             this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // MenuStrip1
             // 
+            this.MenuStrip1.BackColor = System.Drawing.Color.DimGray;
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem,
             this.AboutToolStripMenuItem});
@@ -1038,6 +1066,8 @@
             this.TablesToolStripMenuItem,
             this.ExportToCsvToolStripMenuItem,
             this.ToolStripSeparator1,
+            this.hideOnSystrayToolStripMenuItem,
+            this.toolStripSeparator2,
             this.ExitToolStripMenuItem1});
             this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
             this.FileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -1046,33 +1076,33 @@
             // SettingToolStripMenuItem
             // 
             this.SettingToolStripMenuItem.Name = "SettingToolStripMenuItem";
-            this.SettingToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.SettingToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.SettingToolStripMenuItem.Text = "Setting";
             this.SettingToolStripMenuItem.Click += new System.EventHandler(this.SettingToolStripMenuItem_Click);
             // 
             // TablesToolStripMenuItem
             // 
             this.TablesToolStripMenuItem.Name = "TablesToolStripMenuItem";
-            this.TablesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.TablesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.TablesToolStripMenuItem.Text = "Tables";
             this.TablesToolStripMenuItem.Click += new System.EventHandler(this.TablesToolStripMenuItem_Click);
             // 
             // ExportToCsvToolStripMenuItem
             // 
             this.ExportToCsvToolStripMenuItem.Name = "ExportToCsvToolStripMenuItem";
-            this.ExportToCsvToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.ExportToCsvToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.ExportToCsvToolStripMenuItem.Text = "Export to Csv";
             this.ExportToCsvToolStripMenuItem.Click += new System.EventHandler(this.ExportToCsvToolStripMenuItem_Click);
             // 
             // ToolStripSeparator1
             // 
             this.ToolStripSeparator1.Name = "ToolStripSeparator1";
-            this.ToolStripSeparator1.Size = new System.Drawing.Size(140, 6);
+            this.ToolStripSeparator1.Size = new System.Drawing.Size(153, 6);
             // 
             // ExitToolStripMenuItem1
             // 
             this.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1";
-            this.ExitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ExitToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
             this.ExitToolStripMenuItem1.Text = "Exit";
             this.ExitToolStripMenuItem1.Click += new System.EventHandler(this.ExitToolStripMenuItem1_Click);
             // 
@@ -1085,19 +1115,20 @@
             // 
             // StatusStrip1
             // 
+            this.StatusStrip1.BackColor = System.Drawing.Color.DimGray;
             this.StatusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LevelStatus});
+            this.ConnectionStatus});
             this.StatusStrip1.Location = new System.Drawing.Point(0, 680);
             this.StatusStrip1.Name = "StatusStrip1";
             this.StatusStrip1.Size = new System.Drawing.Size(1100, 22);
             this.StatusStrip1.TabIndex = 10;
             this.StatusStrip1.Text = "StatusStrip1";
             // 
-            // LevelStatus
+            // ConnectionStatus
             // 
-            this.LevelStatus.Name = "LevelStatus";
-            this.LevelStatus.Size = new System.Drawing.Size(98, 17);
-            this.LevelStatus.Text = "Tank Level Status";
+            this.ConnectionStatus.Name = "ConnectionStatus";
+            this.ConnectionStatus.Size = new System.Drawing.Size(104, 17);
+            this.ConnectionStatus.Text = "Connection Status";
             // 
             // SaveFileDialog1
             // 
@@ -1150,6 +1181,7 @@
             this.NotifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon1.Icon")));
             this.NotifyIcon1.Text = "NotifyIcon1";
             this.NotifyIcon1.Visible = true;
+            this.NotifyIcon1.BalloonTipClicked += new System.EventHandler(this.NotifyIcon1_BalloonTipClicked);
             this.NotifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon1_MouseDoubleClick);
             // 
             // panel8
@@ -1158,7 +1190,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 24);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(790, 626);
+            this.panel8.Size = new System.Drawing.Size(812, 626);
             this.panel8.TabIndex = 12;
             // 
             // textLog
@@ -1170,11 +1202,23 @@
             this.textLog.Name = "textLog";
             this.textLog.ReadOnly = true;
             this.textLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textLog.Size = new System.Drawing.Size(790, 626);
+            this.textLog.Size = new System.Drawing.Size(812, 626);
             this.textLog.TabIndex = 0;
             this.textLog.WordWrap = false;
             // 
-            // Form1
+            // hideOnSystrayToolStripMenuItem
+            // 
+            this.hideOnSystrayToolStripMenuItem.Name = "hideOnSystrayToolStripMenuItem";
+            this.hideOnSystrayToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.hideOnSystrayToolStripMenuItem.Text = "Hide on Systray";
+            this.hideOnSystrayToolStripMenuItem.Click += new System.EventHandler(this.hideOnSystrayToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(153, 6);
+            // 
+            // TankMeasurement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1185,8 +1229,11 @@
             this.Controls.Add(this.Panel4);
             this.Controls.Add(this.MenuStrip1);
             this.Controls.Add(this.StatusStrip1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "TankMeasurement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tank Measurement";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.SplitContainer1.Panel1.ResumeLayout(false);
             this.SplitContainer1.Panel2.ResumeLayout(false);
@@ -1207,9 +1254,9 @@
             this.SplitContainer4.Panel2.ResumeLayout(false);
             this.SplitContainer4.Panel2.PerformLayout();
             this.SplitContainer4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.data_log_table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartTemp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridExport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_log_table)).EndInit();
             this.Panel2.ResumeLayout(false);
             this.Panel2.PerformLayout();
             this.SplitContainer5.Panel1.ResumeLayout(false);
@@ -1221,14 +1268,14 @@
             this.Panel3.PerformLayout();
             this.Panel5.ResumeLayout(false);
             this.Panel5.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.Panel7.ResumeLayout(false);
             this.Panel7.PerformLayout();
-            this.Panel6.ResumeLayout(false);
-            this.Panel6.PerformLayout();
-            this.GroupBox2.ResumeLayout(false);
-            this.GroupBox2.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
             this.Panel4.ResumeLayout(false);
             this.MenuStrip1.ResumeLayout(false);
             this.MenuStrip1.PerformLayout();
@@ -1275,7 +1322,6 @@
         internal System.Windows.Forms.Panel Panel7;
         internal System.Windows.Forms.Label Label22;
         internal System.Windows.Forms.Label Label15;
-        internal System.Windows.Forms.Panel Panel6;
         internal System.Windows.Forms.ComboBox cBoxDensity;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Label Label5;
@@ -1284,7 +1330,6 @@
         internal System.Windows.Forms.TextBox tBoxPress;
         internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.TextBox tBoxTemp;
-        internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.TextBox kilogramsVapour;
         internal System.Windows.Forms.TextBox vapourDensity;
         internal System.Windows.Forms.TextBox TemperatureFactor;
@@ -1297,7 +1342,6 @@
         internal System.Windows.Forms.Label Label19;
         internal System.Windows.Forms.Label Label20;
         internal System.Windows.Forms.Label Label21;
-        internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.TextBox kilogramLiquid;
         internal System.Windows.Forms.TextBox Multiplier;
         internal System.Windows.Forms.TextBox Liters15C;
@@ -1324,7 +1368,7 @@
         internal System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem1;
         internal System.Windows.Forms.ToolStripMenuItem AboutToolStripMenuItem;
         internal System.Windows.Forms.StatusStrip StatusStrip1;
-        internal System.Windows.Forms.ToolStripStatusLabel LevelStatus;
+        internal System.Windows.Forms.ToolStripStatusLabel ConnectionStatus;
         internal System.Windows.Forms.DataVisualization.Charting.Chart ChartLevel;
         internal System.Windows.Forms.DataVisualization.Charting.Chart ChartTemp;
         internal System.Windows.Forms.DataVisualization.Charting.Chart ChartPressure;
@@ -1341,6 +1385,11 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox textLog;
         private System.Windows.Forms.Button btnLog;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.ToolStripMenuItem hideOnSystrayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 
