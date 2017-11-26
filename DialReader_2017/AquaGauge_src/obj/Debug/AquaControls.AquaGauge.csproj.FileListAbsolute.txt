@@ -1,0 +1,7 @@
+C:\Git\Dial Reader\DialReader_2017\AquaGauge_src\bin\Debug\AquaGauge.dll
+C:\Git\Dial Reader\DialReader_2017\AquaGauge_src\bin\Debug\AquaGauge.pdb
+C:\Git\Dial Reader\DialReader_2017\AquaGauge_src\obj\Debug\AquaControls.AquaGauge.csprojResolveAssemblyReference.cache
+C:\Git\Dial Reader\DialReader_2017\AquaGauge_src\obj\Debug\AquaControls.AquaGauge.resources
+C:\Git\Dial Reader\DialReader_2017\AquaGauge_src\obj\Debug\AquaControls.AquaGauge.csproj.GenerateResource.Cache
+C:\Git\Dial Reader\DialReader_2017\AquaGauge_src\obj\Debug\AquaGauge.dll
+C:\Git\Dial Reader\DialReader_2017\AquaGauge_src\obj\Debug\AquaGauge.pdb

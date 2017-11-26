@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     ".NETFramework,Version=v4.5.2": {},
     ".NETStandard,Version=v1.3": {
@@ -6070,33 +6070,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER PC\\.nuget\\packages\\": {}
+    "C:\\Users\\Formulatrix\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "6.10.4",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACER PC\\Documents\\Visual Studio 2017\\Project\\MySQL.Data\\src\\MySql.Data.csproj",
+      "projectUniqueName": "C:\\Git\\Dial Reader\\DialReader_2017\\MySQL.Data\\src\\MySql.Data.csproj",
       "projectName": "MySql.Data",
-      "projectPath": "C:\\Users\\ACER PC\\Documents\\Visual Studio 2017\\Project\\MySQL.Data\\src\\MySql.Data.csproj",
-      "packagesPath": "C:\\Users\\ACER PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACER PC\\Documents\\Visual Studio 2017\\Project\\MySQL.Data\\src\\obj\\",
+      "projectPath": "C:\\Git\\Dial Reader\\DialReader_2017\\MySQL.Data\\src\\MySql.Data.csproj",
+      "outputPath": "C:\\Git\\Dial Reader\\DialReader_2017\\MySQL.Data\\src\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
-      "configFilePaths": [
-        "C:\\Users\\ACER PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-      ],
       "originalTargetFrameworks": [
         "netstandard1.3",
         "net452"
       ],
-      "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "netstandard1.3": {
           "projectReferences": {}
