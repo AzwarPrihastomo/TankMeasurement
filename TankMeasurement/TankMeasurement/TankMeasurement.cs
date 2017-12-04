@@ -19,7 +19,7 @@ namespace TankMeasurement
         public delegate void LogDelegate(string item);
         modbus mb = new modbus();
         SerialPort sp = new SerialPort();
-        System.Timers.Timer timer = new System.Timers.Timer();
+        //System.Timers.Timer timer = new System.Timers.Timer();
         Encryp MyEncryp = new Encryp();
         StringToFormula myFormula = new StringToFormula();
 
@@ -71,7 +71,7 @@ namespace TankMeasurement
         String connstring;
         String defaultdir;
 
-        short[] values = new short[20];
+        ushort[] values = new ushort[20];
         double valLevel, valTemp, valPress;
 
         const int rowDensityTable54 = 1;
@@ -91,7 +91,7 @@ namespace TankMeasurement
         public TankMeasurement()
         {
             InitializeComponent();
-            timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
+            //timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
             defaultdir = Directory.GetCurrentDirectory();
             loadConfig();
             loadTableSetting();
@@ -284,9 +284,12 @@ namespace TankMeasurement
             }
             {
                 btnRun.Text = "Stop";
-                timer.AutoReset = true;
-                timer.Interval = 1000 * update_period;
-                timer.Start();
+                //timer.AutoReset = true;
+                //timer.Interval = 1000 * update_period;
+                //timer.Start();
+                timer1.Interval = 1000 * update_period;
+                timer1.Enabled = true;
+                timer1.Start();
                 isConnect = true;
                 ConnectionStatus.Text = "Connected";
             }
@@ -296,7 +299,9 @@ namespace TankMeasurement
         private void StopProcess()
         {
             oMysql.DisConnect();
-            timer.Stop();
+            //timer.Stop();
+            timer1.Stop();
+            timer1.Enabled = false;
             mb.Close();
             btnRun.Text = "Run";
             isConnect = false;
@@ -304,10 +309,10 @@ namespace TankMeasurement
             ConnectionStatus.Text = "Disconnected, Process stopped";
         }
 
-        void timer_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            PollAllData();
-        }
+        //void timer_Elapsed(object sender, ElapsedEventArgs e)
+        //{
+        //    PollAllData();
+        //}
 
         private void PollAllData()
         {
@@ -337,22 +342,22 @@ namespace TankMeasurement
                 ConnectionStatus.Text = "Error in modbus read";
                 MessageBox.Show("Error in modbus read: " + err.Message);
             }
-
-            DoUpdate();
+            UpdateALL();
+            //DoUpdate();
         }
 
-        public void DoUpdate()
-        {
-            if (this.InvokeRequired)
-            {
-                GUIDelegate delegateMethod = new GUIDelegate(this.DoUpdate);
-                this.Invoke(delegateMethod, new object[] { });
-            }
-            else
-            {
-                UpdateALL();
-            }
-        }
+        //public void DoUpdate()
+        //{
+        //    if (this.InvokeRequired)
+        //    {
+        //        GUIDelegate delegateMethod = new GUIDelegate(this.DoUpdate);
+        //        this.Invoke(delegateMethod, new object[] { });
+        //    }
+        //    else
+        //    {
+        //        UpdateALL();
+        //    }
+        //}
 
         private void UpdateALL()
         {
@@ -837,6 +842,11 @@ namespace TankMeasurement
             this.Show();
             this.WindowState = FormWindowState.Normal;
             NotifyIcon1.Visible = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            PollAllData();
         }
     }
 }

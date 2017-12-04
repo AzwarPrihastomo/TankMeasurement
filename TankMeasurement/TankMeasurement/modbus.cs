@@ -208,7 +208,7 @@ namespace Modbus_Poll_CS
         #endregion
 
         #region Function 3 - Read Registers
-        public bool SendFc3(byte address, ushort start, ushort registers, ref short[] values)
+        public bool SendFc3(byte address, ushort start, ushort registers, ref ushort[] values)
         {
             //Ensure port is open:
             if (sp.IsOpen)

@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TankMeasurement));
             this.SplitContainer1 = new System.Windows.Forms.SplitContainer();
             this.SplitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.gaugeLevel = new AquaControls.AquaGauge();
             this.ChkTodayLevel = new System.Windows.Forms.CheckBox();
             this.DTLevel = new System.Windows.Forms.DateTimePicker();
             this.ChartLevel = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -60,7 +59,6 @@
             this.Panel2 = new System.Windows.Forms.Panel();
             this.Label2 = new System.Windows.Forms.Label();
             this.SplitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.gaugePressure = new AquaControls.AquaGauge();
             this.ChkTodayPress = new System.Windows.Forms.CheckBox();
             this.DTPress = new System.Windows.Forms.DateTimePicker();
             this.ChartPressure = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -119,6 +117,8 @@
             this.TablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExportToCsvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.hideOnSystrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.ExitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -134,8 +134,9 @@
             this.NotifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel8 = new System.Windows.Forms.Panel();
             this.textLog = new System.Windows.Forms.TextBox();
-            this.hideOnSystrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.gaugePressure = new AquaControls.AquaGauge();
+            this.gaugeLevel = new AquaControls.AquaGauge();
             this.SplitContainer1.Panel1.SuspendLayout();
             this.SplitContainer1.Panel2.SuspendLayout();
             this.SplitContainer1.SuspendLayout();
@@ -219,23 +220,6 @@
             this.SplitContainer3.SplitterDistance = 169;
             this.SplitContainer3.TabIndex = 0;
             // 
-            // gaugeLevel
-            // 
-            this.gaugeLevel.BackColor = System.Drawing.Color.Transparent;
-            this.gaugeLevel.DialColor = System.Drawing.Color.Black;
-            this.gaugeLevel.DialText = "Level (%)";
-            this.gaugeLevel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gaugeLevel.Glossiness = 50F;
-            this.gaugeLevel.Location = new System.Drawing.Point(0, 0);
-            this.gaugeLevel.MaxValue = 100F;
-            this.gaugeLevel.MinValue = 0F;
-            this.gaugeLevel.Name = "gaugeLevel";
-            this.gaugeLevel.RecommendedValue = 0F;
-            this.gaugeLevel.Size = new System.Drawing.Size(169, 169);
-            this.gaugeLevel.TabIndex = 1;
-            this.gaugeLevel.ThresholdPercent = 1F;
-            this.gaugeLevel.Value = 0F;
-            // 
             // ChkTodayLevel
             // 
             this.ChkTodayLevel.AutoSize = true;
@@ -261,23 +245,23 @@
             // 
             // ChartLevel
             // 
-            chartArea4.Name = "ChartArea1";
-            this.ChartLevel.ChartAreas.Add(chartArea4);
+            chartArea7.Name = "ChartArea1";
+            this.ChartLevel.ChartAreas.Add(chartArea7);
             this.ChartLevel.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Alignment = System.Drawing.StringAlignment.Far;
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend4.Name = "Legend1";
-            this.ChartLevel.Legends.Add(legend4);
+            legend7.Alignment = System.Drawing.StringAlignment.Far;
+            legend7.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend7.Name = "Legend1";
+            this.ChartLevel.Legends.Add(legend7);
             this.ChartLevel.Location = new System.Drawing.Point(0, 0);
             this.ChartLevel.Name = "ChartLevel";
-            series4.BorderWidth = 2;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Color = System.Drawing.Color.Blue;
-            series4.Legend = "Legend1";
-            series4.Name = "Tank Level";
-            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartLevel.Series.Add(series4);
+            series7.BorderWidth = 2;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Color = System.Drawing.Color.Blue;
+            series7.Legend = "Legend1";
+            series7.Name = "Tank Level";
+            series7.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartLevel.Series.Add(series7);
             this.ChartLevel.Size = new System.Drawing.Size(637, 175);
             this.ChartLevel.TabIndex = 13;
             this.ChartLevel.Text = "Chart1";
@@ -368,9 +352,9 @@
             // 
             this.gaugeTemp.BackColor = System.Drawing.Color.Transparent;
             this.gaugeTemp.DialColor = System.Drawing.Color.Black;
-            this.gaugeTemp.DialText = "Temp ( ° C )";
+            this.gaugeTemp.DialText = "Temp (° C)";
             this.gaugeTemp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gaugeTemp.Glossiness = 50F;
+            this.gaugeTemp.Glossiness = 70F;
             this.gaugeTemp.Location = new System.Drawing.Point(0, 0);
             this.gaugeTemp.MaxValue = 60F;
             this.gaugeTemp.MinValue = 0F;
@@ -406,23 +390,23 @@
             // 
             // ChartTemp
             // 
-            chartArea5.Name = "ChartArea1";
-            this.ChartTemp.ChartAreas.Add(chartArea5);
+            chartArea8.Name = "ChartArea1";
+            this.ChartTemp.ChartAreas.Add(chartArea8);
             this.ChartTemp.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Alignment = System.Drawing.StringAlignment.Far;
-            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend5.Name = "Legend1";
-            this.ChartTemp.Legends.Add(legend5);
+            legend8.Alignment = System.Drawing.StringAlignment.Far;
+            legend8.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend8.Name = "Legend1";
+            this.ChartTemp.Legends.Add(legend8);
             this.ChartTemp.Location = new System.Drawing.Point(0, 0);
             this.ChartTemp.Name = "ChartTemp";
-            series5.BorderWidth = 2;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Color = System.Drawing.Color.SeaGreen;
-            series5.Legend = "Legend1";
-            series5.Name = "Temperature";
-            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartTemp.Series.Add(series5);
+            series8.BorderWidth = 2;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Color = System.Drawing.Color.SeaGreen;
+            series8.Legend = "Legend1";
+            series8.Name = "Temperature";
+            series8.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartTemp.Series.Add(series8);
             this.ChartTemp.Size = new System.Drawing.Size(637, 177);
             this.ChartTemp.TabIndex = 13;
             this.ChartTemp.Text = "Chart1";
@@ -492,24 +476,6 @@
             this.SplitContainer5.SplitterDistance = 172;
             this.SplitContainer5.TabIndex = 0;
             // 
-            // gaugePressure
-            // 
-            this.gaugePressure.BackColor = System.Drawing.Color.Transparent;
-            this.gaugePressure.DialColor = System.Drawing.Color.Black;
-            this.gaugePressure.DialText = "Press (Bar)";
-            this.gaugePressure.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gaugePressure.EnableTransparentBackground = true;
-            this.gaugePressure.Glossiness = 50F;
-            this.gaugePressure.Location = new System.Drawing.Point(0, 0);
-            this.gaugePressure.MaxValue = 200F;
-            this.gaugePressure.MinValue = 0F;
-            this.gaugePressure.Name = "gaugePressure";
-            this.gaugePressure.RecommendedValue = 0F;
-            this.gaugePressure.Size = new System.Drawing.Size(172, 172);
-            this.gaugePressure.TabIndex = 1;
-            this.gaugePressure.ThresholdPercent = 0F;
-            this.gaugePressure.Value = 0F;
-            // 
             // ChkTodayPress
             // 
             this.ChkTodayPress.AutoSize = true;
@@ -535,23 +501,23 @@
             // 
             // ChartPressure
             // 
-            chartArea6.Name = "ChartArea1";
-            this.ChartPressure.ChartAreas.Add(chartArea6);
+            chartArea9.Name = "ChartArea1";
+            this.ChartPressure.ChartAreas.Add(chartArea9);
             this.ChartPressure.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend6.Alignment = System.Drawing.StringAlignment.Far;
-            legend6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend6.Name = "Legend1";
-            this.ChartPressure.Legends.Add(legend6);
+            legend9.Alignment = System.Drawing.StringAlignment.Far;
+            legend9.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend9.Name = "Legend1";
+            this.ChartPressure.Legends.Add(legend9);
             this.ChartPressure.Location = new System.Drawing.Point(0, 0);
             this.ChartPressure.Name = "ChartPressure";
-            series6.BorderWidth = 2;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Color = System.Drawing.Color.BlueViolet;
-            series6.Legend = "Legend1";
-            series6.Name = "Pressure";
-            series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartPressure.Series.Add(series6);
+            series9.BorderWidth = 2;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Color = System.Drawing.Color.BlueViolet;
+            series9.Legend = "Legend1";
+            series9.Name = "Pressure";
+            series9.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartPressure.Series.Add(series9);
             this.ChartPressure.Size = new System.Drawing.Size(634, 188);
             this.ChartPressure.TabIndex = 12;
             this.ChartPressure.Text = "Chart1";
@@ -1099,6 +1065,18 @@
             this.ToolStripSeparator1.Name = "ToolStripSeparator1";
             this.ToolStripSeparator1.Size = new System.Drawing.Size(153, 6);
             // 
+            // hideOnSystrayToolStripMenuItem
+            // 
+            this.hideOnSystrayToolStripMenuItem.Name = "hideOnSystrayToolStripMenuItem";
+            this.hideOnSystrayToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.hideOnSystrayToolStripMenuItem.Text = "Hide on Systray";
+            this.hideOnSystrayToolStripMenuItem.Click += new System.EventHandler(this.hideOnSystrayToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(153, 6);
+            // 
             // ExitToolStripMenuItem1
             // 
             this.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1";
@@ -1206,17 +1184,43 @@
             this.textLog.TabIndex = 0;
             this.textLog.WordWrap = false;
             // 
-            // hideOnSystrayToolStripMenuItem
+            // timer1
             // 
-            this.hideOnSystrayToolStripMenuItem.Name = "hideOnSystrayToolStripMenuItem";
-            this.hideOnSystrayToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.hideOnSystrayToolStripMenuItem.Text = "Hide on Systray";
-            this.hideOnSystrayToolStripMenuItem.Click += new System.EventHandler(this.hideOnSystrayToolStripMenuItem_Click);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // toolStripSeparator2
+            // gaugePressure
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(153, 6);
+            this.gaugePressure.BackColor = System.Drawing.Color.Transparent;
+            this.gaugePressure.DialColor = System.Drawing.Color.Black;
+            this.gaugePressure.DialText = "Pressure (Bar)";
+            this.gaugePressure.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gaugePressure.Glossiness = 70F;
+            this.gaugePressure.Location = new System.Drawing.Point(0, 0);
+            this.gaugePressure.MaxValue = 60F;
+            this.gaugePressure.MinValue = 0F;
+            this.gaugePressure.Name = "gaugePressure";
+            this.gaugePressure.RecommendedValue = 0F;
+            this.gaugePressure.Size = new System.Drawing.Size(172, 172);
+            this.gaugePressure.TabIndex = 2;
+            this.gaugePressure.ThresholdPercent = 0F;
+            this.gaugePressure.Value = 0F;
+            // 
+            // gaugeLevel
+            // 
+            this.gaugeLevel.BackColor = System.Drawing.Color.Transparent;
+            this.gaugeLevel.DialColor = System.Drawing.Color.Black;
+            this.gaugeLevel.DialText = "Level (%)";
+            this.gaugeLevel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gaugeLevel.Glossiness = 70F;
+            this.gaugeLevel.Location = new System.Drawing.Point(0, 0);
+            this.gaugeLevel.MaxValue = 60F;
+            this.gaugeLevel.MinValue = 0F;
+            this.gaugeLevel.Name = "gaugeLevel";
+            this.gaugeLevel.RecommendedValue = 0F;
+            this.gaugeLevel.Size = new System.Drawing.Size(169, 169);
+            this.gaugeLevel.TabIndex = 2;
+            this.gaugeLevel.ThresholdPercent = 0F;
+            this.gaugeLevel.Value = 0F;
             // 
             // TankMeasurement
             // 
@@ -1295,7 +1299,6 @@
 
         internal System.Windows.Forms.SplitContainer SplitContainer1;
         internal System.Windows.Forms.SplitContainer SplitContainer3;
-        internal AquaControls.AquaGauge gaugeLevel;
         internal System.Windows.Forms.CheckBox ChkTodayLevel;
         internal System.Windows.Forms.DateTimePicker DTLevel;
         internal System.Windows.Forms.DataGridView tableTangki;
@@ -1312,7 +1315,6 @@
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.SplitContainer SplitContainer5;
-        internal AquaControls.AquaGauge gaugePressure;
         internal System.Windows.Forms.CheckBox ChkTodayPress;
         internal System.Windows.Forms.DateTimePicker DTPress;
         internal System.Windows.Forms.Panel Panel3;
@@ -1390,6 +1392,9 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.ToolStripMenuItem hideOnSystrayToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.Timer timer1;
+        internal AquaControls.AquaGauge gaugePressure;
+        internal AquaControls.AquaGauge gaugeLevel;
     }
 }
 

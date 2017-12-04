@@ -101,6 +101,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Password";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Password";
             this.TableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
