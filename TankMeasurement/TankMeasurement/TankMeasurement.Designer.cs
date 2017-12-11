@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea22 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend22 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea23 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend23 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea24 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend24 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TankMeasurement));
             this.SplitContainer1 = new System.Windows.Forms.SplitContainer();
             this.SplitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.ChkTodayLevel = new System.Windows.Forms.CheckBox();
-            this.DTLevel = new System.Windows.Forms.DateTimePicker();
+            this.gaugeLevel = new AquaControls.AquaGauge();
+            this.cbHistHoursLevel = new System.Windows.Forms.ComboBox();
             this.ChartLevel = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableTangki = new System.Windows.Forms.DataGridView();
             this.table54 = new System.Windows.Forms.DataGridView();
@@ -51,16 +51,15 @@
             this.SplitContainer2 = new System.Windows.Forms.SplitContainer();
             this.SplitContainer4 = new System.Windows.Forms.SplitContainer();
             this.gaugeTemp = new AquaControls.AquaGauge();
-            this.ChkTodayTemp = new System.Windows.Forms.CheckBox();
-            this.DTTemp = new System.Windows.Forms.DateTimePicker();
+            this.cbHistHoursTemp = new System.Windows.Forms.ComboBox();
             this.ChartTemp = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridExport = new System.Windows.Forms.DataGridView();
             this.data_log_table = new System.Windows.Forms.DataGridView();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.Label2 = new System.Windows.Forms.Label();
             this.SplitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.ChkTodayPress = new System.Windows.Forms.CheckBox();
-            this.DTPress = new System.Windows.Forms.DateTimePicker();
+            this.gaugePressure = new AquaControls.AquaGauge();
+            this.cbHistHoursPress = new System.Windows.Forms.ComboBox();
             this.ChartPressure = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.Label3 = new System.Windows.Forms.Label();
@@ -135,8 +134,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.textLog = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.gaugePressure = new AquaControls.AquaGauge();
-            this.gaugeLevel = new AquaControls.AquaGauge();
             this.SplitContainer1.Panel1.SuspendLayout();
             this.SplitContainer1.Panel2.SuspendLayout();
             this.SplitContainer1.SuspendLayout();
@@ -211,8 +208,7 @@
             // 
             // SplitContainer3.Panel2
             // 
-            this.SplitContainer3.Panel2.Controls.Add(this.ChkTodayLevel);
-            this.SplitContainer3.Panel2.Controls.Add(this.DTLevel);
+            this.SplitContainer3.Panel2.Controls.Add(this.cbHistHoursLevel);
             this.SplitContainer3.Panel2.Controls.Add(this.ChartLevel);
             this.SplitContainer3.Panel2.Controls.Add(this.tableTangki);
             this.SplitContainer3.Panel2.Controls.Add(this.table54);
@@ -220,48 +216,56 @@
             this.SplitContainer3.SplitterDistance = 169;
             this.SplitContainer3.TabIndex = 0;
             // 
-            // ChkTodayLevel
+            // gaugeLevel
             // 
-            this.ChkTodayLevel.AutoSize = true;
-            this.ChkTodayLevel.Checked = true;
-            this.ChkTodayLevel.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChkTodayLevel.Location = new System.Drawing.Point(41, 7);
-            this.ChkTodayLevel.Name = "ChkTodayLevel";
-            this.ChkTodayLevel.Size = new System.Drawing.Size(56, 17);
-            this.ChkTodayLevel.TabIndex = 11;
-            this.ChkTodayLevel.Text = "Today";
-            this.ChkTodayLevel.UseVisualStyleBackColor = true;
-            this.ChkTodayLevel.CheckedChanged += new System.EventHandler(this.ChkTodayLevel_CheckedChanged);
+            this.gaugeLevel.BackColor = System.Drawing.Color.Transparent;
+            this.gaugeLevel.DialColor = System.Drawing.Color.Black;
+            this.gaugeLevel.DialText = "Level (%)";
+            this.gaugeLevel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gaugeLevel.Glossiness = 70F;
+            this.gaugeLevel.Location = new System.Drawing.Point(0, 0);
+            this.gaugeLevel.MaxValue = 60F;
+            this.gaugeLevel.MinValue = 0F;
+            this.gaugeLevel.Name = "gaugeLevel";
+            this.gaugeLevel.RecommendedValue = 0F;
+            this.gaugeLevel.Size = new System.Drawing.Size(169, 169);
+            this.gaugeLevel.TabIndex = 2;
+            this.gaugeLevel.ThresholdPercent = 0F;
+            this.gaugeLevel.Value = 0F;
             // 
-            // DTLevel
+            // cbHistHoursLevel
             // 
-            this.DTLevel.Enabled = false;
-            this.DTLevel.Location = new System.Drawing.Point(106, 6);
-            this.DTLevel.Name = "DTLevel";
-            this.DTLevel.Size = new System.Drawing.Size(200, 20);
-            this.DTLevel.TabIndex = 10;
-            this.DTLevel.Value = new System.DateTime(2012, 10, 23, 0, 0, 0, 0);
-            this.DTLevel.ValueChanged += new System.EventHandler(this.DTLevel_ValueChanged);
+            this.cbHistHoursLevel.FormattingEnabled = true;
+            this.cbHistHoursLevel.Items.AddRange(new object[] {
+            "12 Hours",
+            "6 Hours",
+            "1 Hours"});
+            this.cbHistHoursLevel.Location = new System.Drawing.Point(61, 7);
+            this.cbHistHoursLevel.Name = "cbHistHoursLevel";
+            this.cbHistHoursLevel.Size = new System.Drawing.Size(121, 21);
+            this.cbHistHoursLevel.TabIndex = 14;
+            this.cbHistHoursLevel.Text = "12 Hours";
+            this.cbHistHoursLevel.SelectedIndexChanged += new System.EventHandler(this.cbHistHoursLevel_SelectedIndexChanged);
             // 
             // ChartLevel
             // 
-            chartArea7.Name = "ChartArea1";
-            this.ChartLevel.ChartAreas.Add(chartArea7);
+            chartArea22.Name = "ChartArea1";
+            this.ChartLevel.ChartAreas.Add(chartArea22);
             this.ChartLevel.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend7.Alignment = System.Drawing.StringAlignment.Far;
-            legend7.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend7.Name = "Legend1";
-            this.ChartLevel.Legends.Add(legend7);
+            legend22.Alignment = System.Drawing.StringAlignment.Far;
+            legend22.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend22.Name = "Legend1";
+            this.ChartLevel.Legends.Add(legend22);
             this.ChartLevel.Location = new System.Drawing.Point(0, 0);
             this.ChartLevel.Name = "ChartLevel";
-            series7.BorderWidth = 2;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Color = System.Drawing.Color.Blue;
-            series7.Legend = "Legend1";
-            series7.Name = "Tank Level";
-            series7.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartLevel.Series.Add(series7);
+            series22.BorderWidth = 2;
+            series22.ChartArea = "ChartArea1";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series22.Color = System.Drawing.Color.Blue;
+            series22.Legend = "Legend1";
+            series22.Name = "Tank Level";
+            series22.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartLevel.Series.Add(series22);
             this.ChartLevel.Size = new System.Drawing.Size(637, 175);
             this.ChartLevel.TabIndex = 13;
             this.ChartLevel.Text = "Chart1";
@@ -339,8 +343,7 @@
             // 
             // SplitContainer4.Panel2
             // 
-            this.SplitContainer4.Panel2.Controls.Add(this.ChkTodayTemp);
-            this.SplitContainer4.Panel2.Controls.Add(this.DTTemp);
+            this.SplitContainer4.Panel2.Controls.Add(this.cbHistHoursTemp);
             this.SplitContainer4.Panel2.Controls.Add(this.ChartTemp);
             this.SplitContainer4.Panel2.Controls.Add(this.dataGridExport);
             this.SplitContainer4.Panel2.Controls.Add(this.data_log_table);
@@ -365,48 +368,39 @@
             this.gaugeTemp.ThresholdPercent = 0F;
             this.gaugeTemp.Value = 0F;
             // 
-            // ChkTodayTemp
+            // cbHistHoursTemp
             // 
-            this.ChkTodayTemp.AutoSize = true;
-            this.ChkTodayTemp.Checked = true;
-            this.ChkTodayTemp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChkTodayTemp.Location = new System.Drawing.Point(41, 7);
-            this.ChkTodayTemp.Name = "ChkTodayTemp";
-            this.ChkTodayTemp.Size = new System.Drawing.Size(56, 17);
-            this.ChkTodayTemp.TabIndex = 11;
-            this.ChkTodayTemp.Text = "Today";
-            this.ChkTodayTemp.UseVisualStyleBackColor = true;
-            this.ChkTodayTemp.CheckedChanged += new System.EventHandler(this.ChkTodayTemp_CheckedChanged);
-            // 
-            // DTTemp
-            // 
-            this.DTTemp.Enabled = false;
-            this.DTTemp.Location = new System.Drawing.Point(106, 6);
-            this.DTTemp.Name = "DTTemp";
-            this.DTTemp.Size = new System.Drawing.Size(200, 20);
-            this.DTTemp.TabIndex = 10;
-            this.DTTemp.Value = new System.DateTime(2012, 10, 23, 0, 0, 0, 0);
-            this.DTTemp.ValueChanged += new System.EventHandler(this.DTTemp_ValueChanged);
+            this.cbHistHoursTemp.FormattingEnabled = true;
+            this.cbHistHoursTemp.Items.AddRange(new object[] {
+            "12 Hours",
+            "6 Hours",
+            "1 Hours"});
+            this.cbHistHoursTemp.Location = new System.Drawing.Point(61, 9);
+            this.cbHistHoursTemp.Name = "cbHistHoursTemp";
+            this.cbHistHoursTemp.Size = new System.Drawing.Size(121, 21);
+            this.cbHistHoursTemp.TabIndex = 14;
+            this.cbHistHoursTemp.Text = "12 Hours";
+            this.cbHistHoursTemp.SelectedIndexChanged += new System.EventHandler(this.cbHistHoursTemp_SelectedIndexChanged);
             // 
             // ChartTemp
             // 
-            chartArea8.Name = "ChartArea1";
-            this.ChartTemp.ChartAreas.Add(chartArea8);
+            chartArea23.Name = "ChartArea1";
+            this.ChartTemp.ChartAreas.Add(chartArea23);
             this.ChartTemp.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend8.Alignment = System.Drawing.StringAlignment.Far;
-            legend8.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend8.Name = "Legend1";
-            this.ChartTemp.Legends.Add(legend8);
+            legend23.Alignment = System.Drawing.StringAlignment.Far;
+            legend23.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend23.Name = "Legend1";
+            this.ChartTemp.Legends.Add(legend23);
             this.ChartTemp.Location = new System.Drawing.Point(0, 0);
             this.ChartTemp.Name = "ChartTemp";
-            series8.BorderWidth = 2;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Color = System.Drawing.Color.SeaGreen;
-            series8.Legend = "Legend1";
-            series8.Name = "Temperature";
-            series8.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartTemp.Series.Add(series8);
+            series23.BorderWidth = 2;
+            series23.ChartArea = "ChartArea1";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series23.Color = System.Drawing.Color.SeaGreen;
+            series23.Legend = "Legend1";
+            series23.Name = "Temperature";
+            series23.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartTemp.Series.Add(series23);
             this.ChartTemp.Size = new System.Drawing.Size(637, 177);
             this.ChartTemp.TabIndex = 13;
             this.ChartTemp.Text = "Chart1";
@@ -469,55 +463,62 @@
             // 
             // SplitContainer5.Panel2
             // 
-            this.SplitContainer5.Panel2.Controls.Add(this.ChkTodayPress);
-            this.SplitContainer5.Panel2.Controls.Add(this.DTPress);
+            this.SplitContainer5.Panel2.Controls.Add(this.cbHistHoursPress);
             this.SplitContainer5.Panel2.Controls.Add(this.ChartPressure);
             this.SplitContainer5.Size = new System.Drawing.Size(810, 188);
             this.SplitContainer5.SplitterDistance = 172;
             this.SplitContainer5.TabIndex = 0;
             // 
-            // ChkTodayPress
+            // gaugePressure
             // 
-            this.ChkTodayPress.AutoSize = true;
-            this.ChkTodayPress.Checked = true;
-            this.ChkTodayPress.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChkTodayPress.Location = new System.Drawing.Point(38, 7);
-            this.ChkTodayPress.Name = "ChkTodayPress";
-            this.ChkTodayPress.Size = new System.Drawing.Size(56, 17);
-            this.ChkTodayPress.TabIndex = 11;
-            this.ChkTodayPress.Text = "Today";
-            this.ChkTodayPress.UseVisualStyleBackColor = true;
-            this.ChkTodayPress.CheckedChanged += new System.EventHandler(this.ChkTodayPress_CheckedChanged);
+            this.gaugePressure.BackColor = System.Drawing.Color.Transparent;
+            this.gaugePressure.DialColor = System.Drawing.Color.Black;
+            this.gaugePressure.DialText = "Pressure (Bar)";
+            this.gaugePressure.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gaugePressure.Glossiness = 70F;
+            this.gaugePressure.Location = new System.Drawing.Point(0, 0);
+            this.gaugePressure.MaxValue = 60F;
+            this.gaugePressure.MinValue = 0F;
+            this.gaugePressure.Name = "gaugePressure";
+            this.gaugePressure.RecommendedValue = 0F;
+            this.gaugePressure.Size = new System.Drawing.Size(172, 172);
+            this.gaugePressure.TabIndex = 2;
+            this.gaugePressure.ThresholdPercent = 0F;
+            this.gaugePressure.Value = 0F;
             // 
-            // DTPress
+            // cbHistHoursPress
             // 
-            this.DTPress.Enabled = false;
-            this.DTPress.Location = new System.Drawing.Point(103, 6);
-            this.DTPress.Name = "DTPress";
-            this.DTPress.Size = new System.Drawing.Size(200, 20);
-            this.DTPress.TabIndex = 10;
-            this.DTPress.Value = new System.DateTime(2012, 10, 23, 0, 0, 0, 0);
-            this.DTPress.ValueChanged += new System.EventHandler(this.DTPress_ValueChanged);
+            this.cbHistHoursPress.FormattingEnabled = true;
+            this.cbHistHoursPress.Items.AddRange(new object[] {
+            "12 Hours",
+            "6 Hours",
+            "1 Hours"});
+            this.cbHistHoursPress.Location = new System.Drawing.Point(58, 9);
+            this.cbHistHoursPress.Name = "cbHistHoursPress";
+            this.cbHistHoursPress.Size = new System.Drawing.Size(121, 21);
+            this.cbHistHoursPress.TabIndex = 14;
+            this.cbHistHoursPress.Text = "12 Hours";
+            this.cbHistHoursPress.SelectedIndexChanged += new System.EventHandler(this.cbHistHoursPress_SelectedIndexChanged);
             // 
             // ChartPressure
             // 
-            chartArea9.Name = "ChartArea1";
-            this.ChartPressure.ChartAreas.Add(chartArea9);
+            chartArea24.Name = "ChartArea1";
+            this.ChartPressure.ChartAreas.Add(chartArea24);
             this.ChartPressure.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend9.Alignment = System.Drawing.StringAlignment.Far;
-            legend9.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend9.Name = "Legend1";
-            this.ChartPressure.Legends.Add(legend9);
+            legend24.Alignment = System.Drawing.StringAlignment.Far;
+            legend24.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend24.Name = "Legend1";
+            this.ChartPressure.Legends.Add(legend24);
             this.ChartPressure.Location = new System.Drawing.Point(0, 0);
             this.ChartPressure.Name = "ChartPressure";
-            series9.BorderWidth = 2;
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series9.Color = System.Drawing.Color.BlueViolet;
-            series9.Legend = "Legend1";
-            series9.Name = "Pressure";
-            series9.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartPressure.Series.Add(series9);
+            series24.BorderWidth = 2;
+            series24.ChartArea = "ChartArea1";
+            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series24.Color = System.Drawing.Color.BlueViolet;
+            series24.Legend = "Legend1";
+            series24.Name = "Pressure";
+            series24.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartPressure.Series.Add(series24);
             this.ChartPressure.Size = new System.Drawing.Size(634, 188);
             this.ChartPressure.TabIndex = 12;
             this.ChartPressure.Text = "Chart1";
@@ -1024,6 +1025,9 @@
             this.MenuStrip1.Size = new System.Drawing.Size(1100, 24);
             this.MenuStrip1.TabIndex = 8;
             this.MenuStrip1.Text = "MenuStrip1";
+            this.MenuStrip1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MenuStrip1_MouseUp);
+            this.MenuStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MenuStrip1_MouseDown);
+            this.MenuStrip1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MenuStrip1_MouseMove);
             // 
             // FileToolStripMenuItem
             // 
@@ -1188,40 +1192,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // gaugePressure
-            // 
-            this.gaugePressure.BackColor = System.Drawing.Color.Transparent;
-            this.gaugePressure.DialColor = System.Drawing.Color.Black;
-            this.gaugePressure.DialText = "Pressure (Bar)";
-            this.gaugePressure.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gaugePressure.Glossiness = 70F;
-            this.gaugePressure.Location = new System.Drawing.Point(0, 0);
-            this.gaugePressure.MaxValue = 60F;
-            this.gaugePressure.MinValue = 0F;
-            this.gaugePressure.Name = "gaugePressure";
-            this.gaugePressure.RecommendedValue = 0F;
-            this.gaugePressure.Size = new System.Drawing.Size(172, 172);
-            this.gaugePressure.TabIndex = 2;
-            this.gaugePressure.ThresholdPercent = 0F;
-            this.gaugePressure.Value = 0F;
-            // 
-            // gaugeLevel
-            // 
-            this.gaugeLevel.BackColor = System.Drawing.Color.Transparent;
-            this.gaugeLevel.DialColor = System.Drawing.Color.Black;
-            this.gaugeLevel.DialText = "Level (%)";
-            this.gaugeLevel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gaugeLevel.Glossiness = 70F;
-            this.gaugeLevel.Location = new System.Drawing.Point(0, 0);
-            this.gaugeLevel.MaxValue = 60F;
-            this.gaugeLevel.MinValue = 0F;
-            this.gaugeLevel.Name = "gaugeLevel";
-            this.gaugeLevel.RecommendedValue = 0F;
-            this.gaugeLevel.Size = new System.Drawing.Size(169, 169);
-            this.gaugeLevel.TabIndex = 2;
-            this.gaugeLevel.ThresholdPercent = 0F;
-            this.gaugeLevel.Value = 0F;
-            // 
             // TankMeasurement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1244,7 +1214,6 @@
             this.SplitContainer1.ResumeLayout(false);
             this.SplitContainer3.Panel1.ResumeLayout(false);
             this.SplitContainer3.Panel2.ResumeLayout(false);
-            this.SplitContainer3.Panel2.PerformLayout();
             this.SplitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ChartLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableTangki)).EndInit();
@@ -1256,7 +1225,6 @@
             this.SplitContainer2.ResumeLayout(false);
             this.SplitContainer4.Panel1.ResumeLayout(false);
             this.SplitContainer4.Panel2.ResumeLayout(false);
-            this.SplitContainer4.Panel2.PerformLayout();
             this.SplitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ChartTemp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridExport)).EndInit();
@@ -1265,7 +1233,6 @@
             this.Panel2.PerformLayout();
             this.SplitContainer5.Panel1.ResumeLayout(false);
             this.SplitContainer5.Panel2.ResumeLayout(false);
-            this.SplitContainer5.Panel2.PerformLayout();
             this.SplitContainer5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ChartPressure)).EndInit();
             this.Panel3.ResumeLayout(false);
@@ -1299,8 +1266,6 @@
 
         internal System.Windows.Forms.SplitContainer SplitContainer1;
         internal System.Windows.Forms.SplitContainer SplitContainer3;
-        internal System.Windows.Forms.CheckBox ChkTodayLevel;
-        internal System.Windows.Forms.DateTimePicker DTLevel;
         internal System.Windows.Forms.DataGridView tableTangki;
         internal System.Windows.Forms.DataGridView table54;
         internal System.Windows.Forms.Panel Panel1;
@@ -1308,15 +1273,11 @@
         internal System.Windows.Forms.SplitContainer SplitContainer2;
         internal System.Windows.Forms.SplitContainer SplitContainer4;
         internal AquaControls.AquaGauge gaugeTemp;
-        internal System.Windows.Forms.CheckBox ChkTodayTemp;
-        internal System.Windows.Forms.DateTimePicker DTTemp;
         internal System.Windows.Forms.DataGridView dataGridExport;
         internal System.Windows.Forms.DataGridView data_log_table;
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.SplitContainer SplitContainer5;
-        internal System.Windows.Forms.CheckBox ChkTodayPress;
-        internal System.Windows.Forms.DateTimePicker DTPress;
         internal System.Windows.Forms.Panel Panel3;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Panel Panel5;
@@ -1395,6 +1356,9 @@
         private System.Windows.Forms.Timer timer1;
         internal AquaControls.AquaGauge gaugePressure;
         internal AquaControls.AquaGauge gaugeLevel;
+        private System.Windows.Forms.ComboBox cbHistHoursLevel;
+        private System.Windows.Forms.ComboBox cbHistHoursTemp;
+        private System.Windows.Forms.ComboBox cbHistHoursPress;
     }
 }
 

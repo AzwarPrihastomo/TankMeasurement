@@ -204,6 +204,7 @@
             this.Controls.Add(this.SplitContainer1);
             this.Controls.Add(this.Panel1);
             this.Name = "Tables";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tables";
             this.SplitContainer1.Panel1.ResumeLayout(false);
             this.SplitContainer1.Panel2.ResumeLayout(false);

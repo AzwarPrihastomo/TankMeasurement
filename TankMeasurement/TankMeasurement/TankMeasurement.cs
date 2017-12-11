@@ -88,6 +88,10 @@ namespace TankMeasurement
         string myQuery;
         int dateNow;
 
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
+
         public TankMeasurement()
         {
             InitializeComponent();
@@ -96,9 +100,6 @@ namespace TankMeasurement
             loadConfig();
             loadTableSetting();
             updateSetting();
-            DTLevel.Value = DateTime.Now;
-            DTPress.Value = DateTime.Now;
-            DTTemp.Value = DateTime.Now;
             dateNow = Convert.ToInt16(DateTime.Now.ToString("dd"));
             CreateNewLog();
         }
@@ -343,30 +344,13 @@ namespace TankMeasurement
                 MessageBox.Show("Error in modbus read: " + err.Message);
             }
             UpdateALL();
-            //DoUpdate();
         }
-
-        //public void DoUpdate()
-        //{
-        //    if (this.InvokeRequired)
-        //    {
-        //        GUIDelegate delegateMethod = new GUIDelegate(this.DoUpdate);
-        //        this.Invoke(delegateMethod, new object[] { });
-        //    }
-        //    else
-        //    {
-        //        UpdateALL();
-        //    }
-        //}
 
         private void UpdateALL()
         {
             if (dateNow != Convert.ToInt16(DateTime.Now.ToString("dd")))
             {
                 CreateNewLog();
-                DTLevel.Value = DateTime.Now;
-                DTPress.Value = DateTime.Now;
-                DTTemp.Value = DateTime.Now;
                 dateNow = Convert.ToInt16(DateTime.Now.ToString("dd"));
             }
             valLevel = CalculateEquation(levelFormula, (double)values[levelAddress]);
@@ -381,7 +365,16 @@ namespace TankMeasurement
             tBoxLevel.Text = Convert.ToString(valLevel);
             tBoxPress.Text = Convert.ToString(valPress);
             tBoxTemp.Text = Convert.ToString(valTemp);
-            calculateData(valLevel, valPress, valTemp, Convert.ToDouble(cBoxDensity.Text));
+            if (btnHide.Text == "Hide Calculation")
+            {
+                calculateData(valLevel, valPress, valTemp, Convert.ToDouble(cBoxDensity.Text));
+            }
+            else
+            {
+                kilogramLiquid.Text = "0";
+                kilogramsVapour.Text = "0";
+                TotalKilograms.Text = "0";
+            }
             myQuery = "INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '" + Convert.ToString(valLevel) + "', '" + Convert.ToString(valPress) + "', '" + Convert.ToString(valTemp) + "', '" + kilogramLiquid.Text + "', '" + kilogramsVapour.Text + "', '" + TotalKilograms.Text + "');";
             WriteLog(myQuery);
             if (!oMysql.SetData(myQuery))
@@ -399,9 +392,31 @@ namespace TankMeasurement
 
         private void updateLevelChart()
         {
+            //12 Hours
+            //6 Hours
+            //1 Hours
             if (!isConnect)
                 return;
-            myQuery = "SELECT `DataCompleteTime`, `TankLevel` FROM `" + dataTable + "`where DataCompleteTime > '" + DTLevel.Value.ToString("yyyy-MM-dd") + " 00:00:00' and DataCompleteTime < '" + DTLevel.Value.ToString("yyyy-MM-dd") + " 23:59:59';";
+            int hours = 0;
+            if (cbHistHoursLevel.Text == "12 Hours")
+            {
+                hours = 12;
+            }
+            else if (cbHistHoursLevel.Text == "6 Hours")
+            {
+                hours = 6;
+            }
+            else if (cbHistHoursLevel.Text == "1 Hours")
+            {
+                hours = 1;
+            }
+            
+            DateTime timeStart,timeEnd;
+            timeEnd = DateTime.Now;
+            timeStart = DateTime.Now.AddHours(-1 * hours);
+            
+
+            myQuery = "SELECT `DataCompleteTime`, `TankLevel` FROM `" + dataTable + "`where DataCompleteTime > '" + timeStart.ToString("yyyy-MM-dd HH:mm:ss") + "' and DataCompleteTime < '" + timeEnd.ToString("yyyy-MM-dd HH:mm:ss") + "';";
             myData = oMysql.GetData(myQuery);
             data_log_table.DataSource = myData.Tables[0];
             myData.Dispose();
@@ -414,9 +429,30 @@ namespace TankMeasurement
 
         private void updatePressChart()
         {
+            //12 Hours
+            //6 Hours
+            //1 Hours
             if (!isConnect)
                 return;
-            myQuery = "SELECT `DataCompleteTime`, `TankPress` FROM `" + dataTable + "`where DataCompleteTime > '" + DTLevel.Value.ToString("yyyy-MM-dd") + " 00:00:00' and DataCompleteTime < '" + DTLevel.Value.ToString("yyyy-MM-dd") + " 23:59:59';";
+            int hours = 0;
+            if (cbHistHoursPress.Text == "12 Hours")
+            {
+                hours = 12;
+            }
+            else if (cbHistHoursPress.Text == "6 Hours")
+            {
+                hours = 6;
+            }
+            else if (cbHistHoursPress.Text == "1 Hours")
+            {
+                hours = 1;
+            }
+
+            DateTime timeStart, timeEnd;
+            timeEnd = DateTime.Now;
+            timeStart = DateTime.Now.AddHours(-1 * hours);
+
+            myQuery = "SELECT `DataCompleteTime`, `TankPress` FROM `" + dataTable + "`where DataCompleteTime > '" + timeStart.ToString("yyyy-MM-dd HH:mm:ss") + "' and DataCompleteTime < '" + timeEnd.ToString("yyyy-MM-dd HH:mm:ss") + "';";
             myData = oMysql.GetData(myQuery);
             data_log_table.DataSource = myData.Tables[0];
             myData.Dispose();
@@ -429,9 +465,30 @@ namespace TankMeasurement
 
         private void updateTempChart()
         {
+            //12 Hours
+            //6 Hours
+            //1 Hours
             if (!isConnect)
                 return;
-            myQuery = "SELECT `DataCompleteTime`, `TankTemp` FROM `" + dataTable + "`where DataCompleteTime > '" + DTLevel.Value.ToString("yyyy-MM-dd") + " 00:00:00' and DataCompleteTime < '" + DTLevel.Value.ToString("yyyy-MM-dd") + " 23:59:59';";
+            int hours = 0;
+            if (cbHistHoursTemp.Text == "12 Hours")
+            {
+                hours = 12;
+            }
+            else if (cbHistHoursTemp.Text == "6 Hours")
+            {
+                hours = 6;
+            }
+            else if (cbHistHoursTemp.Text == "1 Hours")
+            {
+                hours = 1;
+            }
+
+            DateTime timeStart, timeEnd;
+            timeEnd = DateTime.Now;
+            timeStart = DateTime.Now.AddHours(-1 * hours);
+
+            myQuery = "SELECT `DataCompleteTime`, `TankTemp` FROM `" + dataTable + "`where DataCompleteTime > '" + timeStart.ToString("yyyy-MM-dd HH:mm:ss") + "' and DataCompleteTime < '" + timeEnd.ToString("yyyy-MM-dd HH:mm:ss") + "';";
             myData = oMysql.GetData(myQuery);
             data_log_table.DataSource = myData.Tables[0];
             myData.Dispose();
@@ -630,60 +687,6 @@ namespace TankMeasurement
             NotifyIcon1.Visible = false;
         }
 
-        private void ChkTodayLevel_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ChkTodayLevel.Checked)
-            {
-                DTLevel.Enabled = false;
-                DTLevel.Value = DateTime.Now;
-            }
-            else
-            {
-                DTLevel.Enabled = true;
-            }
-        }
-
-        private void ChkTodayTemp_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ChkTodayTemp.Checked)
-            {
-                DTTemp.Enabled = false;
-                DTTemp.Value = DateTime.Now;
-            }
-            else
-            {
-                DTTemp.Enabled = true;
-            }
-        }
-
-        private void ChkTodayPress_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ChkTodayPress.Checked)
-            {
-                DTPress.Enabled = false;
-                DTPress.Value = DateTime.Now;
-            }
-            else
-            {
-                DTPress.Enabled = true;
-            }
-        }
-
-        private void DTLevel_ValueChanged(object sender, EventArgs e)
-        {
-            updateLevelChart();
-        }
-
-        private void DTTemp_ValueChanged(object sender, EventArgs e)
-        {
-            updateTempChart();
-        }
-
-        private void DTPress_ValueChanged(object sender, EventArgs e)
-        {
-            updatePressChart();
-        }
-
         private void ExportToCsvToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExportToCsv();
@@ -847,6 +850,42 @@ namespace TankMeasurement
         private void timer1_Tick(object sender, EventArgs e)
         {
             PollAllData();
+        }
+
+        private void cbHistHoursLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateLevelChart();
+        }
+
+        private void cbHistHoursTemp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateTempChart();
+        }
+
+        private void cbHistHoursPress_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updatePressChart();
+        }
+
+        private void MenuStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+
+        private void MenuStrip1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        private void MenuStrip1_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
         }
     }
 }

@@ -130,6 +130,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ExportCsv";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ExportCsv";
             this.datepicker.ResumeLayout(false);
             this.datepicker.PerformLayout();

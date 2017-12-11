@@ -493,6 +493,7 @@
             this.Controls.Add(this.GroupBox2);
             this.Controls.Add(this.GroupBox1);
             this.Name = "Setting";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Setting";
             this.GroupBox5.ResumeLayout(false);
             this.GroupBox5.PerformLayout();
