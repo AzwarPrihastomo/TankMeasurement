@@ -10,6 +10,7 @@ using Modbus_Poll_CS;
 using System.Timers;
 using System.IO.Ports;
 using System.IO;
+using MathParserTK;
 
 namespace TankMeasurement
 {
@@ -39,6 +40,9 @@ namespace TankMeasurement
         private About aboutForm = new About();
         private cMySQL oMysql = new cMySQL();
         private ExportCsv exportCsvForm = new ExportCsv();
+        
+        //var input = "10/2.5";
+        //var output = 4d;
 
         //------------ server SQL -----------------------------
         String master_user; //= "root"
@@ -594,9 +598,16 @@ namespace TankMeasurement
 
         private double CalculateEquation(string equation, double XValue)
         {
-            StringToFormula myFormula = new StringToFormula();
+
+
+            //StringToFormula myFormula = new StringToFormula();
             string finalEqu = equation.Replace("X", Convert.ToString(XValue));
-            return myFormula.Eval(finalEqu);
+
+            var mathParser = new MathParser('.');
+            string input = finalEqu;
+            double result = mathParser.Parse(input);
+
+            return result;
         }
 
         private void SettingToolStripMenuItem_Click(object sender, EventArgs e)

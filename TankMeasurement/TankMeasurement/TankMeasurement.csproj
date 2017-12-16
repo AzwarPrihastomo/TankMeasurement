@@ -78,6 +78,7 @@
     <Compile Include="ExportCsv.Designer.cs">
       <DependentUpon>ExportCsv.cs</DependentUpon>
     </Compile>
+    <Compile Include="MathParser.cs" />
     <Compile Include="TankMeasurement.cs">
       <SubType>Form</SubType>
     </Compile>
