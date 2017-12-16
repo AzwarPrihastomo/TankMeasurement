@@ -24,66 +24,25 @@ D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\bin\Debug\AquaGauge.pdb
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\ResolveAssemblyReference.cache
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.About.resources
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.ExportCsv.resources
-D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Form1.resources
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Password.resources
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Properties.Resources.resources
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Setting.resources
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Tables.resources
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csproj.GenerateResource.Cache
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csprojResolveAssemblyReference.cache
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.About.resources
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.ExportCsv.resources
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Form1.resources
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Password.resources
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Properties.Resources.resources
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Setting.resources
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Tables.resources
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csproj.GenerateResource.Cache
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csproj.CoreCompileInputs.cache
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.exe.config
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.exe
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.pdb
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\AquaGauge.dll
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\MySql.Data.dll
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\AquaGauge.pdb
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\MySql.Data.pdb
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.exe
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.pdb
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.dll
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.WinForms.dll
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.Wpf.dll
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.pdb
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.xml
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.WinForms.pdb
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.WinForms.xml
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.Wpf.pdb
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.Wpf.xml
-C:\Users\ACER PC\Documents\Visual Studio 2017\Project\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Form2.resources
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.exe.config
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.exe
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.pdb
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\AquaGauge.dll
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.dll
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.WinForms.dll
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.Wpf.dll
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\MySql.Data.dll
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\AquaGauge.pdb
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\MySql.Data.pdb
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.pdb
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.xml
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.WinForms.pdb
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.WinForms.xml
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.Wpf.pdb
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\LiveCharts.Wpf.xml
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csprojResolveAssemblyReference.cache
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.About.resources
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.ExportCsv.resources
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Form1.resources
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Form2.resources
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Password.resources
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Properties.Resources.resources
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Setting.resources
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Tables.resources
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csproj.GenerateResource.Cache
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.exe
-C:\Git\Dial Reader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.pdb
+D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.TankMeasurement.resources
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.exe.config
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.exe
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.pdb
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\AquaGauge.pdb
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\bin\Debug\MySql.Data.pdb
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csprojResolveAssemblyReference.cache
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.About.resources
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.ExportCsv.resources
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.TankMeasurement.resources
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Password.resources
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Properties.Resources.resources
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Setting.resources
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Tables.resources
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csproj.GenerateResource.Cache
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.exe
+C:\Git\DialReader\DialReader_2017\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.pdb
