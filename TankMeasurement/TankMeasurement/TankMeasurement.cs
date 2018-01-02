@@ -505,95 +505,102 @@ namespace TankMeasurement
 
         private void calculateData(double valLevel, double valPress, double valTemp, double densityVal)
         {
-            if ((valLevel <= 0) || (valPress < 0) || (valTemp <= 0) || (densityVal <= 0))
-                return;
-            //'-----------------------------faktorKoreksiTemp---------------------------------------------------------
-            int rowTempLookup, colDensityLookup;
-            rowTempLookup = rowTempStartTable54;
-            colDensityLookup = colDensityStartTable54;
-            for (int i = rowTempStartTable54; i < table54.RowCount; i++)
+            try
             {
 
-                if (valTemp <= Convert.ToDouble(table54[ColTempTable54, i].Value))
+                if ((valLevel <= 0) || (valPress < 0) || (valTemp <= 0) || (densityVal <= 0))
+                    return;
+                //'-----------------------------faktorKoreksiTemp---------------------------------------------------------
+                int rowTempLookup, colDensityLookup;
+                rowTempLookup = rowTempStartTable54;
+                colDensityLookup = colDensityStartTable54;
+                for (int i = rowTempStartTable54; i < table54.RowCount; i++)
                 {
-                    rowTempLookup = i;
-                    break;
+
+                    if (valTemp <= Convert.ToDouble(table54[ColTempTable54, i].Value))
+                    {
+                        rowTempLookup = i;
+                        break;
+                    }
+                    rowTempLookup = i - 1;
                 }
-                rowTempLookup = i;
+                for (int i = colDensityStartTable54; i < table54.ColumnCount; i++)
+                {
+                    if (densityVal <= Convert.ToDouble(table54[i, rowDensityTable54].Value))
+                    {
+                        colDensityLookup = i;
+                        break;
+                    }
+                    colDensityLookup = i - 1;
+                }
+                faktorKoreksiTemp.Text = Convert.ToString(table54[colDensityLookup, rowTempLookup].Value);
+
+                //---------------------------density15C ---------------------------------------------------------------
+                density15C.Text = Convert.ToString(densityVal * Convert.ToDouble(faktorKoreksiTemp.Text));
+
+                //---------------------------nettLiterProduc-----------------------------------------------------------
+                int rowPersenLookup = rowPersenTableTangki;
+                for (int i = rowPersenTableTangki; i < tableTangki.RowCount; i++)
+                {
+                    if (valLevel <= Convert.ToDouble(tableTangki[colPersenTableTangki, i].Value))
+                    {
+                        rowPersenLookup = i;
+                        break;
+                    }
+                    rowPersenLookup = i - 1;
+                }
+                nettLiterProducLiquid.Text = Convert.ToString(tableTangki[colLiterTableTangki, rowPersenLookup].Value);
+
+                //------------------------- volCorrectionFactor -------------------------------------------------------
+                volCorrectionFactor.Text = faktorKoreksiTemp.Text;
+
+                //------------------------ Liters15C ------------------------------------------------------------------
+                Liters15C.Text = Convert.ToString(Convert.ToDouble(nettLiterProducLiquid.Text) * Convert.ToDouble(volCorrectionFactor.Text));
+
+                //------------------------ Multiplier -----------------------------------------------------------------
+                Multiplier.Text = Convert.ToString(Convert.ToDouble(density15C.Text) - 0.0011);
+
+                //------------------------ kilogramLiquid -------------------------------------------------------------
+                kilogramLiquid.Text = Convert.ToString(Convert.ToDouble(Liters15C.Text) * Convert.ToDouble(Multiplier.Text));
+
+                //======================== CALCULATE VAPOUR ===========================================================
+
+                //----------------------- levelVapour -----------------------------------------------------------------
+                levelVapour.Text = Convert.ToString(100 - valLevel);
+
+                //----------------------- nettLitersProductVapour -----------------------------------------------------
+                int rowMaxLookup = rowPersenTableTangki;
+                for (int i = rowPersenTableTangki; i < tableTangki.RowCount; i++)
+                {
+                    if (Convert.ToDouble(tableTangki[colPersenTableTangki, i].Value) >= 100)
+                    {
+                        rowMaxLookup = i;
+                        break;
+                    }
+                    rowMaxLookup = i - 1;
+                }
+                nettLitersProductVapour.Text = Convert.ToString(Convert.ToDouble(tableTangki[colLiterTableTangki, rowMaxLookup].Value) - Convert.ToDouble(nettLiterProducLiquid.Text));
+
+                //--------------------- pressureFactor ----------------------------------------------------------------
+                pressureFactor.Text = Convert.ToString((1.033 + valPress) / 1.033);
+
+                //-------------------- TemperatureFactor --------------------------------------------------------------
+                TemperatureFactor.Text = Convert.ToString(273 / (valTemp + 273));
+
+                //------------------- vapourDensity -------------------------------------------------------------------
+                vapourDensity.Text = "2.433036";
+
+                //------------------- kilogramsVapour -----------------------------------------------------------------
+                kilogramsVapour.Text = Convert.ToString(Convert.ToDouble(nettLitersProductVapour.Text) * Convert.ToDouble(pressureFactor.Text) * Convert.ToDouble(TemperatureFactor.Text) * Convert.ToDouble(vapourDensity.Text) * 0.001);
+
+                //=================== TOTAL KILOGRAMS =================================================================
+                TotalKilograms.Text = Convert.ToString(Convert.ToDouble(kilogramLiquid.Text) + Convert.ToDouble(kilogramsVapour.Text));
+
             }
-            for (int i = colDensityStartTable54; i < table54.ColumnCount; i++)
+            catch (Exception err)
             {
-                if (densityVal <= Convert.ToDouble(table54[i, rowDensityTable54].Value))
-                {
-                    colDensityLookup = i;
-                    break;
-                }
-                colDensityLookup = i;
+                WriteLog("Error calculating data: " + err.Message);
             }
-            faktorKoreksiTemp.Text = Convert.ToString(table54[colDensityLookup, rowTempLookup].Value);
-
-            //---------------------------density15C ---------------------------------------------------------------
-            density15C.Text = Convert.ToString(densityVal * Convert.ToDouble(faktorKoreksiTemp.Text));
-
-            //---------------------------nettLiterProduc-----------------------------------------------------------
-            int rowPersenLookup = rowPersenTableTangki;
-            for (int i = rowPersenTableTangki; i < tableTangki.RowCount; i++)
-            {
-                if (valLevel <= Convert.ToDouble(tableTangki[colPersenTableTangki, i].Value))
-                {
-                    rowPersenLookup = i;
-                    break;
-                }
-                rowPersenLookup = i;
-            }
-            nettLiterProducLiquid.Text = Convert.ToString(tableTangki[colLiterTableTangki, rowPersenLookup].Value);
-
-            //------------------------- volCorrectionFactor -------------------------------------------------------
-            volCorrectionFactor.Text = faktorKoreksiTemp.Text;
-
-            //------------------------ Liters15C ------------------------------------------------------------------
-            Liters15C.Text = Convert.ToString(Convert.ToDouble(nettLiterProducLiquid.Text) * Convert.ToDouble(volCorrectionFactor.Text));
-
-            //------------------------ Multiplier -----------------------------------------------------------------
-            Multiplier.Text = Convert.ToString(Convert.ToDouble(density15C.Text) - 0.0011);
-
-            //------------------------ kilogramLiquid -------------------------------------------------------------
-            kilogramLiquid.Text = Convert.ToString(Convert.ToDouble(Liters15C.Text) * Convert.ToDouble(Multiplier.Text));
-
-            //======================== CALCULATE VAPOUR ===========================================================
-
-            //----------------------- levelVapour -----------------------------------------------------------------
-            levelVapour.Text = Convert.ToString(100 - valLevel);
-
-            //----------------------- nettLitersProductVapour -----------------------------------------------------
-            int rowMaxLookup = rowPersenTableTangki;
-            for (int i = rowPersenTableTangki; i < tableTangki.RowCount; i++)
-            {
-                if (Convert.ToDouble(tableTangki[colPersenTableTangki, i].Value) >= 100)
-                {
-                    rowMaxLookup = i;
-                    break;
-                }
-                rowMaxLookup = i;
-            }
-            nettLitersProductVapour.Text = Convert.ToString(Convert.ToDouble(tableTangki[colLiterTableTangki, rowMaxLookup].Value) - Convert.ToDouble(nettLiterProducLiquid.Text));
-
-            //--------------------- pressureFactor ----------------------------------------------------------------
-            pressureFactor.Text = Convert.ToString((1.033 + valPress) / 1.033);
-
-            //-------------------- TemperatureFactor --------------------------------------------------------------
-            TemperatureFactor.Text = Convert.ToString(273 / (valTemp + 273));
-
-            //------------------- vapourDensity -------------------------------------------------------------------
-            vapourDensity.Text = "2.433036";
-
-            //------------------- kilogramsVapour -----------------------------------------------------------------
-            kilogramsVapour.Text = Convert.ToString(Convert.ToDouble(nettLitersProductVapour.Text) * Convert.ToDouble(pressureFactor.Text) * Convert.ToDouble(TemperatureFactor.Text) * Convert.ToDouble(vapourDensity.Text) * 0.001);
-
-            //=================== TOTAL KILOGRAMS =================================================================
-            TotalKilograms.Text = Convert.ToString(Convert.ToDouble(kilogramLiquid.Text) + Convert.ToDouble(kilogramsVapour.Text));
-
-
         }
 
         private double CalculateEquation(string equation, double XValue)
@@ -661,7 +668,7 @@ namespace TankMeasurement
         {
             tablesForm.File54.Text = File54;
             tablesForm.FileTangki.Text = FileTangki;
-            openCsv(File54, ref tablesForm.table54);
+            openCsv(File54,ref  tablesForm.table54);
             openCsv(FileTangki, ref tablesForm.tableTangki);
             if (tablesForm.ShowDialog() == DialogResult.OK)
             {
@@ -898,5 +905,6 @@ namespace TankMeasurement
         {
             dragging = false;
         }
+
     }
 }

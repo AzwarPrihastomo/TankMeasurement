@@ -1,6 +1,5 @@
 D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.exe
 D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.pdb
-D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\bin\Debug\AquaGauge.dll
 D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\bin\Debug\MySql.Data.dll
 D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\ResolveAssemblyReference.cache
 D:\PROJECT\Gauge\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Form1.resources
@@ -30,3 +29,4 @@ D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasureme
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Tables.resources
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csproj.GenerateResource.Cache
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.TankMeasurement.resources
+D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\bin\Debug\AquaGauge.dll

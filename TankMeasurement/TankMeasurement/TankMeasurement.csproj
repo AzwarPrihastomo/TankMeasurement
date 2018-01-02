@@ -31,9 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AquaGauge, Version=1.0.6247.30556, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="AquaGauge, Version=1.0.6423.39721, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\publish\gauge\gauge\bin\Debug\AquaGauge.dll</HintPath>
+      <HintPath>..\..\..\TankMeasurement\TankMeasurement\bin\Debug\AquaGauge.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=5.1.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

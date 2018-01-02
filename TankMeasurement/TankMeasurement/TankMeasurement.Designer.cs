@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TankMeasurement));
             this.SplitContainer1 = new System.Windows.Forms.SplitContainer();
             this.SplitContainer3 = new System.Windows.Forms.SplitContainer();
@@ -196,6 +196,7 @@
             // 
             // SplitContainer3
             // 
+            this.SplitContainer3.BackColor = System.Drawing.Color.LightGray;
             this.SplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SplitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.SplitContainer3.Location = new System.Drawing.Point(0, 26);
@@ -249,23 +250,28 @@
             // 
             // ChartLevel
             // 
-            chartArea4.Name = "ChartArea1";
-            this.ChartLevel.ChartAreas.Add(chartArea4);
+            this.ChartLevel.BackColor = System.Drawing.Color.LightGray;
+            chartArea1.BackColor = System.Drawing.Color.LightGray;
+            chartArea1.Name = "ChartArea1";
+            this.ChartLevel.ChartAreas.Add(chartArea1);
             this.ChartLevel.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Alignment = System.Drawing.StringAlignment.Far;
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend4.Name = "Legend1";
-            this.ChartLevel.Legends.Add(legend4);
+            legend1.Alignment = System.Drawing.StringAlignment.Far;
+            legend1.BackColor = System.Drawing.Color.LightGray;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.Name = "Legend1";
+            this.ChartLevel.Legends.Add(legend1);
             this.ChartLevel.Location = new System.Drawing.Point(0, 0);
             this.ChartLevel.Name = "ChartLevel";
-            series4.BorderWidth = 2;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Color = System.Drawing.Color.Blue;
-            series4.Legend = "Legend1";
-            series4.Name = "Tank Level";
-            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartLevel.Series.Add(series4);
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Blue;
+            series1.LabelBackColor = System.Drawing.Color.LightGray;
+            series1.LabelBorderColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "Tank Level";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartLevel.Series.Add(series1);
             this.ChartLevel.Size = new System.Drawing.Size(637, 175);
             this.ChartLevel.TabIndex = 13;
             this.ChartLevel.Text = "Chart1";
@@ -331,6 +337,7 @@
             // 
             // SplitContainer4
             // 
+            this.SplitContainer4.BackColor = System.Drawing.Color.LightGray;
             this.SplitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SplitContainer4.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.SplitContainer4.Location = new System.Drawing.Point(0, 26);
@@ -384,23 +391,26 @@
             // 
             // ChartTemp
             // 
-            chartArea5.Name = "ChartArea1";
-            this.ChartTemp.ChartAreas.Add(chartArea5);
+            this.ChartTemp.BackColor = System.Drawing.Color.LightGray;
+            chartArea2.BackColor = System.Drawing.Color.LightGray;
+            chartArea2.Name = "ChartArea1";
+            this.ChartTemp.ChartAreas.Add(chartArea2);
             this.ChartTemp.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Alignment = System.Drawing.StringAlignment.Far;
-            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend5.Name = "Legend1";
-            this.ChartTemp.Legends.Add(legend5);
+            legend2.Alignment = System.Drawing.StringAlignment.Far;
+            legend2.BackColor = System.Drawing.Color.LightGray;
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend2.Name = "Legend1";
+            this.ChartTemp.Legends.Add(legend2);
             this.ChartTemp.Location = new System.Drawing.Point(0, 0);
             this.ChartTemp.Name = "ChartTemp";
-            series5.BorderWidth = 2;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Color = System.Drawing.Color.SeaGreen;
-            series5.Legend = "Legend1";
-            series5.Name = "Temperature";
-            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartTemp.Series.Add(series5);
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.SeaGreen;
+            series2.Legend = "Legend1";
+            series2.Name = "Temperature";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartTemp.Series.Add(series2);
             this.ChartTemp.Size = new System.Drawing.Size(637, 177);
             this.ChartTemp.TabIndex = 13;
             this.ChartTemp.Text = "Chart1";
@@ -451,6 +461,7 @@
             // 
             // SplitContainer5
             // 
+            this.SplitContainer5.BackColor = System.Drawing.Color.LightGray;
             this.SplitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SplitContainer5.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.SplitContainer5.Location = new System.Drawing.Point(0, 26);
@@ -502,23 +513,26 @@
             // 
             // ChartPressure
             // 
-            chartArea6.Name = "ChartArea1";
-            this.ChartPressure.ChartAreas.Add(chartArea6);
+            this.ChartPressure.BackColor = System.Drawing.Color.LightGray;
+            chartArea3.BackColor = System.Drawing.Color.LightGray;
+            chartArea3.Name = "ChartArea1";
+            this.ChartPressure.ChartAreas.Add(chartArea3);
             this.ChartPressure.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend6.Alignment = System.Drawing.StringAlignment.Far;
-            legend6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend6.Name = "Legend1";
-            this.ChartPressure.Legends.Add(legend6);
+            legend3.Alignment = System.Drawing.StringAlignment.Far;
+            legend3.BackColor = System.Drawing.Color.LightGray;
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend3.Name = "Legend1";
+            this.ChartPressure.Legends.Add(legend3);
             this.ChartPressure.Location = new System.Drawing.Point(0, 0);
             this.ChartPressure.Name = "ChartPressure";
-            series6.BorderWidth = 2;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Color = System.Drawing.Color.BlueViolet;
-            series6.Legend = "Legend1";
-            series6.Name = "Pressure";
-            series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            this.ChartPressure.Series.Add(series6);
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.BlueViolet;
+            series3.Legend = "Legend1";
+            series3.Name = "Pressure";
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.ChartPressure.Series.Add(series3);
             this.ChartPressure.Size = new System.Drawing.Size(634, 188);
             this.ChartPressure.TabIndex = 12;
             this.ChartPressure.Text = "Chart1";
