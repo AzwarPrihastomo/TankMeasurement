@@ -289,9 +289,6 @@ namespace TankMeasurement
             }
             {
                 btnRun.Text = "Stop";
-                //timer.AutoReset = true;
-                //timer.Interval = 1000 * update_period;
-                //timer.Start();
                 timer1.Interval = 1000 * update_period;
                 timer1.Enabled = true;
                 timer1.Start();
@@ -304,7 +301,6 @@ namespace TankMeasurement
         private void StopProcess()
         {
             oMysql.DisConnect();
-            //timer.Stop();
             timer1.Stop();
             timer1.Enabled = false;
             mb.Close();
@@ -313,11 +309,6 @@ namespace TankMeasurement
             WriteLog("Disconnected, Process stopped");
             ConnectionStatus.Text = "Disconnected, Process stopped";
         }
-
-        //void timer_Elapsed(object sender, ElapsedEventArgs e)
-        //{
-        //    PollAllData();
-        //}
 
         private void PollAllData()
         {
@@ -352,6 +343,7 @@ namespace TankMeasurement
 
         private void UpdateALL()
         {
+            bool invalid = false;
             if (dateNow != Convert.ToInt16(DateTime.Now.ToString("dd")))
             {
                 CreateNewLog();
@@ -359,16 +351,39 @@ namespace TankMeasurement
             }
             valLevel = CalculateEquation(levelFormula, (double)values[levelAddress]);
             valPress = ((double)values[pressAddress] * pressScale) + pressOffset;
-            if (valPress < 0)
-                valPress = 0;
             valTemp = ((double)values[tempAddress] * tempScale) + tempOffset;
+            if (valPress < 0 || valPress > maxValPress)
+            {
+                valPress = 0;
+                invalid = true;
+                WriteLog("Invalid pressure data");
+            }
+            if (valLevel < 0 || valLevel > maxValLevel)
+            {
+                valLevel = 0;
+                invalid = true;
+                WriteLog("Invalid level data");
+            }
+            if (valTemp < 0 || valTemp > maxValTemp)
+            {
+                valTemp = 0;
+                invalid = true;
+                WriteLog("Invalid temperature data");
+            }
+            if (invalid)
+            {
+                return;
+            }
+
             gaugeLevel.Value = (float)valLevel;
             gaugeTemp.Value = (float)valTemp;
             gaugePressure.Value = (float)valPress;
             WriteLog("updating display");
-            tBoxLevel.Text = Convert.ToString(valLevel);
-            tBoxPress.Text = Convert.ToString(valPress);
-            tBoxTemp.Text = Convert.ToString(valTemp);
+            tBoxLevel.Text = String.Format("{0:0.##}",Convert.ToString(valLevel));
+            tBoxPress.Text = String.Format("{0:0.##}",Convert.ToString(valPress));
+            tBoxTemp.Text = String.Format("{0:0.##}",Convert.ToString(valTemp));
+            
+
             if (btnHide.Text == "Hide Calculation")
             {
                 calculateData(valLevel, valPress, valTemp, Convert.ToDouble(cBoxDensity.Text));
@@ -418,9 +433,9 @@ namespace TankMeasurement
             DateTime timeStart,timeEnd;
             timeEnd = DateTime.Now;
             timeStart = DateTime.Now.AddHours(-1 * hours);
-            
 
-            myQuery = "SELECT `DataCompleteTime`, `TankLevel` FROM `" + dataTable + "`where DataCompleteTime > '" + timeStart.ToString("yyyy-MM-dd HH:mm:ss") + "' and DataCompleteTime < '" + timeEnd.ToString("yyyy-MM-dd HH:mm:ss") + "';";
+
+            myQuery = "SELECT `DataCompleteTime`, `TankLevel` FROM `" + dataTable + "`where DataCompleteTime > '" + timeStart.ToString("yyyy-MM-dd HH:mm:ss") + "' and DataCompleteTime < '" + timeEnd.ToString("yyyy-MM-dd HH:mm:ss") + "' ORDER BY `DataCompleteTime` ASC;;";
             myData = oMysql.GetData(myQuery);
             data_log_table.DataSource = myData.Tables[0];
             myData.Dispose();
@@ -456,7 +471,7 @@ namespace TankMeasurement
             timeEnd = DateTime.Now;
             timeStart = DateTime.Now.AddHours(-1 * hours);
 
-            myQuery = "SELECT `DataCompleteTime`, `TankPress` FROM `" + dataTable + "`where DataCompleteTime > '" + timeStart.ToString("yyyy-MM-dd HH:mm:ss") + "' and DataCompleteTime < '" + timeEnd.ToString("yyyy-MM-dd HH:mm:ss") + "';";
+            myQuery = "SELECT `DataCompleteTime`, `TankPress` FROM `" + dataTable + "`where DataCompleteTime > '" + timeStart.ToString("yyyy-MM-dd HH:mm:ss") + "' and DataCompleteTime < '" + timeEnd.ToString("yyyy-MM-dd HH:mm:ss") + "' ORDER BY `DataCompleteTime` ASC;;";
             myData = oMysql.GetData(myQuery);
             data_log_table.DataSource = myData.Tables[0];
             myData.Dispose();
@@ -492,7 +507,7 @@ namespace TankMeasurement
             timeEnd = DateTime.Now;
             timeStart = DateTime.Now.AddHours(-1 * hours);
 
-            myQuery = "SELECT `DataCompleteTime`, `TankTemp` FROM `" + dataTable + "`where DataCompleteTime > '" + timeStart.ToString("yyyy-MM-dd HH:mm:ss") + "' and DataCompleteTime < '" + timeEnd.ToString("yyyy-MM-dd HH:mm:ss") + "';";
+            myQuery = "SELECT `DataCompleteTime`, `TankTemp` FROM `" + dataTable + "`where DataCompleteTime > '" + timeStart.ToString("yyyy-MM-dd HH:mm:ss") + "' and DataCompleteTime < '" + timeEnd.ToString("yyyy-MM-dd HH:mm:ss") + "' ORDER BY `DataCompleteTime` ASC;;";
             myData = oMysql.GetData(myQuery);
             data_log_table.DataSource = myData.Tables[0];
             myData.Dispose();
