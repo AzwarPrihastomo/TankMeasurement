@@ -379,9 +379,9 @@ namespace TankMeasurement
             gaugeTemp.Value = (float)valTemp;
             gaugePressure.Value = (float)valPress;
             WriteLog("updating display");
-            tBoxLevel.Text = String.Format("{0:0.##}",Convert.ToString(valLevel));
-            tBoxPress.Text = String.Format("{0:0.##}",Convert.ToString(valPress));
-            tBoxTemp.Text = String.Format("{0:0.##}",Convert.ToString(valTemp));
+            tBoxLevel.Text = Convert.ToString(Math.Round(valLevel, 2));
+            tBoxPress.Text = Convert.ToString(Math.Round(valPress, 2));
+            tBoxTemp.Text = Convert.ToString(Math.Round(valTemp, 2));
             
 
             if (btnHide.Text == "Hide Calculation")
@@ -436,6 +436,7 @@ namespace TankMeasurement
 
 
             myQuery = "SELECT `DataCompleteTime`, `TankLevel` FROM `" + dataTable + "`where DataCompleteTime > '" + timeStart.ToString("yyyy-MM-dd HH:mm:ss") + "' and DataCompleteTime < '" + timeEnd.ToString("yyyy-MM-dd HH:mm:ss") + "' ORDER BY `DataCompleteTime` ASC;;";
+            Console.WriteLine(myQuery);
             myData = oMysql.GetData(myQuery);
             data_log_table.DataSource = myData.Tables[0];
             myData.Dispose();
@@ -444,6 +445,7 @@ namespace TankMeasurement
             {
                 ChartLevel.Series["Tank Level"].Points.AddXY(Convert.ToDateTime(data_log_table[0, i].Value), Convert.ToDouble(data_log_table[1, i].Value));
             }
+            ChartLevel.ChartAreas["ChartArea1"].AxisX.LabelStyle.Format = "HH:mm:ss";
         }
 
         private void updatePressChart()
@@ -480,6 +482,7 @@ namespace TankMeasurement
             {
                 ChartPressure.Series["Pressure"].Points.AddXY(Convert.ToDateTime(data_log_table[0, i].Value), Convert.ToDouble(data_log_table[1, i].Value));
             }
+            ChartPressure.ChartAreas["ChartArea1"].AxisX.LabelStyle.Format = "HH:mm:ss";
         }
 
         private void updateTempChart()
@@ -516,6 +519,7 @@ namespace TankMeasurement
             {
                 ChartTemp.Series["Temperature"].Points.AddXY(Convert.ToDateTime(data_log_table[0, i].Value), Convert.ToDouble(data_log_table[1, i].Value));
             }
+            ChartTemp.ChartAreas["ChartArea1"].AxisX.LabelStyle.Format = "HH:mm:ss";
         }
 
         private void calculateData(double valLevel, double valPress, double valTemp, double densityVal)
@@ -919,6 +923,16 @@ namespace TankMeasurement
         private void MenuStrip1_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
+        }
+
+        private void bGetData_Click(object sender, EventArgs e)
+        {
+            if (isConnect)
+            {
+                timer1.Enabled = false;
+                PollAllData();
+                timer1.Enabled = true;
+            }
         }
 
     }

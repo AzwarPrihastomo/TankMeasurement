@@ -107,6 +107,7 @@
             this.Label15 = new System.Windows.Forms.Label();
             this.Label23 = new System.Windows.Forms.Label();
             this.Panel4 = new System.Windows.Forms.Panel();
+            this.bGetData = new System.Windows.Forms.Button();
             this.btnLog = new System.Windows.Forms.Button();
             this.btnHide = new System.Windows.Forms.Button();
             this.btnRun = new System.Windows.Forms.Button();
@@ -270,7 +271,7 @@
             series1.LabelBorderColor = System.Drawing.Color.White;
             series1.Legend = "Legend1";
             series1.Name = "Tank Level";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             this.ChartLevel.Series.Add(series1);
             this.ChartLevel.Size = new System.Drawing.Size(637, 175);
             this.ChartLevel.TabIndex = 13;
@@ -409,7 +410,7 @@
             series2.Color = System.Drawing.Color.SeaGreen;
             series2.Legend = "Legend1";
             series2.Name = "Temperature";
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             this.ChartTemp.Series.Add(series2);
             this.ChartTemp.Size = new System.Drawing.Size(637, 177);
             this.ChartTemp.TabIndex = 13;
@@ -531,7 +532,7 @@
             series3.Color = System.Drawing.Color.BlueViolet;
             series3.Legend = "Legend1";
             series3.Name = "Pressure";
-            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             this.ChartPressure.Series.Add(series3);
             this.ChartPressure.Size = new System.Drawing.Size(634, 188);
             this.ChartPressure.TabIndex = 12;
@@ -977,6 +978,7 @@
             // Panel4
             // 
             this.Panel4.BackColor = System.Drawing.Color.Gray;
+            this.Panel4.Controls.Add(this.bGetData);
             this.Panel4.Controls.Add(this.btnLog);
             this.Panel4.Controls.Add(this.btnHide);
             this.Panel4.Controls.Add(this.btnRun);
@@ -985,6 +987,18 @@
             this.Panel4.Name = "Panel4";
             this.Panel4.Size = new System.Drawing.Size(1100, 30);
             this.Panel4.TabIndex = 9;
+            // 
+            // bGetData
+            // 
+            this.bGetData.FlatAppearance.BorderSize = 0;
+            this.bGetData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGetData.Location = new System.Drawing.Point(715, 3);
+            this.bGetData.Name = "bGetData";
+            this.bGetData.Size = new System.Drawing.Size(75, 23);
+            this.bGetData.TabIndex = 3;
+            this.bGetData.Text = "Get Data";
+            this.bGetData.UseVisualStyleBackColor = true;
+            this.bGetData.Click += new System.EventHandler(this.bGetData_Click);
             // 
             // btnLog
             // 
@@ -1373,6 +1387,7 @@
         private System.Windows.Forms.ComboBox cbHistHoursLevel;
         private System.Windows.Forms.ComboBox cbHistHoursTemp;
         private System.Windows.Forms.ComboBox cbHistHoursPress;
+        private System.Windows.Forms.Button bGetData;
     }
 }
 
