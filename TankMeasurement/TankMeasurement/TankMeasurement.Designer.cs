@@ -42,10 +42,11 @@
             this.SplitContainer1 = new System.Windows.Forms.SplitContainer();
             this.SplitContainer3 = new System.Windows.Forms.SplitContainer();
             this.gaugeLevel = new AquaControls.AquaGauge();
+            this.tableLevel = new System.Windows.Forms.DataGridView();
+            this.table54 = new System.Windows.Forms.DataGridView();
+            this.tableTangki = new System.Windows.Forms.DataGridView();
             this.cbHistHoursLevel = new System.Windows.Forms.ComboBox();
             this.ChartLevel = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tableTangki = new System.Windows.Forms.DataGridView();
-            this.table54 = new System.Windows.Forms.DataGridView();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Label1 = new System.Windows.Forms.Label();
             this.SplitContainer2 = new System.Windows.Forms.SplitContainer();
@@ -135,18 +136,16 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.textLog = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tableLevel = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SplitContainer1.Panel1.SuspendLayout();
             this.SplitContainer1.Panel2.SuspendLayout();
             this.SplitContainer1.SuspendLayout();
             this.SplitContainer3.Panel1.SuspendLayout();
             this.SplitContainer3.Panel2.SuspendLayout();
             this.SplitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartLevel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableTangki)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table54)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableTangki)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartLevel)).BeginInit();
             this.Panel1.SuspendLayout();
             this.SplitContainer2.Panel1.SuspendLayout();
             this.SplitContainer2.Panel2.SuspendLayout();
@@ -175,7 +174,6 @@
             this.menuTemp.SuspendLayout();
             this.menuPress.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableLevel)).BeginInit();
             this.SuspendLayout();
             // 
             // SplitContainer1
@@ -214,11 +212,11 @@
             // 
             // SplitContainer3.Panel2
             // 
+            this.SplitContainer3.Panel2.Controls.Add(this.cbHistHoursLevel);
+            this.SplitContainer3.Panel2.Controls.Add(this.ChartLevel);
             this.SplitContainer3.Panel2.Controls.Add(this.tableLevel);
             this.SplitContainer3.Panel2.Controls.Add(this.table54);
             this.SplitContainer3.Panel2.Controls.Add(this.tableTangki);
-            this.SplitContainer3.Panel2.Controls.Add(this.cbHistHoursLevel);
-            this.SplitContainer3.Panel2.Controls.Add(this.ChartLevel);
             this.SplitContainer3.Size = new System.Drawing.Size(810, 175);
             this.SplitContainer3.SplitterDistance = 169;
             this.SplitContainer3.TabIndex = 0;
@@ -239,6 +237,33 @@
             this.gaugeLevel.TabIndex = 2;
             this.gaugeLevel.ThresholdPercent = 0F;
             this.gaugeLevel.Value = 0F;
+            // 
+            // tableLevel
+            // 
+            this.tableLevel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableLevel.Location = new System.Drawing.Point(167, 7);
+            this.tableLevel.Name = "tableLevel";
+            this.tableLevel.Size = new System.Drawing.Size(147, 150);
+            this.tableLevel.TabIndex = 12;
+            this.tableLevel.Visible = false;
+            // 
+            // table54
+            // 
+            this.table54.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.table54.Location = new System.Drawing.Point(322, 7);
+            this.table54.Name = "table54";
+            this.table54.Size = new System.Drawing.Size(147, 150);
+            this.table54.TabIndex = 12;
+            this.table54.Visible = false;
+            // 
+            // tableTangki
+            // 
+            this.tableTangki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableTangki.Location = new System.Drawing.Point(475, 7);
+            this.tableTangki.Name = "tableTangki";
+            this.tableTangki.Size = new System.Drawing.Size(141, 150);
+            this.tableTangki.TabIndex = 12;
+            this.tableTangki.Visible = false;
             // 
             // cbHistHoursLevel
             // 
@@ -282,22 +307,6 @@
             this.ChartLevel.TabIndex = 13;
             this.ChartLevel.Text = "Chart1";
             this.ChartLevel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ChartLevel_MouseDown);
-            // 
-            // tableTangki
-            // 
-            this.tableTangki.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableTangki.Location = new System.Drawing.Point(475, 7);
-            this.tableTangki.Name = "tableTangki";
-            this.tableTangki.Size = new System.Drawing.Size(141, 150);
-            this.tableTangki.TabIndex = 12;
-            // 
-            // table54
-            // 
-            this.table54.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table54.Location = new System.Drawing.Point(322, 7);
-            this.table54.Name = "table54";
-            this.table54.Size = new System.Drawing.Size(147, 150);
-            this.table54.TabIndex = 12;
             // 
             // Panel1
             // 
@@ -480,8 +489,6 @@
             // 
             // SplitContainer5.Panel2
             // 
-            this.SplitContainer5.Panel2.Controls.Add(this.textBox1);
-            this.SplitContainer5.Panel2.Controls.Add(this.button1);
             this.SplitContainer5.Panel2.Controls.Add(this.cbHistHoursPress);
             this.SplitContainer5.Panel2.Controls.Add(this.ChartPressure);
             this.SplitContainer5.Size = new System.Drawing.Size(810, 188);
@@ -1227,31 +1234,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // tableLevel
-            // 
-            this.tableLevel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLevel.Location = new System.Drawing.Point(167, 7);
-            this.tableLevel.Name = "tableLevel";
-            this.tableLevel.Size = new System.Drawing.Size(147, 150);
-            this.tableLevel.TabIndex = 12;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(483, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(377, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 16;
-            // 
             // TankMeasurement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1275,9 +1257,10 @@
             this.SplitContainer3.Panel1.ResumeLayout(false);
             this.SplitContainer3.Panel2.ResumeLayout(false);
             this.SplitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ChartLevel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableTangki)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table54)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableTangki)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartLevel)).EndInit();
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             this.SplitContainer2.Panel1.ResumeLayout(false);
@@ -1293,7 +1276,6 @@
             this.Panel2.PerformLayout();
             this.SplitContainer5.Panel1.ResumeLayout(false);
             this.SplitContainer5.Panel2.ResumeLayout(false);
-            this.SplitContainer5.Panel2.PerformLayout();
             this.SplitContainer5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ChartPressure)).EndInit();
             this.Panel3.ResumeLayout(false);
@@ -1318,7 +1300,6 @@
             this.menuPress.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableLevel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1423,8 +1404,6 @@
         private System.Windows.Forms.ComboBox cbHistHoursPress;
         private System.Windows.Forms.Button bGetData;
         internal System.Windows.Forms.DataGridView tableLevel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
     }
 }
 

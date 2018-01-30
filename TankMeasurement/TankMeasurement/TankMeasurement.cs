@@ -711,6 +711,7 @@ namespace TankMeasurement
         {
             tablesForm.File54.Text = File54;
             tablesForm.FileTangki.Text = FileTangki;
+            tablesForm.FileLevel.Text = FileLevel;
             openCsv(File54,ref  tablesForm.table54);
             openCsv(FileTangki, ref tablesForm.tableTangki);
             openCsv(FileLevel, ref tablesForm.tableLevel);
@@ -989,11 +990,6 @@ namespace TankMeasurement
                 result = ((((double)adcValue - startAdc) / (endAdc - startAdc)) * (startEndVal - startVal)) + startVal;
             }
             return result;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine(Convert.ToString(getLoopkupLevel(Convert.ToUInt32(textBox1.Text))));
         }
     }
 }
