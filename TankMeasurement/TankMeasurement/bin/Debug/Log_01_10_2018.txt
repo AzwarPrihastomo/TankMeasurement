@@ -1,0 +1,205 @@
+1/10/2018 3:13:32 PM: Running Process
+1/10/2018 3:13:32 PM: Cannot Connect to Modbus
+1/10/2018 3:15:08 PM: Running Process
+1/10/2018 3:15:11 PM: updating display
+1/10/2018 3:15:11 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:15:12 PM: updating chart
+1/10/2018 3:15:13 PM: updating display
+1/10/2018 3:15:13 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:15:13 PM: updating chart
+1/10/2018 3:15:14 PM: updating display
+1/10/2018 3:15:14 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:15:14 PM: updating chart
+1/10/2018 3:15:14 PM: updating display
+1/10/2018 3:15:14 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:15:14 PM: updating chart
+1/10/2018 3:15:14 PM: updating display
+1/10/2018 3:15:14 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:15:14 PM: updating chart
+1/10/2018 3:15:14 PM: updating display
+1/10/2018 3:15:14 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:15:14 PM: updating chart
+1/10/2018 3:15:15 PM: updating display
+1/10/2018 3:15:15 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:15:15 PM: updating chart
+1/10/2018 3:15:15 PM: updating display
+1/10/2018 3:15:15 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:15:15 PM: updating chart
+1/10/2018 3:15:20 PM: Stopping Process
+1/10/2018 3:15:20 PM: Disconnected, Process stopped
+1/10/2018 3:16:15 PM: Running Process
+1/10/2018 3:16:16 PM: updating display
+1/10/2018 3:16:16 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:16 PM: updating chart
+1/10/2018 3:16:18 PM: updating display
+1/10/2018 3:16:18 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:18 PM: updating chart
+1/10/2018 3:16:18 PM: updating display
+1/10/2018 3:16:18 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:18 PM: updating chart
+1/10/2018 3:16:18 PM: updating display
+1/10/2018 3:16:18 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:18 PM: updating chart
+1/10/2018 3:16:18 PM: updating display
+1/10/2018 3:16:18 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:18 PM: updating chart
+1/10/2018 3:16:19 PM: updating display
+1/10/2018 3:16:19 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:19 PM: updating chart
+1/10/2018 3:16:19 PM: updating display
+1/10/2018 3:16:19 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:19 PM: updating chart
+1/10/2018 3:16:19 PM: updating display
+1/10/2018 3:16:19 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:19 PM: updating chart
+1/10/2018 3:16:19 PM: updating display
+1/10/2018 3:16:19 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:19 PM: updating chart
+1/10/2018 3:16:19 PM: updating display
+1/10/2018 3:16:19 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:20 PM: updating chart
+1/10/2018 3:16:20 PM: updating display
+1/10/2018 3:16:20 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:20 PM: updating chart
+1/10/2018 3:16:20 PM: updating display
+1/10/2018 3:16:20 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:16:20 PM: updating chart
+1/10/2018 3:16:25 PM: Stopping Process
+1/10/2018 3:16:25 PM: Disconnected, Process stopped
+1/10/2018 3:17:48 PM: Running Process
+1/10/2018 3:17:51 PM: updating display
+1/10/2018 3:17:51 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:17:51 PM: updating chart
+1/10/2018 3:17:53 PM: updating display
+1/10/2018 3:17:53 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:17:53 PM: updating chart
+1/10/2018 3:17:53 PM: updating display
+1/10/2018 3:17:53 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:17:53 PM: updating chart
+1/10/2018 3:17:53 PM: updating display
+1/10/2018 3:17:53 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:17:53 PM: updating chart
+1/10/2018 3:17:53 PM: updating display
+1/10/2018 3:17:53 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:17:53 PM: updating chart
+1/10/2018 3:17:59 PM: Stopping Process
+1/10/2018 3:17:59 PM: Disconnected, Process stopped
+1/10/2018 3:18:14 PM: Running Process
+1/10/2018 3:18:15 PM: updating display
+1/10/2018 3:18:15 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:18:15 PM: updating chart
+1/10/2018 3:18:16 PM: updating display
+1/10/2018 3:18:16 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:18:16 PM: updating chart
+1/10/2018 3:18:17 PM: updating display
+1/10/2018 3:18:17 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:18:17 PM: updating chart
+1/10/2018 3:18:17 PM: updating display
+1/10/2018 3:18:17 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:18:17 PM: updating chart
+1/10/2018 3:18:17 PM: updating display
+1/10/2018 3:18:17 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:18:17 PM: updating chart
+1/10/2018 3:18:17 PM: updating display
+1/10/2018 3:18:17 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:18:17 PM: updating chart
+1/10/2018 3:18:17 PM: updating display
+1/10/2018 3:18:17 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:18:17 PM: updating chart
+1/10/2018 3:18:21 PM: Stopping Process
+1/10/2018 3:18:21 PM: Disconnected, Process stopped
+1/10/2018 3:19:13 PM: Running Process
+1/10/2018 3:19:16 PM: updating display
+1/10/2018 3:20:04 PM: Running Process
+1/10/2018 3:20:07 PM: updating display
+1/10/2018 3:20:07 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:20:07 PM: updating chart
+1/10/2018 3:20:08 PM: updating display
+1/10/2018 3:20:08 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:20:08 PM: updating chart
+1/10/2018 3:20:08 PM: updating display
+1/10/2018 3:20:08 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:20:08 PM: updating chart
+1/10/2018 3:20:08 PM: updating display
+1/10/2018 3:20:08 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:20:08 PM: updating chart
+1/10/2018 3:20:08 PM: updating display
+1/10/2018 3:20:08 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:20:08 PM: updating chart
+1/10/2018 3:20:09 PM: updating display
+1/10/2018 3:20:09 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:20:09 PM: updating chart
+1/10/2018 3:20:09 PM: updating display
+1/10/2018 3:20:09 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:20:09 PM: updating chart
+1/10/2018 3:20:09 PM: updating display
+1/10/2018 3:20:09 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:20:09 PM: updating chart
+1/10/2018 3:20:13 PM: Stopping Process
+1/10/2018 3:20:13 PM: Disconnected, Process stopped
+1/10/2018 3:22:10 PM: Running Process
+1/10/2018 3:22:12 PM: updating display
+1/10/2018 3:22:12 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:12 PM: updating chart
+1/10/2018 3:22:13 PM: updating display
+1/10/2018 3:22:13 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:13 PM: updating chart
+1/10/2018 3:22:13 PM: updating display
+1/10/2018 3:22:13 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:13 PM: updating chart
+1/10/2018 3:22:14 PM: updating display
+1/10/2018 3:22:14 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:14 PM: updating chart
+1/10/2018 3:22:14 PM: updating display
+1/10/2018 3:22:14 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:14 PM: updating chart
+1/10/2018 3:22:14 PM: updating display
+1/10/2018 3:22:14 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:14 PM: updating chart
+1/10/2018 3:22:14 PM: updating display
+1/10/2018 3:22:14 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:14 PM: updating chart
+1/10/2018 3:22:14 PM: updating display
+1/10/2018 3:22:14 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:14 PM: updating chart
+1/10/2018 3:22:14 PM: updating display
+1/10/2018 3:22:14 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:14 PM: updating chart
+1/10/2018 3:22:15 PM: updating display
+1/10/2018 3:22:15 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:15 PM: updating chart
+1/10/2018 3:22:15 PM: updating display
+1/10/2018 3:22:15 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:15 PM: updating chart
+1/10/2018 3:22:15 PM: updating display
+1/10/2018 3:22:15 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:15 PM: updating chart
+1/10/2018 3:22:15 PM: updating display
+1/10/2018 3:22:15 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:15 PM: updating chart
+1/10/2018 3:22:17 PM: updating display
+1/10/2018 3:22:17 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:17 PM: updating chart
+1/10/2018 3:22:17 PM: updating display
+1/10/2018 3:22:17 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:17 PM: updating chart
+1/10/2018 3:22:17 PM: updating display
+1/10/2018 3:22:17 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:17 PM: updating chart
+1/10/2018 3:22:17 PM: updating display
+1/10/2018 3:22:17 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:17 PM: updating chart
+1/10/2018 3:22:17 PM: updating display
+1/10/2018 3:22:17 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:18 PM: updating chart
+1/10/2018 3:22:18 PM: updating display
+1/10/2018 3:22:18 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:18 PM: updating chart
+1/10/2018 3:22:18 PM: updating display
+1/10/2018 3:22:18 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.1232', '26528.12426087', '1330.17237750213', '27858.2966383721');
+1/10/2018 3:22:18 PM: updating chart
+1/10/2018 3:22:36 PM: updating display
+1/10/2018 3:22:36 PM: INSERT INTO `tankmeasurement`.`measuringdata` (`DataCompleteTime`, `TankLevel`, `TankPress`, `TankTemp`, `KgLiquid`, `KgVapour`, `KgTotal`) VALUES (now(), '50.452', '10.2343', '30.126', '26528.12426087', '1330.16009058957', '27858.2843514596');
+1/10/2018 3:22:36 PM: updating chart
+1/10/2018 3:22:38 PM: Stopping Process
+1/10/2018 3:22:38 PM: Disconnected, Process stopped

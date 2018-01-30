@@ -26,5 +26,11 @@ namespace TankMeasurement
             this.DialogResult = DialogResult.Cancel;
         }
 
+        private void cbUseLookup_CheckedChanged(object sender, EventArgs e)
+        {
+
+            levelFormula.Enabled = !cbUseLookup.Checked;
+        }
+
     }
 }

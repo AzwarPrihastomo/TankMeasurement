@@ -31,6 +31,7 @@ namespace TankMeasurement
 
         String FileTangki;
         String File54;
+        String FileLevel;
 
         bool isConnect = false;
 
@@ -40,15 +41,12 @@ namespace TankMeasurement
         private About aboutForm = new About();
         private cMySQL oMysql = new cMySQL();
         private ExportCsv exportCsvForm = new ExportCsv();
-        
-        //var input = "10/2.5";
-        //var output = 4d;
 
         //------------ server SQL -----------------------------
-        String master_user; //= "root"
-        String master_pass; //= "usbw"
-        String sql_address; //= "127.0.0.1"
-        String database_name; //= "bts_security"
+        String master_user;
+        String master_pass;
+        String sql_address;
+        String database_name;
         //------------ Com Port -------------------------------
         String portModbus;
         int modBusBaud = 9600;
@@ -71,6 +69,7 @@ namespace TankMeasurement
 
         int levelAddress = 3;
         string levelFormula = "";
+        bool useLookupTable = false;
         //---------- some vars --------------------------------
         String connstring;
         String defaultdir;
@@ -86,6 +85,10 @@ namespace TankMeasurement
         const int colPersenTableTangki = 1;
         const int rowPersenTableTangki = 1;
         const int colLiterTableTangki = 2;
+
+        const int colAdcCountTableLevel = 0;
+        const int colPersenTableLevel = 1;
+        const int rowPersenStartTableLevel = 1;
 
         DataSet myData = new DataSet();
         const string dataTable = "measuringdata";
@@ -142,6 +145,7 @@ namespace TankMeasurement
             settingForm.addrPress.Text = Convert.ToString(pressAddress);
             settingForm.pressScale.Text = Convert.ToString(pressScale);
             settingForm.pressOffset.Text = Convert.ToString(pressOffset);
+            settingForm.cbUseLookup.Checked = useLookupTable;
         }
 
         private void getUserSetting()
@@ -164,6 +168,7 @@ namespace TankMeasurement
             pressAddress = Convert.ToInt16(settingForm.addrPress.Text);
             pressScale = Convert.ToDouble(settingForm.pressScale.Text);
             pressOffset = Convert.ToDouble(settingForm.pressOffset.Text);
+            useLookupTable = settingForm.cbUseLookup.Checked;
         }
 
         private void saveConfig()
@@ -191,7 +196,14 @@ namespace TankMeasurement
                 io_write.WriteLine(MyEncryp.Encrypt(Convert.ToString(pressOffset)));
                 io_write.WriteLine(MyEncryp.Encrypt(Convert.ToString(levelFormula)));
                 io_write.WriteLine(MyEncryp.Encrypt(Convert.ToString(levelAddress)));
-
+                if (useLookupTable)
+                {
+                    io_write.WriteLine(MyEncryp.Encrypt("True"));
+                }
+                else
+                {
+                    io_write.WriteLine(MyEncryp.Encrypt("False"));
+                }
             }
         }
 
@@ -220,6 +232,7 @@ namespace TankMeasurement
                 pressOffset = Convert.ToDouble(MyEncryp.Decrypt(io_read.ReadLine()));
                 levelFormula = MyEncryp.Decrypt(io_read.ReadLine());
                 levelAddress = Convert.ToInt16(MyEncryp.Decrypt(io_read.ReadLine()));
+                useLookupTable = (MyEncryp.Decrypt(io_read.ReadLine()) == "True");
             }
         }
 
@@ -234,9 +247,11 @@ namespace TankMeasurement
             {
                 FileTangki = io_read.ReadLine();
                 File54 = io_read.ReadLine();
+                FileLevel = io_read.ReadLine();
             }
             openCsv(File54, ref table54);
             openCsv(FileTangki, ref tableTangki);
+            openCsv(FileLevel, ref tableLevel);
             cBoxDensity.Items.Clear();
             for (int i = colDensityStartTable54; i < table54.ColumnCount; i++)
             {
@@ -244,7 +259,7 @@ namespace TankMeasurement
             }
         }
 
-        private void saveTableSetting(string file54, string fileTangki)
+        private void saveTableSetting(string file54, string fileTangki,string fileLevel)
         {
             String namafile;
             namafile = defaultdir + "\\" + table_setting;
@@ -253,7 +268,9 @@ namespace TankMeasurement
             {
                 io_write.WriteLine(fileTangki);
                 io_write.WriteLine(file54);
+                io_write.WriteLine(fileLevel);
             }
+            loadTableSetting();
         }
 
         private void btnRun_Click(object sender, EventArgs e)
@@ -349,7 +366,14 @@ namespace TankMeasurement
                 CreateNewLog();
                 dateNow = Convert.ToInt16(DateTime.Now.ToString("dd"));
             }
-            valLevel = CalculateEquation(levelFormula, (double)values[levelAddress]);
+            if (useLookupTable)
+            {
+                valLevel = getLoopkupLevel((UInt32)values[levelAddress]);
+            }
+            else
+            {
+                valLevel = CalculateEquation(levelFormula, (double)values[levelAddress]);
+            }
             valPress = ((double)values[pressAddress] * pressScale) + pressOffset;
             valTemp = ((double)values[tempAddress] * tempScale) + tempOffset;
             if (valPress < 0 || valPress > maxValPress)
@@ -689,9 +713,10 @@ namespace TankMeasurement
             tablesForm.FileTangki.Text = FileTangki;
             openCsv(File54,ref  tablesForm.table54);
             openCsv(FileTangki, ref tablesForm.tableTangki);
+            openCsv(FileLevel, ref tablesForm.tableLevel);
             if (tablesForm.ShowDialog() == DialogResult.OK)
             {
-                saveTableSetting(tablesForm.File54.Text, tablesForm.FileTangki.Text);
+                saveTableSetting(tablesForm.File54.Text, tablesForm.FileTangki.Text, tablesForm.FileLevel.Text);
             }
 
         }
@@ -935,5 +960,40 @@ namespace TankMeasurement
             }
         }
 
+        private double getLoopkupLevel(UInt32 adcValue)
+        {
+            double result = 0;
+            int row = tableLevel.RowCount - 2;
+            for (int i = rowPersenStartTableLevel; i < tableLevel.RowCount-1; i++)
+            {
+                if (adcValue <= Convert.ToUInt32(tableLevel[colAdcCountTableLevel, i].Value))
+                {
+                    row = i;
+                    break;
+                }
+            }
+            Console.WriteLine("Row =" + Convert.ToString(row));
+            if (row >= tableLevel.RowCount - 2)
+            {
+                result = Convert.ToDouble(tableLevel[colPersenTableLevel, tableLevel.RowCount - 2].Value);
+            } else
+            if (row <= rowPersenStartTableLevel)
+            {
+                result = Convert.ToDouble(tableLevel[colPersenTableLevel, rowPersenStartTableLevel].Value);
+            } else
+            {
+                double startAdc = Convert.ToDouble(tableLevel[colAdcCountTableLevel, row -1].Value);
+                double endAdc = Convert.ToDouble(tableLevel[colAdcCountTableLevel, row].Value);
+                double startVal = Convert.ToDouble(tableLevel[colPersenTableLevel, row -1].Value);
+                double startEndVal = Convert.ToDouble(tableLevel[colPersenTableLevel, row].Value);
+                result = ((((double)adcValue - startAdc) / (endAdc - startAdc)) * (startEndVal - startVal)) + startVal;
+            }
+            return result;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(Convert.ToString(getLoopkupLevel(Convert.ToUInt32(textBox1.Text))));
+        }
     }
 }

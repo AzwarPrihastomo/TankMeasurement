@@ -41,5 +41,15 @@ namespace TankMeasurement
             this.DialogResult = DialogResult.OK;
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                TankMeasurement test = new TankMeasurement();
+                test.openCsv(openFileDialog1.FileName, ref tableLevel);
+                FileLevel.Text = openFileDialog1.FileName;
+            }
+        }
+
     }
 }

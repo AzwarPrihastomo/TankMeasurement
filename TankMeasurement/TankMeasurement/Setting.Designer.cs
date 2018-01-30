@@ -66,6 +66,7 @@
             this.maxValTemp = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbUseLookup = new System.Windows.Forms.CheckBox();
             this.levelFormula = new System.Windows.Forms.TextBox();
             this.Label15 = new System.Windows.Forms.Label();
             this.addrLevel = new System.Windows.Forms.TextBox();
@@ -162,7 +163,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(404, 359);
+            this.btnCancel.Location = new System.Drawing.Point(412, 434);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 8;
@@ -172,7 +173,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(319, 359);
+            this.btnSave.Location = new System.Drawing.Point(323, 434);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 9;
@@ -418,6 +419,7 @@
             // 
             // GroupBox1
             // 
+            this.GroupBox1.Controls.Add(this.cbUseLookup);
             this.GroupBox1.Controls.Add(this.levelFormula);
             this.GroupBox1.Controls.Add(this.Label15);
             this.GroupBox1.Controls.Add(this.addrLevel);
@@ -426,14 +428,25 @@
             this.GroupBox1.Controls.Add(this.Label2);
             this.GroupBox1.Location = new System.Drawing.Point(12, 273);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(258, 109);
+            this.GroupBox1.Size = new System.Drawing.Size(258, 135);
             this.GroupBox1.TabIndex = 6;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Tank Level";
             // 
+            // cbUseLookup
+            // 
+            this.cbUseLookup.AutoSize = true;
+            this.cbUseLookup.Location = new System.Drawing.Point(9, 73);
+            this.cbUseLookup.Name = "cbUseLookup";
+            this.cbUseLookup.Size = new System.Drawing.Size(114, 17);
+            this.cbUseLookup.TabIndex = 11;
+            this.cbUseLookup.Text = "Use Lookup Table";
+            this.cbUseLookup.UseVisualStyleBackColor = true;
+            this.cbUseLookup.CheckedChanged += new System.EventHandler(this.cbUseLookup_CheckedChanged);
+            // 
             // levelFormula
             // 
-            this.levelFormula.Location = new System.Drawing.Point(105, 45);
+            this.levelFormula.Location = new System.Drawing.Point(105, 96);
             this.levelFormula.Name = "levelFormula";
             this.levelFormula.Size = new System.Drawing.Size(115, 20);
             this.levelFormula.TabIndex = 1;
@@ -442,7 +455,7 @@
             // Label15
             // 
             this.Label15.AutoSize = true;
-            this.Label15.Location = new System.Drawing.Point(6, 48);
+            this.Label15.Location = new System.Drawing.Point(6, 99);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(44, 13);
             this.Label15.TabIndex = 0;
@@ -450,7 +463,7 @@
             // 
             // addrLevel
             // 
-            this.addrLevel.Location = new System.Drawing.Point(105, 71);
+            this.addrLevel.Location = new System.Drawing.Point(105, 41);
             this.addrLevel.Name = "addrLevel";
             this.addrLevel.Size = new System.Drawing.Size(115, 20);
             this.addrLevel.TabIndex = 1;
@@ -458,7 +471,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 74);
+            this.label1.Location = new System.Drawing.Point(6, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 0;
@@ -484,7 +497,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 411);
+            this.ClientSize = new System.Drawing.Size(499, 469);
             this.Controls.Add(this.GroupBox5);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -555,5 +568,6 @@
         internal System.Windows.Forms.Label label26;
         internal System.Windows.Forms.TextBox addrLevel;
         internal System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.CheckBox cbUseLookup;
     }
 }
