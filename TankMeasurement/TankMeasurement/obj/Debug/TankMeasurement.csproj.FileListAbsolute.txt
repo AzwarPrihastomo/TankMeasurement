@@ -30,17 +30,3 @@ D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasureme
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csproj.GenerateResource.Cache
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.TankMeasurement.resources
 D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\bin\Debug\AquaGauge.dll
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.exe.config
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.exe
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\bin\Debug\TankMeasurement.pdb
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\bin\Debug\MySql.Data.dll
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.About.resources
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.ExportCsv.resources
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.TankMeasurement.resources
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Password.resources
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Properties.Resources.resources
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Setting.resources
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.Tables.resources
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.csproj.GenerateResource.Cache
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.exe
-C:\Users\Formulatrix\Documents\Tankmeasurement\TankMeasurement\TankMeasurement\obj\Debug\TankMeasurement.pdb

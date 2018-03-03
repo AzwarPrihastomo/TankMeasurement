@@ -1,0 +1,9 @@
+D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Release\ResolveAssemblyReference.cache
+D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Release\TankMeasurement.About.resources
+D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Release\TankMeasurement.ExportCsv.resources
+D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Release\TankMeasurement.TankMeasurement.resources
+D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Release\TankMeasurement.Password.resources
+D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Release\TankMeasurement.Properties.Resources.resources
+D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Release\TankMeasurement.Setting.resources
+D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Release\TankMeasurement.Tables.resources
+D:\PROJECT\Gauge\publish\TankMeasurement\TankMeasurement\obj\Release\TankMeasurement.csproj.GenerateResource.Cache
