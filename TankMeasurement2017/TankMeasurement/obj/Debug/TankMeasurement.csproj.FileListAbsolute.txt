@@ -46,3 +46,4 @@ D:\PROJECT\Gauge\publish\TankMeasurement2017\TankMeasurement\obj\Debug\TankMeasu
 D:\PROJECT\Gauge\publish\TankMeasurement2017\TankMeasurement\obj\Debug\TankMeasurement.csproj.CoreCompileInputs.cache
 D:\PROJECT\Gauge\publish\TankMeasurement2017\TankMeasurement\obj\Debug\TankMeasurement.exe
 D:\PROJECT\Gauge\publish\TankMeasurement2017\TankMeasurement\obj\Debug\TankMeasurement.pdb
+D:\PROJECT\Gauge\publish\TankMeasurement2017\TankMeasurement\obj\Debug\TankMeasurement.csprojResolveAssemblyReference.cache
